@@ -1,0 +1,324 @@
+[
+  {
+    "objectID": "dcdc22/index.html",
+    "href": "dcdc22/index.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "slide-transition: push(horizontal, 0.5) presenter-notes: text-scale(0.6), alignment(left), Helvetica"
+  },
+  {
+    "objectID": "dcdc22/index.html#automatic-assignment-of-dewey-decimal-classifications-using-nlp",
+    "href": "dcdc22/index.html#automatic-assignment-of-dewey-decimal-classifications-using-nlp",
+    "title": "Presentations",
+    "section": "Automatic assignment of Dewey Decimal Classifications using NLP",
+    "text": "Automatic assignment of Dewey Decimal Classifications using NLP\n\nJennie Williams & Jon Reades\n\nSlightly simpler version of our original title. “Comparing automated document classification using word embeddings to expert-assigned Dewey Decimal Classifications” is more precise about what we do, but probably more of a mystery as to what we’re actually doing.\n10 minutes to talk!"
+  },
+  {
+    "objectID": "dcdc22/index.html#two-objectives",
+    "href": "dcdc22/index.html#two-objectives",
+    "title": "Presentations",
+    "section": "Two Objectives",
+    "text": "Two Objectives\nWe hope to achieve two things with this tutorial:\n\nTo briefly explain how Natural Language Processing (NLP) opens up new ways of engaging with archives.\nTo test whether NLP can measure up to the expertise of a human on document classification.\n\n\nTo be clear, we see this as augmenting existing practices: I hope no one comes away from this thinking that we’re suggesting that NLP can somehow replace librarians.\nSo in the remainder of this talk we hope to (briefly) look at how we handle text ‘at scale’ and then apply this technique to a real-world archive to make a small contribution to existing practices."
+  },
+  {
+    "objectID": "dcdc22/index.html#ethos",
+    "href": "dcdc22/index.html#ethos",
+    "title": "Presentations",
+    "section": "EThOS",
+    "text": "EThOS\n\n\n\nScreenshot from EThOS Interface\n\n\n\nOur tutorial makes use of the British Library’s EThOS data set. Ethos is, technically, a metadata store because it doesn’t directly store the thesis itself; rather it is data about theses: things like the title, author, and date of submission. Majority of UK PhD theses have a metadata record in EThOS:\n\nEarliest is in Latin (pre-dates the modern PhD by 100 years)!\nOver 520,000 records (and growing continuously)\nData quality varies widely (and evolving continuously)\n\nEthos has obviously not existed since 1812, so from this you might infer that some universities have been more–meticulous–than others in going back over ‘old data’, and entering it into the BL’s data store. As you might expect, data quality varies wildly: the further back you go, the worse the metadata quality, so we’ve tended to focus on more ‘recent’ records, dating back to the 1980s."
+  },
+  {
+    "objectID": "dcdc22/index.html#learning",
+    "href": "dcdc22/index.html#learning",
+    "title": "Presentations",
+    "section": "Learning",
+    "text": "Learning\n\nTerm Co-Occurrence Matrix\nWeighting of Relationships\n‘Training’\n\n\nWhat we do after cleaning is to put all of the vocab into a massive matrix, where we quantify their co-occurrence by calculating the frequency (a global statistic) and context (a local statistic) of the vocabulary, incorporating Firths: ‘You shall know a word by the company it keeps’ and weighting words further away ie. Toblers:“everything is related to everything else, but near things are more related than distant things.” concepts.\nWith the example shown here, we’ll create a co-occurrence matrix using a ‘symmetric weighted context window of size 2’. We take each document in the corpus and then step through each word in that document.\nThe amount of ‘context’ that the computer considers is specified by the analysis. So in this illustration, we’ve used a symmetric context window of 2 words: i.e. we looked at 2 words on either side of the ‘target word’. In our research we specified a symmetric context of 10, which should allow us to capture wider patterns of word usage at the document level (which is what we’re really interested in).\nThe window doesn’t have to be symmetric: your phone uses this same approach, as an input, to do predictive text, where only the words that came before the one you’re trying to type, are considered, or, indeed, can be considered."
+  },
+  {
+    "objectID": "dcdc22/index.html#analysis",
+    "href": "dcdc22/index.html#analysis",
+    "title": "Presentations",
+    "section": "Analysis",
+    "text": "Analysis\n\nClustering\nDimensionality Reduction\nValidation"
+  },
+  {
+    "objectID": "dcdc22/index.html#so-how-did-we-do",
+    "href": "dcdc22/index.html#so-how-did-we-do",
+    "title": "Presentations",
+    "section": "So how did we do?",
+    "text": "So how did we do?"
+  },
+  {
+    "objectID": "dcdc22/index.html#thanks",
+    "href": "dcdc22/index.html#thanks",
+    "title": "Presentations",
+    "section": "Thanks!",
+    "text": "Thanks!\n\nJennie /  @JenniexWilliams /  jenniewilliams\nJon /  @jreades /  jreades\nAcknowledgements\nWe’d like to thank the British Library, and particularly the EThOS team, for their wonderful support. We gratefully acknowledge the contribution of the ESRC via the UBEL DTP to making Jennie’s research possible.\nReferences\n\nSo the E-Theses Online (or EThOS) data store that we’re using is one example of the kind of work that the BL is enabling; but there is also, for instance, the Internet Archive of UK web domains as another really exciting source for those of who are computationally inclined. And, with luck, you’re starting to think about how such an approach might be useful to you…\nI hope that this has given you a sense of why we are so excited about this tutorial: first, everything we used (the data, the code, everything) is open; second, we provided the computer with few clues about the corpus, but from a fragmented record of titles and abstracts we were able to organise a large corpus into groups that are nonetheless intelligible to human beings.\nWe’ve already identified some ways that we think the results could be improved, but these will take time to implement and we’re just beginning what is likely to be a journey that last well beyond the completion of Jennie’s PhD.\nSo that’s it from us!\n\n\n\n\nJon Reades & Jennie Williams (CASA @ UCL)\n\n\n\nAndrews, D., L. Broad, P. Edwards, D. Fox, T. Gallagher, S. Garland, R. Kidd, and J. Sweeney. 2016. “The Creation and Characterisation of a National Compound Collection: The Royal Society of Chemistry Pilot.” Chem. Sci. 7. The Royal Society of Chemistry:3869–78. https://doi.org/10.1039/C6SC00264A.\n\n\nFirth, J. R. 1957. “A Synopsis of Linguistic Theory, 1930-1955.” Studies in Linguistic Analysis. Basil Blackwell.\n\n\nHowe, K. 2015. “A Novel Use of PhD Data: Investigating the State of the Dementia Workforce.” 2015. https://blogs.bl.uk/science/2015/09/a-novel-use-of-phd-data.html.\n\n\nMontgomery, C. 2019. “Surfacing ‘Southern’ Perspectives on Student Engagement with Internationalization: Doctoral Theses as Alternative Forms of Knowledge.” Journal of Studies in International Education 23 (1):123–38. https://doi.org/10.1177/1028315318803743.\n\n\nTshitoyan, V., J. Dagdelen, L. Weston, A. Dunn, Z. Rong, O. Kononova, K. A. Persson, C. Gerbrand, and J. Anubhav. 2019. “Unsupervised Word Embeddings Capture Latent Knowledge from Materials Science Literature.” Nature 571 (July):95–98. https://doi.org/10.1038/s41586-019-1335-8."
+  },
+  {
+    "objectID": "dcdc22/index.html#percentage-complete",
+    "href": "dcdc22/index.html#percentage-complete",
+    "title": "Presentations",
+    "section": "Percentage Complete",
+    "text": "Percentage Complete\n\n\n\nField\nOverall\n1970s\n1980s\n1990s\n2000s\n2010s\n\n\n\n\nAbs.\n50\n19\n21\n29\n42\n88\n\n\nKey.\n50\n12\n89\n84\n32\n47\n\n\nDDCs\n91\n93\n98\n98\n97\n83\n\n\nDept.\n29\n17\n16\n13\n21\n53\n\n\nCount\n526,276\n40,318\n59,825\n88,598\n136,172\n176,171\n\n\n\n\nSo what does the data look like overall, in terms of completeness?\nThe absolutely key fields: author, title, institution, qualification, and date are nearly all 100% complete, although if you look closely at any of these fields you will see problems with variations in spelling, field boundary errors, and so on.\nTheses have already been used via largely manual keyword and topic selection to generate higher-level views of chemical compounds (Andrews et al. 2016), post-colonial relations (Montgomery 2019), and career progression in dementia research (Howe 2015).\nBut if we are looking to categorise or classify dissertations, then we get into some trickier areas: there is definitely evidence of changing practices–whether because the university librarians didn’t have access to the more detailed information, such as abstract, on each thesis or because the practices of academic scholarship themselves, changed.\nAnd just a reminder: DDC stands for Dewey Decimal Classification which is still in wide use as an archive management and storage system!"
+  },
+  {
+    "objectID": "dcdc22/index.html#ddc-as-expert-label",
+    "href": "dcdc22/index.html#ddc-as-expert-label",
+    "title": "Presentations",
+    "section": "DDC as ‘Expert Label’",
+    "text": "DDC as ‘Expert Label’\n\n\n\n\n\n\n\n\nDDC1 Group (‘Class’)\nDDC2 Group (‘Division’)\nCount\n\n\n\n\nScience (500–599)\n Biology (570–579)  Physics (530–539)\n27,095 18,418 8,677\n\n\nSocial Sciences (300–399)\n Economics (330–339)  Social Sciences (300–309)\n21,648 12,625 9,023\n\n\nTotal\n\n48,743\n\n\n\n\nTo test our approach, we chose four disciplines that we thought would present a range of challenges for an automated approach. Certainly, previous classification systems would have struggled.\nBut why do I say ‘expert label’? This is a ‘term of art’, if you will, from Machine Learning where an ‘expert-assigned label’ is part of the training process: Google’s image search and street view platforms didn’t spontaneously ‘learn’ how to recognise different types of birds or crosswalks, they were trained by an army of ‘experts’ of varying abilities. If you’ve filled in one of the image-based Captchas, to verify that you’re a human being, then you’ve been dragooned into that army.\nSo if we want to know whether our NLP approach has any merit at all, then we need to have that ‘expert-assigned label’ and that’s where the DDC comes in: although there are plenty of problems with DDCs, it does give us a sense of where a librarian thinks a piece of work belongs.\nThat sample sample of 48,743 dissertations will then be fed into our NLP pipeline."
+  },
+  {
+    "objectID": "dcdc22/index.html#from-text-to-data",
+    "href": "dcdc22/index.html#from-text-to-data",
+    "title": "Presentations",
+    "section": "From Text to Data",
+    "text": "From Text to Data\nCleaning\nLearning\nAnalysis\n\nWhat does that pipeline look like?\nWell, we have three stages, each of which we’ll review in a little more detail on the following slides.\nIn the cleaning stage, we are looking to standardise the texts that we’re going to process.\nIn the learning stage, the computer processes the cleaned text in order to learn–in a statistical sense–about the corpus.\nAnd finally, in the analysis phase, we take what the computer has learned and convert that back into forms of knowledge that we humans can comprehend.\nI’m going to briefly talk through each of these on the following slides, and then go back an illustrate the key outputs from each stage."
+  },
+  {
+    "objectID": "dcdc22/index.html#word-embeddings",
+    "href": "dcdc22/index.html#word-embeddings",
+    "title": "Presentations",
+    "section": "Word Embeddings",
+    "text": "Word Embeddings\nUnderpins progress in text-mining, predictive text on phones, spell-checking, etc.\n\nNeural network that learns how to embed our high-dimensional corpus into a low-dimensional representation while retaining most of the semantics.\nConverts sparse Term Co-occurrence Matrix (𝑚×𝑚) into a useful dense matrix (𝑚×𝑛 where 𝑛≪𝑚).\nCounter-intuitively, we can compute an average document embedding.\n\n\nPrior to word embedding, we decide how many ‘features’ we would like to have, to characterise our vocab & its context. Typically anything from 100 to 1000 will suffice, we opted for a 300 feature vector, which is fairly large for many applications, but still computable on a laptop. Our sparse, 33,000 squared TCM is then fed into a neural network. Let’s not glaze over at this point, we can think of a neural network as a ‘black-box’ algorithm, we put in our TCM, the neural network learns 300-feature embeddings for each word in our vocabulary, based on pre-trained embeddings, and then outputs a 33 thousand by 300 matrix, a huge reduction in dimensionality from our original corpus.\nThe really, really weird step that this enables is that we can then average all of the word embeddings or a document together, to get a single document embedding.\nBut with this last step, we now have reduced an entire document to a single observation, or set of coordinates in the semantic space. We’re ready to do our analysis!"
+  },
+  {
+    "objectID": "dcdc22/index.html#approach",
+    "href": "dcdc22/index.html#approach",
+    "title": "Presentations",
+    "section": "Approach",
+    "text": "Approach\nTreating each average document embedding as one observation:\n\nHierarchically cluster to create a ‘bottom-up’ representation of clusters in the high-dimensional semantic space.\nVisualise this space using t-SNE to project the 300-dimensional space into a 2-dimensional space.\nImprove interpretability by generating ‘word clouds’ for clusters.\nValidate clusters via examination of selected documents or terms."
+  },
+  {
+    "objectID": "dcdc22/index.html#disciplines-vs.-clusters",
+    "href": "dcdc22/index.html#disciplines-vs.-clusters",
+    "title": "Presentations",
+    "section": "Disciplines vs. Clusters",
+    "text": "Disciplines vs. Clusters\n\n\n\n\n\n\n\n\n\n\n\nCluster\nGeography\nEarth Science\nHistory\nComputer Science\nTotal\n\n\n\n\n1\n126\n310\n104\n11,018\n11,558\n\n\n2\n252\n10,673\n528\n126\n11,579\n\n\n3\n803\n485\n6,730\n135\n8,153\n\n\n4\n100\n109\n6,389\n28\n6,626\n\n\nTotal\n1,281\n11,577\n13,751\n11,307\n37,916\n\n\n\n\nSince we don’t really know what our clusters represent - thats the point of ‘unsupervised’ machine learning - lets see how they compare with disciplines (in the form of DDC categories), its a good place to start. If every document in the sampled corpus was assigned to an NLP-generated cluster that matches with 1 discipline exactly, then we’d expect to see only 1 cell per row populated, usually along the diagonal.\nWhat’s interesting to see, is just how close we do come to finding Earth Science and Computer Science in their own clusters: 92% of Earth Science theses are in a single cluster, as are 97% of Computer Science theses! Similarly, Cluster 1 itself is made up of 95% Computer Science theses. For Cluster 2 its 92% Earth Science ! Things are a little more complicated for History: I’d probably conclude that 3 clusters is a better cut point, and it might help to realise that the Geography DDC actually falls under history in the first place!\nClearly there is a reltionship there but its not clear cut, and that is OK, especially in the case of Geography, a subject area more inter-disciplinary than say History, and under-represented from the start in terms of total numbers of theses. We see that 22% of ‘Geography’ theses are more aligned with Computer science & Earth Sciences than with History. To conclude: Clustering is a summarising mechanism, it doesn’t matter whether the groups it creates are ‘real’ or immediately recognisable groups, but I need to investigate whether the groupings I have found are actually useful in some way."
+  },
+  {
+    "objectID": "dcdc22/index.html#cluster-word-clouds",
+    "href": "dcdc22/index.html#cluster-word-clouds",
+    "title": "Presentations",
+    "section": "Cluster Word Clouds",
+    "text": "Cluster Word Clouds\n\n\n\nTaking the 50 most distinctive keywords from each cluster reinforces interpretation of t-SNE results.\nThe map of semantic space is, of course, highly abstract and quite hard to interpret. Word clouds are a more intuitive way to capture the differences between clusters, and if we take the 50 most distinctive keywords for each cluster and plot them according to frequency then we can get an idea of what our clusters contain.\nWithout anything more than title, abstract and keywords, we’ve managed to clearly separate two domains of research from a more complex set of overlapping interests."
+  },
+  {
+    "objectID": "dcdc22/index.html#cluster1-by-discipline---wordclouds",
+    "href": "dcdc22/index.html#cluster1-by-discipline---wordclouds",
+    "title": "Presentations",
+    "section": "Cluster1 by Discipline - Wordclouds",
+    "text": "Cluster1 by Discipline - Wordclouds\n\n\n\noriginal fit inline\n\n\n\nRemember in cluster 1 we had 126 ‘Geography’ theses (depicted here in yellow), 310 ‘Earth Science’ theses (in blue), 104 ‘History’ theses (in green) & 11,018 ‘Computer Science’ theses (in red) - well here are the wordclouds for those categories in Cluster 1.\nIt gives us a sense of some of the keywords contained in the Analytical cluster, across all 4 disciplines\nWe see words or acronyms such as ‘gis’ from Geography, ‘seismology’ from Earth Sciences and Archaeology from History in these clouds."
+  },
+  {
+    "objectID": "dcdc22/index.html#thanks-.background-image.imgparis.png-.background-opacity.18",
+    "href": "dcdc22/index.html#thanks-.background-image.imgparis.png-.background-opacity.18",
+    "title": "Presentations",
+    "section": "Thanks! {.background-image:“./img/paris.png” .background-opacity:.18}",
+    "text": "Thanks! {.background-image:“./img/paris.png” .background-opacity:.18}\nJennie / @JenniexWilliams / GitHub.com/jenniewilliams Jon / @jreades / GitHub.com/jreades / reades.com\n\nSo the E-Theses Online (or EThOS) data store that we’re using is one example of the kind of work that the BL is enabling; but there is also, for instance, the Internet Archive of UK web domains as another really exciting source for those of who are computationally inclined.\nI hope that this has given you a sense of why we think that NLP is such a promising method to use when engaging with archives and how we can link these to geographic issues. In particular, I think it’s worth noting that everything that Jennie just showed you was based on a computer learning about text: we provided it with no grammar or syntax, no cues as to what to look for, not even parts of speech. And from a fragmented record of titles and abstracts we were able to organise a large corpus into groups that — while far from perfect — were nonetheless intelligible to human beings. We’ve already identified some ways that we think the results could be improved, but these will take time to implement and we’re just beginning what is likely to be a journey that last well beyond the completion of Jennie’s PhD.\nSo that’s it from us!\n\n\n\n\nJon Reades & Jennie Williams (CASA @ UCL)"
+  },
+  {
+    "objectID": "dcdc22/index.html#section",
+    "href": "dcdc22/index.html#section",
+    "title": "Presentations",
+    "section": "",
+    "text": "Cleaning\n\nRemoval of Punctuation / Symbols / HTML\nNamed Entity Recognition (including acronyms)\nLemmatisation\nRemoval of Stop Words\nPhrase Detection\nReduction of Vocabulary\n\nLearning\nAnalysis\n\nThe purpose of the cleaning stage is to radically reduce the overall vocabulary by standardise word forms, finding meaningful turns of phrase, and stripping out high- and low-frequency words."
+  },
+  {
+    "objectID": "dcdc22/index.html#the-semantic-space",
+    "href": "dcdc22/index.html#the-semantic-space",
+    "title": "Presentations",
+    "section": "The ‘Semantic Space’",
+    "text": "The ‘Semantic Space’\n\n\n\nleft original\n\n\n\nIf we then ‘map’ all 38,000 documents in this semantic space - using the clusters - where grey is our predominantly Analytical cluster 1, orange is mainly Synthetic cluster 2, blue and brown are Symbolic - we can see how they relate to one another.\nThis is a completely abstract map of the semantic ‘terrain’ generated via the Word Embedding process. It is a mapping of the vocabulary of 38,000 theses and I suggest that the clusters represent knowledge bases in the form identified by Bjorn Asheim, who introduced a theoretical framework when studying regional innovation. His idea was that there are 3 types of knowledge base: analytical (comprising new & codified knowledge, as well as modelling, aligning with our computer science theses), synthetic (generally applied research, testing, simulation, experimental stuff, aligning with our Earth Sciences theses) and symbolic ( research about people, places, behavour, cultural artefacts, and creative research, aligning with the History & Geography theses)\nI used a t-SNE visualisation for this, again it involved a reduction in dimensions from 300 features to 2 dimensions - so that we can see it! we see similarities between Clusters 3 and 4, and a separation of our documents within the sapce they occupy.\nThis isn’t a binary classification: there is a continuum between documents such that some ‘Analytical’ documents overlap with some ‘Synthetic’ documents and so forth. In fact, we’ve had to suppress the lowest-density areas otherwise you tend to see too much overlap!"
+  },
+  {
+    "objectID": "dcdc22/index.html#applications",
+    "href": "dcdc22/index.html#applications",
+    "title": "Presentations",
+    "section": "Applications",
+    "text": "Applications\nDealing with ‘born digital’ archives:\n\nGrowing problems of scale and context.\nUnderstanding overall structure of corpus.\nAdding metadata / filling in missing fields.\n\nImproving document retrieval:\n\nReduced reliance on ‘direct hits’.\nSearching the ‘semantic space’ means fewer ‘near misses’.\n\nIdentifying trends:\n\nEmbeddings may anticipate discoveries (e.g. Tshitoyan et al. (2019))\n\n\nSo where do we see this kind of approach being useful to ’collections and communities?\nThe first and most obvious is dealing with ‘born digital’ archives: in discussions with the BL about text-mining, they’ve mentioned the issues around the growing provision of personal hard drives as part of a scientist’s or author’s bequest. I don’t know about any of you, but the thought of anyone trying to make much sense of my backup drives is slightly terrifying, and it’s worth thinking about just how much ‘data’ is stored on even the smallest individual backup. And if you’ve ever tried to find something in, say, Outlook then you’ll undoubtedly appreciate that Boolean and Regular Expression searches are not going to cut it. Making it worse that, unlike say traditional written correspondence, it will be that much harder to properly contextualise each document. So the ability to find ‘similar’ documents in a large corpus will be incredibly important, particularly where word usage has changed over time.\nAnd this, in turn, should mean fewer ‘near misses’ when we search a large body of work. Key words are a good place to start, but simpler document search tools start there, and if you don’t pick the right key word then you get back… nothing at all. Or nothing related to your interests. Quite aside from being able to suggest other words that might be related to your search, with Word Embeddings there’s now the possibility of detecting ‘similar usage, different disciplines or discourses’ which could actually help researchers to navigate bodies of work and disciplinary corpora.\nFinally, if we put these pieces together then we might gain just a little insight – however ill-formed – into the near future. Some recent work in Material Science found that associations found in custom word embeddings (so the next step beyond what we’ve done here) actually anticipated discoveries by 2 to 3 years! The payoff in the physical sciences of getting even a year ahead of other labs could be enormous, but I’d like to believe that this also opens up more collaborative ways of peering into the future to understand the evolution of a discipline like geography: where are we now? Where does it look like we are going?\nThe full-text of dissertations is also of longer-term interest, but is not the focus of this work. Although the BL will digitise any dissertation for a fee, coverage here too is temporally biased, since modern theses are submitted as PDFs, so it’s only older ones that need to be scanned. In fact, one hope that the BL has, is that this research might help justify the resourcing of an archival scanning process, in order to bring many more of the missing quarter of a million theses online and make them fully accessible."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "DCDC’22"
+  },
+  {
+    "objectID": "dcdc22/index.html#thanks-background-image.imgparis.png-background-opacity.18",
+    "href": "dcdc22/index.html#thanks-background-image.imgparis.png-background-opacity.18",
+    "title": "Presentations",
+    "section": "Thanks! {background-image:“./img/paris.png” background-opacity:.18}",
+    "text": "Thanks! {background-image:“./img/paris.png” background-opacity:.18}\nJennie / @JenniexWilliams / GitHub.com/jenniewilliams Jon / @jreades / GitHub.com/jreades / reades.com\n\nSo the E-Theses Online (or EThOS) data store that we’re using is one example of the kind of work that the BL is enabling; but there is also, for instance, the Internet Archive of UK web domains as another really exciting source for those of who are computationally inclined.\nI hope that this has given you a sense of why we think that NLP is such a promising method to use when engaging with archives and how we can link these to geographic issues. In particular, I think it’s worth noting that everything that Jennie just showed you was based on a computer learning about text: we provided it with no grammar or syntax, no cues as to what to look for, not even parts of speech. And from a fragmented record of titles and abstracts we were able to organise a large corpus into groups that — while far from perfect — were nonetheless intelligible to human beings. We’ve already identified some ways that we think the results could be improved, but these will take time to implement and we’re just beginning what is likely to be a journey that last well beyond the completion of Jennie’s PhD.\nSo that’s it from us!\n\n\n\n\nJon Reades & Jennie Williams (CASA @ UCL)"
+  },
+  {
+    "objectID": "dcdc22/index.html#learning-1",
+    "href": "dcdc22/index.html#learning-1",
+    "title": "Presentations",
+    "section": "Learning",
+    "text": "Learning\n\nTerm Co-Occurrence Matrix\nWeighting of Relationships\n‘Training’\n\n\nWhat we do after cleaning is to put all of the vocab into a massive matrix, where we quantify their co-occurrence by calculating the frequency (a global statistic) and context (a local statistic) of the vocabulary, incorporating Firths: ‘You shall know a word by the company it keeps’ and weighting words further away ie. Toblers:“everything is related to everything else, but near things are more related than distant things.” concepts.\nWith the example shown here, we’ll create a co-occurrence matrix using a ‘symmetric weighted context window of size 2’. We take each document in the corpus and then step through each word in that document.\nThe amount of ‘context’ that the computer considers is specified by the analysis. So in this illustration, we’ve used a symmetric context window of 2 words: i.e. we looked at 2 words on either side of the ‘target word’. In our research we specified a symmetric context of 10, which should allow us to capture wider patterns of word usage at the document level (which is what we’re really interested in).\nThe window doesn’t have to be symmetric: your phone uses this same approach, as an input, to do predictive text, where only the words that came before the one you’re trying to type, are considered, or, indeed, can be considered."
+  },
+  {
+    "objectID": "dcdc22/index.html#analysis-1",
+    "href": "dcdc22/index.html#analysis-1",
+    "title": "Presentations",
+    "section": "Analysis",
+    "text": "Analysis\n\nClustering\nDimensionality Reduction\nValidation"
+  },
+  {
+    "objectID": "dcdc22/index.html#section-1",
+    "href": "dcdc22/index.html#section-1",
+    "title": "Presentations",
+    "section": "",
+    "text": "Cleaning\nLearning\n\nLearning of Context\nWeighting of Relationships\n‘Training’ of Word Embeddings\n\nAnalysis\n\nIn a historical corpus we might see, for example, “Queen X ruled for 25 years” and “King Y ruled for 4 years”. From this we could say that Queen and King are used in similar contexts. Across a large corpus, we might also find that ‘she’ is used in the context of Queens and ‘he’ in the context of Kings.\nUsing Machine Learning we can exploit (Firth 1957, 11) observation that “You shall know a word by the company it keeps”. Working out how to do this using a process called word embedding was the breakthrough that led to the rapid advances in NLP over the past decade."
+  },
+  {
+    "objectID": "dcdc22/index.html#section-2",
+    "href": "dcdc22/index.html#section-2",
+    "title": "Presentations",
+    "section": "",
+    "text": "Cleaning\nLearning\nAnalysis\n\nDimensionality Reduction\nHierarchical Clustering\nValidation of Results\n\n\nBut even word embeddings are still too much in their raw form for clustering algorithms, so we reduce this still further using a technique called UMAP, which allows us to distill everything down to just a few dimensions.\nAfter that, we cluster the documents using a technique called hierarchical clustering, which allows us to find similar documents in the corpus.\nAnd finally, validation: can we measure how well we did?\nSo let’s now loop back and briefly look at what went in and what came out of each phase."
+  },
+  {
+    "objectID": "dcdc22/index.html#from-text-to-data-1",
+    "href": "dcdc22/index.html#from-text-to-data-1",
+    "title": "Presentations",
+    "section": "From Text to Data",
+    "text": "From Text to Data\nCleaning\nLearning\nAnalysis\n\nWhat does that pipeline look like?\nWell, we have three stages, each of which we’ll review in a little more detail on the following slides.\nIn the cleaning stage, we are looking to standardise the texts that we’re going to process.\nIn the learning stage, the computer processes the cleaned text in order to learn–in a statistical sense–about the corpus.\nAnd finally, in the analysis phase, we take what the computer has learned and convert that back into forms of knowledge that we humans can comprehend.\nI’m going to briefly talk through each of these on the following slides, and then go back an illustrate the key outputs from each stage."
+  },
+  {
+    "objectID": "dcdc22/index.html#learning-2",
+    "href": "dcdc22/index.html#learning-2",
+    "title": "Presentations",
+    "section": "Learning",
+    "text": "Learning\n\nTerm Co-Occurrence Matrix\nWeighting of Relationships\n‘Training’\n\n\nWhat we do after cleaning is to put all of the vocab into a massive matrix, where we quantify their co-occurrence by calculating the frequency (a global statistic) and context (a local statistic) of the vocabulary, incorporating Firths: ‘You shall know a word by the company it keeps’ and weighting words further away ie. Toblers:“everything is related to everything else, but near things are more related than distant things.” concepts.\nWith the example shown here, we’ll create a co-occurrence matrix using a ‘symmetric weighted context window of size 2’. We take each document in the corpus and then step through each word in that document.\nThe amount of ‘context’ that the computer considers is specified by the analysis. So in this illustration, we’ve used a symmetric context window of 2 words: i.e. we looked at 2 words on either side of the ‘target word’. In our research we specified a symmetric context of 10, which should allow us to capture wider patterns of word usage at the document level (which is what we’re really interested in).\nThe window doesn’t have to be symmetric: your phone uses this same approach, as an input, to do predictive text, where only the words that came before the one you’re trying to type, are considered, or, indeed, can be considered."
+  },
+  {
+    "objectID": "dcdc22/index.html#analysis-2",
+    "href": "dcdc22/index.html#analysis-2",
+    "title": "Presentations",
+    "section": "Analysis",
+    "text": "Analysis\n\nClustering\nDimensionality Reduction\nValidation"
+  },
+  {
+    "objectID": "dcdc22/index.html#from-text-to-data-2",
+    "href": "dcdc22/index.html#from-text-to-data-2",
+    "title": "Presentations",
+    "section": "From Text to Data",
+    "text": "From Text to Data\nCleaning\n\nRemoval of Punctuation / Symbols / HTML\nNamed Entity Recognition (including acronyms)\nLemmatisation\nRemoval of Stop Words\nPhrase Detection\nReduction of Vocabulary\n\nLearning\nAnalysis\n\nThe purpose of the cleaning stage is as follows:\n\nTo remove the kinds of things – unusual symbols, markup, even accents – that can stump computers when we try to process text at scale.\nTo find and ‘protect’, if you will, from subsequent cleaning steps abbreviations. In my discipline that would be something like ‘GIS’, which is an abbreviation for ‘geographic information systems’.\nTo standardise word forms by removing plurals, tenses, and so forth.\nTo find the turns of phrase that might be meaningful in the corpus. In my discipline, ‘geographic information systems’ is a meaningful term and it will crop up, from a statistical standpoint, more frequently that you would expect.\nAnd finally, vocabulary reduction: at the beginning we had around 118,000 unique ‘tokens’, but by the end of the process we have fewer than 35,000."
+  },
+  {
+    "objectID": "dcdc22/index.html#from-text-to-data-3",
+    "href": "dcdc22/index.html#from-text-to-data-3",
+    "title": "Presentations",
+    "section": "From Text to Data",
+    "text": "From Text to Data\nCleaning\nLearning\n\nLearning of Context\nWeighting of Relationships\n‘Training’ of Word Embeddings\n\nAnalysis\n\nWhat we do after cleaning is to put all of the tokens into a massive matrix (aka. a table), where we quantify their co-occurrence; which is to say: we look in the vicinity of each word and see what words tends to lie around it.\nFor example, in a historical corpus we might see “Queen/King X ruled for Y years…” coming up a lot. Each time we count “Queen X ruled for” or “King Y ruled for” we are telling the computer that Queen and King are used in similar contexts. Or as (Firth 1957, 11) put it “You shall know a word by the company it keeps”.\nThe final phase is learning how to reduce this context–because, remember, we’re doing this for every word in the entire corpus–to something that manageable on a modern computer.\nWorking out how to do this using something called word embedding was the breakthrough that has led to the rapid advances in NLP over the past decade."
+  },
+  {
+    "objectID": "dcdc22/index.html#cleaning-4",
+    "href": "dcdc22/index.html#cleaning-4",
+    "title": "Presentations",
+    "section": "Cleaning",
+    "text": "Cleaning\n\n\n\n\n\n\n\nSource Text\nCleaned Text\n\n\n\n\nThe economic effects of resource extraction in developing countries. This thesis presents three core chapters examining different aspects of the relationship between natural resources and economic development…\neconomic effect resource extraction develop_country present_three core examine different_aspect relationship natural_resource economic_developmen…\n\n\nMaking sense of environmental governance : a study of e-waste in Malaysia. The nature of e-waste, which is environmentally disastrous but economically precious, calls for close policy attention at all levels of society, and between state and non-state actors…\nmaking_sense environmental_governance study waste malaysia nature waste environmentally disastrous economically precious call close policy attention level society state_non_state actor…\n\n\nAn exploratory study of the constructions of ‘mental health’ in the Afro Caribbean community in the United Kingdom. Afro Caribbean people living in the United Kingdom have historically been overrepresented in the ‘mental health’ system…\nexploratory_study construction mental_health caribbean community united_kingdom caribbean people_live united_kingdom historically mental_health system…\n\n\n\n\nThis table compares three randomly-selected documents before and after cleaning to give you a sense of what this process details. You can see that things like captialisation, punctuation and, to a lesser extent, plurals have gone, together with low- and high-frequency words such as ‘a’ and ‘the’."
+  },
+  {
+    "objectID": "dcdc22/index.html#learning-4",
+    "href": "dcdc22/index.html#learning-4",
+    "title": "Presentations",
+    "section": "Learning",
+    "text": "Learning\n\n\n\n\n\n\n\n\n\n\nTerm\nDim 1\nDim 2\nDim 3\nTop 7 Most Similar\n\n\n\n\naccelerator\n-2.597380\n0.562458\n3.047121\nbeam, cern, facility, spectrometer, beam_energy\n\n\nlondon_stock_exchange\n0.516811\n-0.935569\n1.090004\nipo, ftse, stock_market, announcement, lse\n\n\nnational_health_service\n1.782367\n-2.309419\n-2.430357\nnhs, public_sector, emergency, public_health, developed_world\n\n\n\n\nSo what the word embedding process does it to further reduce that down–embedding is the technical term–to about 3 million elements that replace words with numbers using a so-called ‘neural network’. The reduction process takes full advantage of the context matrix to try to ensure that words that are used in the same context end up with similar ‘embeddings’.\nHere, again, are some examples. On the left side we have a term from the corpus. The next three columns are the first 3 of the 100 dimensional embedding that we calculated using the word embedding algorithm. So there are 97 more dimensions but for obvious reasons I’m not showing them here. These numbers don’t mean anything to us, but they do mean something to the computer.\nFinally, on the right side we see terms that are near–meaning that they have similar values in their 100 columns–to the term of hte left side. So accelerator is ‘near’ to beam, CERN, and other things having to do with high-energy physics, while national health service is, unsurprisingly, near to NHS, public sector, and public health, amongst others."
+  },
+  {
+    "objectID": "dcdc22/index.html#analysis-4",
+    "href": "dcdc22/index.html#analysis-4",
+    "title": "Presentations",
+    "section": "Analysis",
+    "text": "Analysis"
+  },
+  {
+    "objectID": "dcdc22/index.html#clustering-accuracy",
+    "href": "dcdc22/index.html#clustering-accuracy",
+    "title": "Presentations",
+    "section": "Clustering Accuracy",
+    "text": "Clustering Accuracy\n\n\nTable 1: Clustering Results\n\n\n\n\n(a) DDC Class (DDC1) 2 Cluster Results\n\n\nCluster\nScience\nSocial sciences\n\n\n\n\nScience\n26,591\n479\n\n\nSocial sciences\n676\n20,948\n\n\n\n\n\n\n(b) DDC Division (DDC2) 4 Cluster Results\n\n\nCluster\nBiology\nEconomics\nPhysics\nSocial sciences\n\n\n\n\nBiology\n17,498\n214\n514\n178\n\n\nEconomics\n417\n11,063\n79\n1,050\n\n\nPhysics\n230\n45\n8,349\n42\n\n\nSocial sciences\n165\n1,880\n15\n6,955\n\n\n\n\n\n\n\nAt the highest level we were, on average, 98% accurate.\nAt the DDC2 level we were, on average, 90% accurate but this masks some variation: in Biology and Physics we had more success in correctly classifying PhDs than we did in Economics and Social science. Roughly a 10% difference in precision and recall.\nSince we don’t really know what our clusters represent - thats the point of ‘unsupervised’ machine learning - lets see how they compare with disciplines (in the form of DDC categories), its a good place to start. If every document in the sampled corpus was assigned to an NLP-generated cluster that matches with 1 discipline exactly, then we’d expect to see only 1 cell per row populated, usually along the diagonal.\nWhat’s interesting to see, is just how close we do come to finding Earth Science and Computer Science in their own clusters: 92% of Earth Science theses are in a single cluster, as are 97% of Computer Science theses! Similarly, Cluster 1 itself is made up of 95% Computer Science theses. For Cluster 2 its 92% Earth Science ! Things are a little more complicated for History: I’d probably conclude that 3 clusters is a better cut point, and it might help to realise that the Geography DDC actually falls under history in the first place!\nClearly there is a reltionship there but its not clear cut, and that is OK, especially in the case of Geography, a subject area more inter-disciplinary than say History, and under-represented from the start in terms of total numbers of theses. We see that 22% of ‘Geography’ theses are more aligned with Computer science & Earth Sciences than with History. To conclude: Clustering is a summarising mechanism, it doesn’t matter whether the groups it creates are ‘real’ or immediately recognisable groups, but I need to investigate whether the groupings I have found are actually useful in some way."
+  },
+  {
+    "objectID": "dcdc22/index.html#visualising-the-corpus",
+    "href": "dcdc22/index.html#visualising-the-corpus",
+    "title": "Presentations",
+    "section": "Visualising the Corpus",
+    "text": "Visualising the Corpus"
+  },
+  {
+    "objectID": "dcdc22/index.html#mis-clustered-word-clouds",
+    "href": "dcdc22/index.html#mis-clustered-word-clouds",
+    "title": "Presentations",
+    "section": "‘Mis-clustered’ Word Clouds",
+    "text": "‘Mis-clustered’ Word Clouds\n\n\n\nWhat about the off-diagonals? On the preceding slide we’ve assumed that anything not marked in bold is probably a mistake because it’s now how the expert classified it.\nBut it’s worth asking if a time-pressured archivist who may be unfamiliar with a particular field is always going to make the right call. I certainly wouldn’t be the person to ask which subdivision of Physics or Medieval Literature a text was most appropriate for.\nSo here we’ve inverted the focus from where we agreed with the experts to where NLP disagreed. We can use standard techniques (covered in other Programming Historian tutorials) to pull out potential keywords from the misclassified documents.\nAnd what becomes clear pretty quickly from looking at these is that it’s entirely debateable whether the computer is ‘wrong’. The 42 physics PhDs clustered with the social sciences look a lot more like the interests of social science in education, philosophy, and training than they do like string theory or particle accelerators. Similarly, the Economics misclassifications are all too easy to interpret logically in terms of valuing the natural environment, issues of identity, and energy generation!"
+  },
+  {
+    "objectID": "dcdc22/index.html#about-ethos",
+    "href": "dcdc22/index.html#about-ethos",
+    "title": "Presentations",
+    "section": "About EThOS",
+    "text": "About EThOS\n\n\nScreenshot of a PhD Thesis from EThOS Web Interface\n\n\n\n\nOur tutorial makes use of the British Library’s EThOS data set. Ethos is, technically, a metadata store because it doesn’t directly store the thesis itself; rather, it is data about theses: things like the title, author, and date of submission. The vast majority of UK doctoral theses have a metadata record in EThOS:\n\nEarliest is in Latin (pre-dates the modern PhD by 100 years)!\nOver 520,000 records (and growing continuously)\nData quality varies widely (and evolving continuously)\n\nEthos has obviously not existed since 1812, so from this you might infer that some universities have been more meticulous than others in entering ‘old data’ into the BL’s data store. As you might expect, data quality varies wildly: the further back you go, the worse the data quality, so we’ve focussed on more ‘recent’ records, dating back to the 1980s."
+  },
+  {
+    "objectID": "dcdc22/index.html#completeness",
+    "href": "dcdc22/index.html#completeness",
+    "title": "Presentations",
+    "section": "Completeness",
+    "text": "Completeness\n\nPercentage Complete by Decade\n\n\nField\nOverall\n1970s\n1980s\n1990s\n2000s\n2010s\n\n\n\n\nAbs.\n50\n19\n21\n29\n42\n88\n\n\nKey.\n50\n12\n89\n84\n32\n47\n\n\nDDCs\n91\n93\n98\n98\n97\n83\n\n\nDept.\n29\n17\n16\n13\n21\n53\n\n\nCount\n526,276\n40,318\n59,825\n88,598\n136,172\n176,171\n\n\n\n\nTheses have already been used via largely manual keyword and topic selection to generate higher-level views of chemical compounds (Andrews et al. 2016), post-colonial relations (Montgomery 2019), and career progression in dementia research (Howe 2015).\nBut if we are looking to categorise or classify dissertations, then we get into some trickier areas: there is definitely evidence of changing practices–whether because the university librarians didn’t have access to the more detailed information, such as abstract, on each thesis or because the practices of academic scholarship themselves, changed.\nAnd just a reminder: DDC stands for Dewey Decimal Classification which is still in wide use as an archive management and storage system!"
+  },
+  {
+    "objectID": "dcdc22/index.html#from-text-to-data-4",
+    "href": "dcdc22/index.html#from-text-to-data-4",
+    "title": "Presentations",
+    "section": "From Text to Data",
+    "text": "From Text to Data\nCleaning\nLearning\nAnalysis\n\nDimensionality Reduction\nHierarchical Clustering\nValidation of Results\n\n\nOnce we’ve got our Word Embeddings, we can move on the actual analysis.\nBut even the vastly reduced context of the word embeddings is still too much for clustering algorithms, so we reduce this still further using a technique called UMAP, which allows us to distill everything down to just a few dimensions.\nAfter that, we cluster the documents using a technique called hierarchical clustering, which is a bottom-up technique that progressively groups together neighbouring documents until everything falls in a single cluster. We can then explore the tree of relationships however we like.\nAnd finally, validation: can we measure how well we did?\nSo let’s now loop back and briefly look at what went in and what came out of each phase."
+  },
+  {
+    "objectID": "dcdc22/index.html#section-3",
+    "href": "dcdc22/index.html#section-3",
+    "title": "Presentations",
+    "section": "",
+    "text": "Jennie /  @JenniexWilliams /  jenniewilliams\nJon /  @jreades /  jreades\nAcknowledgements\nWe’d like to thank the British Library (particularly the EThOS team) and Programming Historian/Jisc for their support, guidance, and encouragement. We gratefully acknowledge the contribution of the ESRC via the LISS and UBEL DTPs to making Jennie’s research possible.\nReferences\n\nSo the E-Theses Online (or EThOS) data store that we’re using is one example of the kind of work that the BL is enabling; but there is also, for instance, the Internet Archive of UK web domains as another really exciting source for those of who are computationally inclined. And, with luck, you’re starting to think about how such an approach might be useful to you…\nI hope that this has given you a sense of why we are so excited about this tutorial: first, everything we used (the data, the code, everything) is open; second, we provided the computer with few clues about the corpus, but from a fragmented record of titles and abstracts we were able to organise a large corpus into groups that are nonetheless intelligible to human beings.\nWe’ve already identified some ways that we think the results could be improved, but these will take time to implement and we’re just beginning what is likely to be a journey that last well beyond the completion of Jennie’s PhD.\nSo that’s it from us!\n\n\n\n\nJon Reades & Jennie Williams (CASA @ UCL)\n\n\n\nAndrews, D., L. Broad, P. Edwards, D. Fox, T. Gallagher, S. Garland, R. Kidd, and J. Sweeney. 2016. “The Creation and Characterisation of a National Compound Collection: The Royal Society of Chemistry Pilot.” Chem. Sci. 7. The Royal Society of Chemistry:3869–78. https://doi.org/10.1039/C6SC00264A.\n\n\nFirth, J. R. 1957. “A Synopsis of Linguistic Theory, 1930-1955.” Studies in Linguistic Analysis. Basil Blackwell.\n\n\nHowe, K. 2015. “A Novel Use of PhD Data: Investigating the State of the Dementia Workforce.” 2015. https://blogs.bl.uk/science/2015/09/a-novel-use-of-phd-data.html.\n\n\nMontgomery, C. 2019. “Surfacing ‘Southern’ Perspectives on Student Engagement with Internationalization: Doctoral Theses as Alternative Forms of Knowledge.” Journal of Studies in International Education 23 (1):123–38. https://doi.org/10.1177/1028315318803743.\n\n\nTshitoyan, V., J. Dagdelen, L. Weston, A. Dunn, Z. Rong, O. Kononova, K. A. Persson, C. Gerbrand, and J. Anubhav. 2019. “Unsupervised Word Embeddings Capture Latent Knowledge from Materials Science Literature.” Nature 571 (July):95–98. https://doi.org/10.1038/s41586-019-1335-8."
+  },
+  {
+    "objectID": "dcdc22/index.html#section-4",
+    "href": "dcdc22/index.html#section-4",
+    "title": "Presentations",
+    "section": "",
+    "text": "Jennie /  @JenniexWilliams /  jenniewilliams\nJon /  @jreades /  jreades\nAcknowledgements\nWe’d like to thank the British Library (particularly the EThOS team) and Programming Historian/Jisc for their support, guidance, and encouragement. We gratefully acknowledge the contribution of the ESRC via the LISS and UBEL DTPs to making Jennie’s research possible.\nReferences\n\nSo the E-Theses Online (or EThOS) data store that we’re using is one example of the kind of work that the BL is enabling; but there is also, for instance, the Internet Archive of UK web domains as another really exciting source for those of who are computationally inclined. And, with luck, you’re starting to think about how such an approach might be useful to you…\nI hope that this has given you a sense of why we are so excited about this tutorial: first, everything we used (the data, the code, everything) is open; second, we provided the computer with few clues about the corpus, but from a fragmented record of titles and abstracts we were able to organise a large corpus into groups that are nonetheless intelligible to human beings.\nWe’ve already identified some ways that we think the results could be improved, but these will take time to implement and we’re just beginning what is likely to be a journey that last well beyond the completion of Jennie’s PhD.\nSo that’s it from us!\n\n\n\n\nJon Reades & Jennie Williams (CASA @ UCL)\n\n\n\nAndrews, D., L. Broad, P. Edwards, D. Fox, T. Gallagher, S. Garland, R. Kidd, and J. Sweeney. 2016. “The Creation and Characterisation of a National Compound Collection: The Royal Society of Chemistry Pilot.” Chem. Sci. 7. The Royal Society of Chemistry:3869–78. https://doi.org/10.1039/C6SC00264A.\n\n\nFirth, J. R. 1957. “A Synopsis of Linguistic Theory, 1930-1955.” Studies in Linguistic Analysis. Basil Blackwell.\n\n\nHowe, K. 2015. “A Novel Use of PhD Data: Investigating the State of the Dementia Workforce.” 2015. https://blogs.bl.uk/science/2015/09/a-novel-use-of-phd-data.html.\n\n\nMontgomery, C. 2019. “Surfacing ‘Southern’ Perspectives on Student Engagement with Internationalization: Doctoral Theses as Alternative Forms of Knowledge.” Journal of Studies in International Education 23 (1):123–38. https://doi.org/10.1177/1028315318803743.\n\n\nTshitoyan, V., J. Dagdelen, L. Weston, A. Dunn, Z. Rong, O. Kononova, K. A. Persson, C. Gerbrand, and J. Anubhav. 2019. “Unsupervised Word Embeddings Capture Latent Knowledge from Materials Science Literature.” Nature 571 (July):95–98. https://doi.org/10.1038/s41586-019-1335-8."
+  },
+  {
+    "objectID": "dcdc22/index.html#cleaning-3",
+    "href": "dcdc22/index.html#cleaning-3",
+    "title": "Presentations",
+    "section": "Cleaning",
+    "text": "Cleaning\n\n\n\n\n\n\n\nSource Text\nCleaned Text\n\n\n\n\nThe economic effects of resource extraction in developing countries. This thesis presents three core chapters examining different aspects of the relationship between natural resources and economic development…\neconomic effect resource extraction develop_country present_three core examine different_aspect relationship natural_resource economic_developmen…\n\n\nMaking sense of environmental governance : a study of e-waste in Malaysia. The nature of e-waste, which is environmentally disastrous but economically precious, calls for close policy attention at all levels of society, and between state and non-state actors…\nmaking_sense environmental_governance study waste malaysia nature waste environmentally disastrous economically precious call close policy attention level society state_non_state actor…\n\n\nAn exploratory study of the constructions of ‘mental health’ in the Afro Caribbean community in the United Kingdom. Afro Caribbean people living in the United Kingdom have historically been overrepresented in the ‘mental health’ system…\nexploratory_study construction mental_health caribbean community united_kingdom caribbean people_live united_kingdom historically mental_health system…\n\n\n\n\nThis table compares three randomly-selected documents before and after cleaning to give you a sense of what this process details. You can see that things like captialisation, punctuation and, to a lesser extent, plurals have gone, together with low- and high-frequency words such as ‘a’ and ‘the’."
+  },
+  {
+    "objectID": "dcdc22/index.html#learning-3",
+    "href": "dcdc22/index.html#learning-3",
+    "title": "Presentations",
+    "section": "Learning",
+    "text": "Learning\n\n\n\n\n\n\n\n\n\n\nTerm\nDim 1\nDim 2\nDim 3\nTop 7 Most Similar\n\n\n\n\naccelerator\n-2.597380\n0.562458\n3.047121\nbeam, cern, facility, spectrometer, beam_energy\n\n\nlondon_stock_exchange\n0.516811\n-0.935569\n1.090004\nipo, ftse, stock_market, announcement, lse\n\n\nnational_health_service\n1.782367\n-2.309419\n-2.430357\nnhs, public_sector, emergency, public_health, developed_world\n\n\n\n\nSo what the word embedding process does it to further reduce that down–embedding is the technical term–to about 3 million elements that replace words with numbers using a so-called ‘neural network’. The reduction process takes full advantage of the context matrix to try to ensure that words that are used in the same context end up with similar ‘embeddings’.\nHere, again, are some examples. On the left side we have a term from the corpus. The next three columns are the first 3 of the 100 dimensional embedding that we calculated using the word embedding algorithm. So there are 97 more dimensions but for obvious reasons I’m not showing them here. These numbers don’t mean anything to us, but they do mean something to the computer.\nFinally, on the right side we see terms that are near–meaning that they have similar values in their 100 columns–to the term of hte left side. So accelerator is ‘near’ to beam, CERN, and other things having to do with high-energy physics, while national health service is, unsurprisingly, near to NHS, public sector, and public health, amongst others."
+  },
+  {
+    "objectID": "dcdc22/index.html#how-did-we-do-visualising-the-corpus",
+    "href": "dcdc22/index.html#how-did-we-do-visualising-the-corpus",
+    "title": "Presentations",
+    "section": "How Did We Do? Visualising the Corpus",
+    "text": "How Did We Do? Visualising the Corpus"
+  },
+  {
+    "objectID": "dcdc22/index.html#how-did-we-do-clustering-accuracy",
+    "href": "dcdc22/index.html#how-did-we-do-clustering-accuracy",
+    "title": "Presentations",
+    "section": "How Did We Do? Clustering Accuracy",
+    "text": "How Did We Do? Clustering Accuracy\n\n\nTable 1: Clustering Results\n\n\n\n\n(a) DDC Class (DDC1) 2 Cluster Results\n\n\nCluster\nScience\nSocial sciences\n\n\n\n\nScience\n26,591\n479\n\n\nSocial sciences\n676\n20,948\n\n\n\n\n\n\n(b) DDC Division (DDC2) 4 Cluster Results\n\n\nCluster\nBiology\nEconomics\nPhysics\nSocial sciences\n\n\n\n\nBiology\n17,498\n214\n514\n178\n\n\nEconomics\n417\n11,063\n79\n1,050\n\n\nPhysics\n230\n45\n8,349\n42\n\n\nSocial sciences\n165\n1,880\n15\n6,955\n\n\n\n\n\n\n\nAt the highest level we were, on average, 98% accurate.\nAt the DDC2 level we were, on average, 90% accurate but this masks some variation: in Biology and Physics we had more success in correctly classifying PhDs than we did in Economics and Social science. Roughly a 10% difference in precision and recall.\nSince we don’t really know what our clusters represent - thats the point of ‘unsupervised’ machine learning - lets see how they compare with disciplines (in the form of DDC categories), its a good place to start. If every document in the sampled corpus was assigned to an NLP-generated cluster that matches with 1 discipline exactly, then we’d expect to see only 1 cell per row populated, usually along the diagonal.\nWhat’s interesting to see, is just how close we do come to finding Earth Science and Computer Science in their own clusters: 92% of Earth Science theses are in a single cluster, as are 97% of Computer Science theses! Similarly, Cluster 1 itself is made up of 95% Computer Science theses. For Cluster 2 its 92% Earth Science ! Things are a little more complicated for History: I’d probably conclude that 3 clusters is a better cut point, and it might help to realise that the Geography DDC actually falls under history in the first place!\nClearly there is a reltionship there but its not clear cut, and that is OK, especially in the case of Geography, a subject area more inter-disciplinary than say History, and under-represented from the start in terms of total numbers of theses. We see that 22% of ‘Geography’ theses are more aligned with Computer science & Earth Sciences than with History. To conclude: Clustering is a summarising mechanism, it doesn’t matter whether the groups it creates are ‘real’ or immediately recognisable groups, but I need to investigate whether the groupings I have found are actually useful in some way."
+  }
+]
