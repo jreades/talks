@@ -342,18 +342,15 @@
 
 
 <section>
-<section id="automatic-assignment-of-dewey-decimal-classifications-using-nlp" class="title-slide slide level1 center" data-background-image="./img/books.png" data-background-opacity=".18">
-<h1>Automatic assignment of <br>Dewey Decimal Classifications using NLP</h1>
+<section id="comparing-automated-document-classification-using-word-embeddings-to-expert-assigned-dewey-decimal-classifications" class="title-slide slide level1 center" data-background-image="./img/books.png" data-background-opacity=".18">
+<h1>Comparing automated document classification using word embeddings to expert-assigned Dewey Decimal classifications</h1>
 <aside class="notes">
-<p>10 minutes to talk!</p>
-<p>Our original title was more precise about what we <em>do</em>, but probably more of a mystery to many of you as to what we’re actually <em>doing</em>.</p>
 <p>We hope to achieve two things with this tutorial:</p>
 <ol type="1">
 <li>To briefly explain how Natural Language Processing (NLP) opens up new ways of engaging with archives.</li>
 <li>To test whether NLP can measure up to the expertise of a human on document classification.</li>
 </ol>
 <p>To be clear, we see this as augmenting existing practices: I hope no one comes away from this thinking that we’re suggesting that NLP can somehow replace librarians.</p>
-<p>So in the remainder of this talk we hope to (briefly) look at how we handle text ‘at scale’ and then apply this technique to a real-world archive to make a small contribution to existing practices.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -376,7 +373,7 @@
 </figure>
 </div>
 <aside class="notes">
-<p>Our tutorial makes use of the British Library’s EThOS data set. Ethos is, technically, a metadata store because it doesn’t directly store the thesis itself; rather, it is data about theses: things like the title, author, and date of submission. The vast majority of <strong>UK</strong> doctoral theses have a metadata record in EThOS:</p>
+<p>Our tutorial makes use of the British Library’s EThOS data set. Ethos is, technically, metadata because stores data <em>about</em> theses: the title, author, date of submission, etc. The vast majority of <strong>UK</strong> doctoral theses have a metadata record in EThOS:</p>
 <ul>
 <li>Earliest is in Latin (pre-dates the modern PhD by 100 years)!</li>
 <li>Over 520,000 records (and growing continuously)</li>
@@ -459,9 +456,8 @@
 </tbody>
 </table>
 <aside class="notes">
-<p>Theses have already been used via largely manual keyword and topic selection to generate higher-level views of chemical compounds <span class="citation" data-cites="Andrews:2016">(<a href="#/ref-Andrews:2016" role="doc-biblioref" onclick="return false;">Andrews et al. 2016</a>)</span>, post-colonial relations <span class="citation" data-cites="Montgomery:2019">(<a href="#/ref-Montgomery:2019" role="doc-biblioref" onclick="return false;">Montgomery 2019</a>)</span>, and career progression in dementia research <span class="citation" data-cites="Howe:2015">(<a href="#/ref-Howe:2015" role="doc-biblioref" onclick="return false;">Howe 2015</a>)</span>.</p>
-<p>But if we are looking to categorise or classify dissertations, then we get into some trickier areas: there is definitely evidence of changing practices–whether because the university librarians didn’t have access to the more detailed information, such as abstract, on each thesis or because the practices of academic scholarship themselves, changed.</p>
-<p>And just a reminder: DDC stands for Dewey Decimal Classification which is still in wide use as an archive management and storage system!</p>
+<p>Ethos has already been used via manual keyword and topic selection to select theses offering insight into novel chemical compounds <span class="citation" data-cites="Andrews:2016">(<a href="#/ref-Andrews:2016" role="doc-biblioref" onclick="return false;">Andrews et al. 2016</a>)</span>, post-colonial relations <span class="citation" data-cites="Montgomery:2019">(<a href="#/ref-Montgomery:2019" role="doc-biblioref" onclick="return false;">Montgomery 2019</a>)</span>, and career progression in dementia research <span class="citation" data-cites="Howe:2015">(<a href="#/ref-Howe:2015" role="doc-biblioref" onclick="return false;">Howe 2015</a>)</span>.</p>
+<p>But if we want to categorise dissertations, then things get trickier: there is clear evidence of changing practices in the completeness measures, but the DDC, which as a reminder stands for Dewey Decimal Classification, is fairly consistent throughout.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -508,10 +504,10 @@
 </tbody>
 </table>
 <aside class="notes">
-<p>To test our approach, we chose four disciplines that we thought would present a range of challenges for an automated approach. Certainly, previous classification systems would have struggled.</p>
-<p>But why do I say ‘expert label’? This is a ‘term of art’, if you will, from Machine Learning where an ‘expert-assigned label’ is part of the training process: Google’s image search and street view platforms didn’t spontaneously ‘learn’ how to recognise different types of birds or crosswalks, they were trained by an army of ‘experts’ of varying abilities. If you’ve filled in one of the image-based Captchas, to verify that you’re a human being, then you’ve been dragooned into that army.</p>
-<p>So if we want to know whether our NLP approach has any merit at all, then we need to have that ‘expert-assigned label’ and that’s where the DDC comes in: although there are plenty of problems with DDCs, it does give us a sense of where a librarian thinks a piece of work belongs.</p>
-<p>That sample sample of <strong>48,743</strong> dissertations will then be fed into our NLP pipeline.</p>
+<p>So to test our approach, we used the DDC to choose four disciplines that we thought would present a range of challenges for an automated approach.</p>
+<p>We treated the DDC as the expert label, which is a ‘term of art’ from Machine Learning where it’s part of the training process: Google’s image search and street view platforms didn’t spontaneously ‘learn’ how to recognise different types of birds or crosswalks, they were trained by an army of ‘experts’ of varying abilities. If you’ve filled in one of the image-based Captchas, to verify that you’re a human being, then you’ve been dragooned into that army.</p>
+<p>So if we want to know whether our NLP approach has any merit at all, then we need that ‘expert-assigned label’ and that’s where the DDC comes in: although there are plenty of problems with DDCs, it does give us a sense of where a librarian thinks a piece of work belongs.</p>
+<p>That sample sample of <strong>48,743</strong> records is what we fed into our NLP pipeline.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -528,11 +524,13 @@
 <section id="from-text-to-data" class="title-slide slide level1 center">
 <h1>From Text to Data</h1>
 <aside class="notes">
-<p>What does that pipeline look like?</p>
-<p>We have three stages.</p>
-<p>In the cleaning stage, we are looking to standardise the texts that we’re going to process.</p>
-<p>In the learning stage, the computer processes the cleaned text in order to learn–in a statistical sense–about the corpus.</p>
-<p>And finally, in the analysis phase, we take what the computer has learned and convert that back into forms of knowledge that we humans can comprehend.</p>
+<p>So what’s a NLP pipeline?</p>
+<p>It’s three stages of data processing: cleaning, clearning, and analysis.</p>
+<ol type="1">
+<li>In the cleaning stage, we are looking to standardise the texts that we’re going to process.</li>
+<li>In the learning stage, the computer learns–in a statistical sense–about the cleaned corpus.</li>
+<li>AIn the analysis phase, we take what the computer has learned and convert that back into forms of knowledge that we humans can comprehend.</li>
+</ol>
 <p>I’m going to briefly talk through each of these on the following slides, and <em>then</em> go back an illustrate the key outputs from each stage.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -584,8 +582,8 @@
 </ul>
 <h3 id="analysis-1">Analysis</h3>
 <aside class="notes">
-<p>In a historical corpus we might see, for example, “Queen X ruled for 25 years” and “King Y ruled for 4 years”. From this we could say that Queen and King are used in similar contexts. Across a large corpus, we might also find that ‘she’ is used in the context of Queens and ‘he’ in the context of Kings.</p>
-<p>Using Machine Learning we can exploit <span class="citation" data-cites="Firth:1957">(<a href="#/ref-Firth:1957" role="doc-biblioref" onclick="return false;">Firth 1957, 11</a>)</span> observation that “You shall know a word by the company it keeps”. Working out how to do this using a process called word embedding was the breakthrough that led to the rapid advances in NLP over the past decade.</p>
+<p>Context means the words surrounding our ‘targets’. So in a historical corpus we might see, for example, “Queen X ruled for 25 years” and “King Y ruled for 4 years”. From this we could say that Queen and King are used in similar contexts. Across a large corpus, we might also find that ‘she’ is used in the context of Queens and ‘he’ in the context of Kings.</p>
+<p>Using Machine Learning we can exploit <span class="citation" data-cites="Firth:1957">Firth (<a href="#/ref-Firth:1957" role="doc-biblioref" onclick="return false;">1957</a>)</span>, p.11 observation that “You shall know a word by the company it keeps”. Working out how to do this using a process called word embedding was the breakthrough that led to the rapid advances in NLP over the past decade.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -609,9 +607,8 @@
 <li>Validation of Results</li>
 </ul>
 <aside class="notes">
-<p>But even word embeddings are still too much in their raw form for clustering algorithms, so we reduce this still further using a technique called UMAP, which allows us to distill everything down to just a few dimensions.</p>
-<p>After that, we cluster the documents using a technique called hierarchical clustering, which allows us to find similar documents in the corpus.</p>
-<p>And finally, validation: can we measure how well we did?</p>
+<p>But even word embeddings are still too much in their raw form for clustering algorithms, so we use a technique called UMAP, which allows us to distill everything down further.</p>
+<p>After that, we cluster the documents and, finally, try to measure how well we did.</p>
 <p>So let’s now loop back and briefly look at what went in and what came out of each phase.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -655,6 +652,7 @@
 </table>
 <aside class="notes">
 <p>This table compares three randomly-selected documents before and after cleaning to give you a sense of what this process details. You can see that things like captialisation, punctuation and, to a lesser extent, plurals have gone, together with low- and high-frequency words such as ‘a’ and ‘the’.</p>
+<p>You’ll also see some underscores, that’s where the computer found statistical associations between pairs or triplets of words across multiple documents.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -713,9 +711,9 @@
 </tbody>
 </table>
 <aside class="notes">
-<p>So what the word embedding process does it to further reduce that down–embedding is the technical term–to about <em>3 million</em> elements that replace words with <em>numbers</em> using a so-called ‘neural network’. The reduction process takes full advantage of the context matrix to try to ensure that words that are used in the same context end up with similar ‘embeddings’.</p>
-<p>Here, again, are some examples. On the left side we have a term from the corpus. The next three columns are the first 3 of the 100 dimensional embedding that we calculated using the word embedding algorithm. So there are 97 more dimensions but for obvious reasons I’m not showing them here. These numbers don’t mean anything to us, but they <em>do</em> mean something to the computer.</p>
-<p>Finally, on the right side we see terms that are <em>near</em>–meaning that they have similar values in their 100 columns–to the term of hte left side. So accelerator is ‘near’ to beam, CERN, and other things having to do with high-energy physics, while national health service is, unsurprisingly, near to NHS, public sector, and public health, amongst others.</p>
+<p>What the word embedding process does it to convert that text to a vector (that’s a row) of 100 numbers–embedding is the technical term–using a ‘neural network’. The reduction process tries to ensure that words that are used in similar context end up with similar numeric representations.</p>
+<p>Here, again, are some examples. On the left side we have a term from the corpus. The next three columns are the first 3 of the 100 dimensions that we calculated using the word embedding algorithm. So there are 97 more dimensions, but for obvious reasons I’m not showing them here. These numbers don’t mean anything to us, but they <em>do</em> mean something to the computer.</p>
+<p>Finally, on the right side we see terms that are <em>near</em>–meaning that they have similar embeddings–to the term on the left side. So accelerator is ‘near’ to beam, CERN, and other things having to do with high-energy physics, while national health service is, unsurprisingly, near to NHS, public sector, and public health, amongst others.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -732,7 +730,8 @@
 <h2>How Did We Do? Visualising the Corpus</h2>
 <img data-src="./img/DDC_Plot.png" class="r-stretch" alt="Visualisation of corpus after UMAP dimensionality reduction of Word Embeddings">
 <aside class="notes">
-
+<p>It’s a bit mind-bending, but we can take all the vectors for words in a document and average them together to get a useful representation of the document. So now each <em>document</em> is represented by a 100-dimension vector.</p>
+<p>I can’t plot or understand that, but I can use UMAP to project those 100 dimensions down into just 2, which is what this visualisation shows. Each dot is a document, coloured according to its original DDC. So the documents are, for the most part, well-separated which is a really promising sign, but there’s so much data here it’s almost hard to make sense of what’s going on.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -759,7 +758,7 @@
 <tr class="header">
 <th style="text-align: left;">Cluster</th>
 <th style="text-align: right;">Science</th>
-<th style="text-align: right;">Social<br />sciences</th>
+<th style="text-align: right;">Social<br>sciences</th>
 </tr>
 </thead>
 <tbody>
@@ -823,11 +822,9 @@
 </div>
 </div>
 <aside class="notes">
-<p>At the highest level we were, on average, 98% accurate.</p>
-<p>At the DDC2 level we were, on average, 90% accurate but this masks some variation: in Biology and Physics we had more success in correctly classifying PhDs than we did in Economics and Social science. Roughly a 10% difference in precision and recall.</p>
-<p>Since we don’t really know what our clusters represent - thats the point of ‘unsupervised’ machine learning - lets see how they compare with disciplines (in the form of DDC categories), its a good place to start. If every document in the sampled corpus was assigned to an NLP-generated cluster that matches with 1 discipline exactly, then we’d expect to see only 1 cell per row populated, usually along the diagonal.</p>
-<p>What’s interesting to see, is just how close we do come to finding Earth Science and Computer Science in their own clusters: 92% of Earth Science theses are in a single cluster, as are 97% of Computer Science theses! Similarly, Cluster 1 itself is made up of 95% Computer Science theses. For Cluster 2 its 92% Earth Science ! Things are a little more complicated for History: I’d probably conclude that 3 clusters is a better cut point, and it might help to realise that the Geography DDC actually falls under history in the first place!</p>
-<p>Clearly there is a reltionship there but its not clear cut, and that is OK, especially in the case of Geography, a subject area more inter-disciplinary than say History, and under-represented from the start in terms of total numbers of theses. We see that 22% of ‘Geography’ theses are more aligned with Computer science &amp; Earth Sciences than with History. To conclude: Clustering is a summarising mechanism, it doesn’t matter whether the groups it creates are ‘real’ or immediately recognisable groups, but I need to investigate whether the groupings I have found are actually useful in some way.</p>
+<p>These tables are called confusion matrices. If every document was assigned to an NLP-generated cluster that matched with one DDC exactly, then we’d expect to see only the diagonal of this matrix populated. Those are the bold numbers. So any number that isn’t bold is a case of our NLP process and the university librarian having a difference of opinion.</p>
+<p>So this table tells you that, at the highest level we were about 98% accurate. At the DDC2 level we were about 90% accurate but this masks some variation: in Biology and Physics we had more success in correctly classifying PhDs than we did in Economics and Social science. Roughly a 10% difference in precision and recall.</p>
+<p>And where we’ve struggled are exactly the places you’d expect a human to struggle: distinguishing certain types of biology from physics, when does economics become social science?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -845,9 +842,8 @@
 <p><img data-src="./img/DDC_Cloud-c4-ddcPhysics-tfidf.png" alt="Word clouds for dissertations assigned to Physics DDC but clustered with another topic."></p>
 <p><img data-src="./img/DDC_Cloud-c4-ddcEconomics-tfidf.png" alt="Word clouds for dissertations assigned to Economics DDC but clustered with another topic."></p>
 <aside class="notes">
-<p>What about the off-diagonals? On the preceding slide we’ve assumed that anything not marked in bold is probably a <em>mistake</em> because it’s now how the expert classified it.</p>
-<p>But it’s worth asking if a time-pressured archivist who may be unfamiliar with a particular field is always going to make the right call. I certainly wouldn’t be the person to ask which subdivision of Physics or Medieval Literature a text was most appropriate for.</p>
-<p>So here we’ve inverted the focus from where we agreed with the experts to where NLP <em>disagreed</em>. We can use standard techniques (covered in <a href="https://programminghistorian.org/en/lessons/analyzing-documents-with-tfidf">other <em>Programming Historian</em> tutorials</a>) to pull out potential keywords from the misclassified documents.</p>
+<p>So let’s look a little more at the off-diagonals? We’ve assumed that any difference of opinion between algorithm and expert represents a <em>mistake</em> because it’s not how the expert classified it. But it’s worth asking if a human under any number of practical pressures and constraints is always going to get it right? <em>I</em> certainly wouldn’t be the person to tell you which subdivision of Physics or Medieval Literature a text was most appropriate for.</p>
+<p>So these word clouds use a standard techniques (covered in <a href="https://programminghistorian.org/en/lessons/analyzing-documents-with-tfidf">other <em>Programming Historian</em> tutorials</a>) to pull out potential keywords from the misclassified documents.</p>
 <p>And what becomes clear pretty quickly from looking at these is that it’s entirely debateable whether the computer is ‘wrong’. The 42 physics PhDs clustered with the social sciences look a lot more like the interests of social science in education, philosophy, and training than they do like string theory or particle accelerators. Similarly, the Economics misclassifications are all too easy to interpret logically in terms of valuing the natural environment, issues of identity, and energy generation!</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -880,10 +876,10 @@
 </ul>
 <aside class="notes">
 <p>So where do we see this kind of approach being useful to ’collections and communities?</p>
-<p>The first and most obvious is dealing with ‘born digital’ archives: in discussions with the BL about text-mining, they’ve mentioned the issues around the growing provision of personal hard drives as part of a scientist’s or author’s bequest. I don’t know about any of you, but the thought of anyone trying to make much sense of my backup drives is slightly terrifying, and it’s worth thinking about just how much ‘data’ is stored on even the smallest individual backup. And if you’ve ever tried to find something in, say, Outlook then you’ll undoubtedly appreciate that Boolean and Regular Expression searches are not going to cut it. Making it worse that, unlike say traditional written correspondence, it will be that much harder to properly contextualise each document. So the ability to find ‘similar’ documents in a large corpus will be incredibly important, particularly where word usage has changed over time.</p>
-<p>And this, in turn, should mean fewer ‘near misses’ when we search a large body of work. Key words are a good place to start, but simpler document search tools start there, and if you don’t pick the right key word then you get back… nothing at all. Or nothing related to your interests. Quite aside from being able to suggest <em>other</em> words that might be related to your search, with Word Embeddings there’s now the possibility of detecting ‘similar usage, different disciplines or discourses’ which could actually help researchers to navigate bodies of work and disciplinary corpora.</p>
+<p>The first and most obvious is dealing with ‘born digital’ archives: in discussions with the BL about text-mining, they’ve mentioned the issues around the growing provision of personal hard drives as part of a scientist’s or author’s bequest. I don’t know about any of you, but the thought of anyone trying to make much sense of my backup drives is terrifying, and it’s worth thinking about just how much ‘data’ is stored on even the smallest personal backup.</p>
+<p>And if you’ve ever tried to find something in, say, Outlook then you’ll undoubtedly appreciate that Boolean and Regular Expression searches are not going to cut it. Making it worse is that, unlike traditional written correspondence, it will be that much harder to properly contextualise documents from a drive. So the ability to find ‘similar’ documents in a large corpus will be incredibly important, particularly where word usage has changed over time or where the same word is used to mean different things depending on the context.</p>
+<p>Key words are a good place to start, but often if you don’t pick the right key word then you get back… nothing at all. Or nothing related to your interests. So this <em>kind</em> of approach should mean fewer ‘near misses’ when we search a large corpus. Quite aside from being able to suggest <em>other</em> words that might be related to your search, with Word Embeddings there’s now the possibility of detecting ‘similar usage, different disciplines or discourses’ which could actually help researchers to navigate across disciplinary boundaries, for instance.</p>
 <p>Finally, if we put these pieces together then we might gain just a little insight – however ill-formed – into the near future. Some recent work in Material Science found that associations found in custom word embeddings (so the next step beyond what we’ve done here) actually anticipated discoveries by 2 to 3 years! The payoff in the physical sciences of getting even a year ahead of other labs could be enormous, but I’d like to believe that this also opens up more collaborative ways of peering into the future to understand the evolution of a discipline like geography: where are we now? Where does it look like we are going?</p>
-<p>The full-text of dissertations is also of longer-term interest, but is not the focus of this work. Although the BL will digitise any dissertation for a fee, coverage here too is temporally biased, since modern theses are submitted as PDFs, so it’s only older ones that need to be scanned. In fact, one hope that the BL has, is that this research might help justify the resourcing of an archival scanning process, in order to bring many more of the missing quarter of a million theses online and make them fully accessible.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
