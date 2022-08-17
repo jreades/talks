@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Presentations - Hello, QGIS!</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="..//img/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <img src="../img/CASA_Logo_no_text.png" alt="">
+    <span class="navbar-title">Presentations</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Welcome</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-recent-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recent Talks</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-recent-talks">    
+        <li>
+    <a class="dropdown-item" href="../dcdc22/index.html">
+ <span class="dropdown-text">DCDC22</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../in2science/index.html">
+ <span class="dropdown-text">In2Science UK</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started"> <span class="header-section-number">1</span> Getting Started</a></li>
+  <li><a href="#adding-osm-data" id="toc-adding-osm-data" class="nav-link" data-scroll-target="#adding-osm-data"> <span class="header-section-number">2</span> Adding OSM Data</a></li>
+  <li><a href="#get-the-remaining-data" id="toc-get-the-remaining-data" class="nav-link" data-scroll-target="#get-the-remaining-data"> <span class="header-section-number">3</span> Get the Remaining Data</a></li>
+  <li><a href="#add-the-boroughs" id="toc-add-the-boroughs" class="nav-link" data-scroll-target="#add-the-boroughs"> <span class="header-section-number">4</span> Add the Boroughs</a></li>
+  <li><a href="#adding-lsoas" id="toc-adding-lsoas" class="nav-link" data-scroll-target="#adding-lsoas"> <span class="header-section-number">5</span> Adding LSOAs</a></li>
+  <li><a href="#lets-talk-data" id="toc-lets-talk-data" class="nav-link" data-scroll-target="#lets-talk-data"> <span class="header-section-number">6</span> Let’s Talk Data</a></li>
+  <li><a href="#add-the-census-data" id="toc-add-the-census-data" class="nav-link" data-scroll-target="#add-the-census-data"> <span class="header-section-number">7</span> Add the Census Data</a></li>
+  <li><a href="#joining-data" id="toc-joining-data" class="nav-link" data-scroll-target="#joining-data"> <span class="header-section-number">8</span> Joining Data</a></li>
+  <li><a href="#save-get-coffee" id="toc-save-get-coffee" class="nav-link" data-scroll-target="#save-get-coffee"> <span class="header-section-number">9</span> Save &amp; Get Coffee</a></li>
+  <li><a href="#congratulations" id="toc-congratulations" class="nav-link" data-scroll-target="#congratulations"> <span class="header-section-number">10</span> Congratulations!</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jreades/presentations/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Hello, QGIS!</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="getting-started" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">1</span> Getting Started</h2>
+<p>QGIS can be found under the Raspberry Pi menu (top-left) and then in <em>Education</em>. Start QGIS and you’ll get a welcome page showing previously created projects (if any) and some general information about QGIS. Next, create a new, empty document by clicking on the… wait for it… `New Empty Document’ area visible on the Welcome Page <em>or</em> on the ‘blank’ document icon at the top-left of the screenshot below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">QGIS Welcome Screen</figcaption><p></p>
+<p><a href="./img/qgis-welcome.png" class="lightbox" title="QGIS Welcome Screen" data-gallery="start-up"><img src="./img/qgis-welcome.png" class="img-fluid figure-img" alt="The QGIS Welcome Screen"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Ready to Begin</figcaption><p></p>
+<p><a href="./img/qgis.png" class="lightbox" title="Ready to Begin" data-gallery="start-up"><img src="./img/qgis.png" class="img-fluid figure-img" alt="An empty QGIS document"></a></p>
+</figure>
+</div>
+</section>
+<section id="adding-osm-data" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="adding-osm-data"><span class="header-section-number">2</span> Adding OSM Data</h2>
+<p>OSM stands for ‘Open Street Map’ and it’s the largest open data set in the world – companies like Apple and Uber rely on OSM (and contribute data to it) so that they aren’t dependent on Google!</p>
+<section id="add-osm-map-layer" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="add-osm-map-layer"><span class="header-section-number">2.1</span> Add OSM Map Layer</h3>
+<p>Under the <code>Web</code> menu item at the top of your screen is a QuickMapServices option:</p>
+<ol type="1">
+<li>Under <code>Web</code> in the main application window…</li>
+<li>Pick <code>QuickMapServices</code></li>
+<li>Pick <code>OSM</code> (Open Street Map)</li>
+<li>Pick <code>OSM Standard</code></li>
+</ol>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Adding the OSM Layer</figcaption><p></p>
+<p><a href="./img/adding-osm.png" class="lightbox" title="Adding the OSM Layer" data-gallery="quarto-lightbox-gallery-4"><img src="./img/adding-osm.png" class="img-fluid figure-img" alt="Screenshot from QGIS on a Mac showing location of the QuickMapServices OSM layer" style="width:50.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="find-brixton" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="find-brixton"><span class="header-section-number">2.2</span> Find Brixton</h3>
+<p>Now zoom in on London using the magnifying glass (with the <code>+</code>) as below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Zooming In</figcaption><p></p>
+<p><a href="./img/zoom.png" class="lightbox" title="Zooming In" data-gallery="controls"><img src="./img/zoom.png" class="img-fluid figure-img" alt="Zooming in on Brixton in OSM"></a></p>
+</figure>
+</div>
+<p>Panning (keeping the same zoom level but noving the map) is done using the Hand icon or by pressing the space bar and dragging the mouse. If you leave the mouse hovering over a button you will get some simple help to tell you what the button <em>does</em>. See if you can get Brixton in the centre of the map!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Controls</figcaption><p></p>
+<p><a href="./img/zoom-pan-controls.png" class="lightbox" title="Controls" data-gallery="controls"><img src="./img/zoom-pan-controls.png" class="img-fluid figure-img" alt="Zooming and panning controls"></a></p>
+</figure>
+</div>
+</section>
+<section id="check-out-street-view" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="check-out-street-view"><span class="header-section-number">2.3</span> Check Out Street View</h3>
+<p>If you click on the Google Street View icon (<a href="./img/street_view.png" class="lightbox" title="Street View icon" data-gallery="quarto-lightbox-gallery-7"><img src="./img/street_view.png" height="20" alt="Street View icon"></a>) and then click+drag anywhere on the map you will open Google Street View in your web browser showing the view from that point in the direction selected.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Street View Tool in Action</figcaption><p></p>
+<p><a href="./img/street_view_ui.png" class="lightbox" title="Street View Tool in Action" data-gallery="streetview"><img src="./img/street_view_ui.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Street View Tool Output</figcaption><p></p>
+<p><a href="./img/street_view_output.png" class="lightbox" title="Street View Tool Output" data-gallery="streetview"><img src="./img/street_view_output.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="add-some-real-data" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="add-some-real-data"><span class="header-section-number">2.4</span> Add Some ‘Real’ Data</h3>
+<p>Under the <code>Vector</code> menu you’ll see a <code>QuickOSM</code> option, and then a second <code>QuickOSM</code> menu item. select this. This will open a new popup menu.</p>
+<p>We are now going to build a <em>query</em>, meaning that we’ll be asking OpenStreetMap’s servers to find us locations fitting a particular description/having a particular tag. There are <em>many</em> tags and many <em>choices</em>, so a good way to find out what you want is to Google <code>OSM wiki &lt;x&gt;</code> where <code>&lt;x&gt;</code> is whatever you’re looking for (<em>e.g.</em> yoga studios, bars, etc.).</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Data Volumes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>London has a <em>lot</em> of data, so you <em>must</em> change the <code>In</code> drop-down to <code>Canvas Extent</code> and ensure you’re fairly zoomed-in on Brixton if you don’t want to be waiting a <em>very</em> long time for data.</p>
+</div>
+</div>
+<p>As a first go, your query could look like this one for ‘local bars’:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Quick OSM Query for Bars in the Area</figcaption><p></p>
+<p><a href="./img/amenity.png" class="lightbox" title="Quick OSM Query for Bars in the Area" data-gallery="osm-query"><img src="./img/amenity.png" class="img-fluid figure-img" alt="A query for local bars (i.e. those on the canvas) in OSM"></a></p>
+</figure>
+</div>
+<p>Depending on how far you were zoomed in when you created this query, after clicking <code>Run Query</code> you might get an answer nearly instantly or have to wait up to a couple of minutes! When the query completes you <em>should</em> see that <em>two</em> new layers have appeared in the lower left-hand corner of the QGIS app:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Amenity layers created by Quick OSM Query</figcaption><p></p>
+<p><a href="./img/amenity_layers.png" class="lightbox" title="Amenity layers created by Quick OSM Query" data-gallery="osm-query"><img src="./img/amenity_layers.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>If you’re having trouble seeing the bars that you’ve added, try turning off the <code>OSM Standard</code> layer by clicking the tic-box next to its name!</p>
+</section>
+<section id="more-information-please" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="more-information-please"><span class="header-section-number">2.5</span> More Information Please!</h3>
+<p>Select one of the two new <code>amenity_bar</code> layers by clicking on it in the Layers area, and then pick the ‘info’ button (it’s an arrow with an <em>i</em> in a blue circle). See what information you can find out about some of the bars!</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Active Layers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice that you can <em>only</em> get information for a layer that you’ve <strong>selected</strong> in the Layers panel. In the screenshot below <code>amenity_bar</code> with a circle icon is selected so I can only use the ‘info’ button to get more information about data <strong>in that layer</strong>.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Inspecting an individual element</figcaption><p></p>
+<p><a href="./img/amenity_info.png" class="lightbox" title="Inspecting an individual element" data-gallery="osm-query"><img src="./img/amenity_info.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="questions" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="questions"><span class="header-section-number">2.6</span> Questions</h3>
+<ol type="1">
+<li>Why do you think that <strong>two</strong> layers named <code>amenity_bar</code> were added to QGIS? <em>Hint:</em> try right-clicking on each one in turn and picking <code>Zoom to Layers</code> <em>then</em> turn each amenity layer on and off in turn while seeing if you can spot the difference!</li>
+<li>Using the information button, can you think about <strong>other ways</strong> that you might be able to find Brixton bars? <em>Hint:</em> while using <code>amenity=bar</code> is likely the <em>best</em> way, it’s definitely not the <em>only</em> way! Are there other attributes that might help?</li>
+<li>Using the tip below, see if you can use <em>multiple</em> criteria in your QuickOSM search to find Yoga Studios in the area. <em>Hint:</em> this will be a Boolean logic problem that you would encounter in any programming class.</li>
+<li>Using what you’ve been discussing in previous classes together with some ideas contained in <a href="https://twitter.com/cynthiagreenlee/status/1559317089487167489?s=21&amp;t=TrhkqzcSkf645oJ6NlcqWA">this Twitter thread</a> see if you can come up with some other QuickOSM queries to pull data on possible markers of gentrification in the Brixton area.</li>
+</ol>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Using the OSM Wiki
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you’re not sure how to find something then check the <a href="https://wiki.openstreetmap.org/wiki/Main_Page">OSM Wiki</a>. For instance, if you Google <a href="https://wiki.openstreetmap.org/wiki/Tag:sport%3Dyoga"><code>OSM Wiki yoga</code></a> you will get tips on searching for yoga studios using <strong>synonyms</strong>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="get-the-remaining-data" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="get-the-remaining-data"><span class="header-section-number">3</span> Get the Remaining Data</h2>
+<p>OK, now let’s get the rest of data that we need for this practical. I’ve (partially) prepared some data for you so that you don’t have to track everything down yourselves.</p>
+<p>There are three files you need:</p>
+<ol type="1">
+<li><a href="https://github.com/jreades/talks/raw/gh-pages/in2science/data/London.gpkg">Borough Boundaries</a></li>
+<li><a href="https://github.com/jreades/talks/raw/gh-pages/in2science/data/LSOA_2011_London.zip">London LSOA boundaries</a></li>
+<li><a href="https://github.com/jreades/talks/raw/gh-pages/in2science/data/LSOA_2011_London.zip">LSOA-level Census Data</a></li>
+</ol>
+<p>Once these have been downloaded, I would suggest moving all of these to your ‘Documents’ folder before double-clicking them to unzip the Zip archives. The GeoPackage (<code>.gpkg</code>) does <em>not</em> need to be unzipped.</p>
+</section>
+<section id="add-the-boroughs" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="add-the-boroughs"><span class="header-section-number">4</span> Add the Boroughs</h2>
+<p>‘Vector’ data that is <em>already</em> ready to display on a map is easy to add to QGIS. Under the <code>Layer</code> menu option select <code>Add Layer</code> then <code>Add Vector Layer</code> as shown below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Adding a Vector Layer</figcaption><p></p>
+<p><a href="./img/add_vector_layer.png" class="lightbox" title="Adding a Vector Layer" data-gallery="adding-layer"><img src="./img/add_vector_layer.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>This will bring up the <code>Add Vector Layer</code> popup and you then click on the <code>...</code> to navigate to where you saved <code>London.gpkg</code>. Select this, click <code>Add</code>, and see what happens!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Vector Layer Popup</figcaption><p></p>
+<p><a href="./img/add_vector_layer_ui.png" class="lightbox" title="Vector Layer Popup" data-gallery="adding-layer"><img src="./img/add_vector_layer_ui.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Hmmmmm, what is <em>this</em>?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Transform Choices</figcaption><p></p>
+<p><a href="./img/add_vector_layer_transforms.png" class="lightbox" title="Transform Choices" data-gallery="adding-layer"><img src="./img/add_vector_layer_transforms.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>For now, just take the selected the option, click <code>OK</code> to make the Transform popup go away, and then click <code>Close</code> to make the Add Vector Layer popup disappear.</p>
+<p><strong>You will now need to zoom <em>out</em> quite a bit to see what you’ve done!</strong></p>
+<section id="rearranging-layers" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="rearranging-layers"><span class="header-section-number">4.1</span> Rearranging Layers</h3>
+<p>Take a close look at the Layers area in QGIS. If London has ended up in between your <code>amenity...</code> layers you may want to rearrange things so that it’s at the <strong>bottom</strong>, just above the <strong>OSM Standard</strong> layer. You do that by clicking-and-dragging as shown here:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Dragging layers to rearrage</figcaption><p></p>
+<p><a href="./img/dragging_layers.gif" class="lightbox" title="Dragging layers to rearrage" data-gallery="quarto-lightbox-gallery-16"><img src="./img/dragging_layers.gif" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="styling-boroughs" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="styling-boroughs"><span class="header-section-number">4.2</span> Styling Boroughs</h3>
+<p>Now that you can clearly see both London and any OSM layers:</p>
+<ol type="1">
+<li>Right-click (Ctrl+Click on a Mac) on the layer and pick <code>Properties</code> to open the <code>Layer Properties</code> popup</li>
+<li>Pick <code>Symbology</code> from the area on the left.</li>
+<li>Click on the area labelled <code>Simple Fill</code> (see below).</li>
+<li>Change the <code>Fill color</code> to <code>No brush</code></li>
+<li>Change the <code>Stroke color</code> to a dark red.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Video of Changing Layer Style</figcaption><p></p>
+<p><a href="./img/change_layer_style.mov" class="lightbox" title="Video of Changing Layer Style" data-gallery="quarto-lightbox-gallery-17"><video src="./img/change_layer_style.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/change_layer_style.mov">Video</a></p>
+</figure>
+</div>
+<p>Your Layer Properties should look something like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/lp-boroughs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="./img/lp-boroughs.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Click <code>OK</code> and have a close look at your map of London. You should now see the boroughs outlined in red with the OSM Standard layer visible ‘behind’ and any QuickOSM layers visible ‘on top’.</p>
+</section>
+<section id="labelling-boroughs" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="labelling-boroughs"><span class="header-section-number">4.3</span> Labelling Boroughs</h3>
+<p>Right-click on the London layer again to bring up <code>Layer Properties</code>, but this time pick <code>Labels</code> from the left-hand side:</p>
+<ol type="1">
+<li>Change <code>No labels</code> to <code>Single labels</code>.</li>
+<li>The <code>Value</code> should already be set to <code>NAME</code> (which is what we want)</li>
+<li>Change the font size to 14 (from 10.0000).</li>
+<li>Click <code>OK</code> and you should now see labels for each borough.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Video of Adding Layer Labels</figcaption><p></p>
+<p><a href="./img/adding-labels.mov" class="lightbox" title="Video of Adding Layer Labels" data-gallery="quarto-lightbox-gallery-19"><video src="./img/adding-labels.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/adding-labels.mov">Video</a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="adding-lsoas" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="adding-lsoas"><span class="header-section-number">5</span> Adding LSOAs</h2>
+<p>Find and double-click on <code>LSOA_2011_London_gen_MHW.shp</code>. Your computer <em>might</em> add the layer to your current QGIS document, or the computer might just say that it has no idea what to do. The better way to add data is using the <code>Add Vector Layer</code> menu option or short-cut (again).</p>
+<ol type="1">
+<li>From <code>Layer</code> select <code>Add Vector Layer</code></li>
+<li>You’ll see that you’re in the Data Source Manager popup with the <code>Vector</code> option selected.</li>
+<li>Again, click on the <code>...</code> (to the right of <code>Vector Dataset(s)</code>).</li>
+<li>And navigate to where you unzipped the unzipped LSOA files.</li>
+<li>Select <code>LSOA_2011_London_gen_MHW.shp</code></li>
+<li>Click <code>Add</code></li>
+</ol>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Rearrange the Layers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the LSOA layer has appeared on top of the London boroughs layer then just drag-and-drop to rearrange the order so that the LSOAs are ‘behind’ the boroughs!</p>
+</div>
+</div>
+<p>See if you can change the style of the LSOA layer to something like the image below. Remember that you do this through <code>Layer Properties</code>!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Map with LSOAs added</figcaption><p></p>
+<p><a href="./img/add_lsoa_data.png" class="lightbox" title="Map with LSOAs added" data-gallery="quarto-lightbox-gallery-20"><img src="./img/add_lsoa_data.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="lets-talk-data" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="lets-talk-data"><span class="header-section-number">6</span> Let’s Talk Data</h2>
+<p>OK, finally we need to add the ‘real’ data to the map! The CSV file that you downloaded and unzipped into <code>Census_2001_2011.csv</code> contains the following attributes:</p>
+<ul>
+<li>Median House Prices in 2001 &amp; 2011</li>
+<li>Median Household Income in 2001 &amp; 2011</li>
+<li>Percentage with Level 4+ NVQ Qualifications in 2001 &amp; 2011</li>
+<li>Percentage of Higher and Lower Managerial Workers in 2001 &amp; 2011</li>
+</ul>
+<p>The first few rows look like this:</p>
+<div class="smallt">
+<table class="table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 6%">
+<col style="width: 17%">
+<col style="width: 14%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 17%">
+<col style="width: 14%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>lsoacd</th>
+<th>House Prices 2001</th>
+<th>Percentage with Level 4+ Qualifications 2001</th>
+<th>Percentage of Knowledge Workers 2001</th>
+<th>Household Income 2001</th>
+<th>House Prices 2011</th>
+<th>Percentage with Level 4+ Qualifications 2011</th>
+<th>Percentage of Knowledge Workers 2011</th>
+<th>Household Income 2011</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>E01000001</td>
+<td>255450</td>
+<td>72.3120169</td>
+<td>86.3765374</td>
+<td>45630</td>
+<td>504999.5</td>
+<td>77.5555556</td>
+<td>88.6609071</td>
+<td>65520</td>
+</tr>
+<tr class="even">
+<td>E01000002</td>
+<td>244000</td>
+<td>68.3584457</td>
+<td>86.0125261</td>
+<td>44970</td>
+<td>525000</td>
+<td>79.195669</td>
+<td>87.3626374</td>
+<td>66300</td>
+</tr>
+<tr class="odd">
+<td>E01000003</td>
+<td>175000</td>
+<td>50.3252033</td>
+<td>65.6019656</td>
+<td>36330</td>
+<td>350000</td>
+<td>56.8438003</td>
+<td>72.9057592</td>
+<td>54140</td>
+</tr>
+<tr class="even">
+<td>E01000005</td>
+<td>132000</td>
+<td>31.3237221</td>
+<td>47.1794872</td>
+<td>31530</td>
+<td>300000</td>
+<td>34.4701583</td>
+<td>46.2184874</td>
+<td>46740</td>
+</tr>
+<tr class="odd">
+<td>E01032739</td>
+<td>230000</td>
+<td>64.6043162</td>
+<td>80.6902998</td>
+<td>44710</td>
+<td>447500</td>
+<td>73.6465781</td>
+<td>84.1269841</td>
+<td>62460</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <code>lsoacd</code> is the <em>key</em> field here since it tells us what LSOA (a.k.a. small neighbourhood-type area) is being ‘talked about’ here.</p>
+<section id="questions-1" class="level4">
+<h4 class="anchored" data-anchor-id="questions-1">Questions:</h4>
+<p>Thinking as a <em>scientist</em> about what we’ve discussed in earlier sessions, answer the following questions about the data and how they might connect to questions about gentrification:</p>
+<ol type="1">
+<li>What does each <em>row</em> represent?</li>
+<li>What does each <em>column</em> represent?</li>
+<li>What is the significance of 2001 and 2011 as dates for providing us with data? <em>The answer is in the name of the file…</em></li>
+<li>Why did I provide you with <em>median</em> instead of <em>mean</em> house prices and household incomes? <em>This is a maths question and your hint is</em>: <span class="math inline">\(\sigma^{2} = \frac{\sum(x-\bar{x})^{2}}{N}\)</span>.</li>
+<li>Why did I provide you with median <em>household</em> income instead of median <em>individual</em> income? <em>This is a measurment bias question…</em></li>
+<li>What is a Level 4 (or more) NVQ and why would I include this in the file? <em>Use Google to find this out…</em></li>
+<li>Why would the share of Higher and Lower Managerial workers be included? <em>You might need to look at the <a href="https://www.ons.gov.uk/methodology/classificationsandstandards/otherclassifications/thenationalstatisticssocioeconomicclassificationnssecrebasedonsoc2010">National Statistics Socio-Economic Classification</a>.</em></li>
+</ol>
+</section>
+</section>
+<section id="add-the-census-data" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="add-the-census-data"><span class="header-section-number">7</span> Add the Census Data</h2>
+<p>Click on the <code>Layer</code> menu and then pick <code>Data Source Manager</code> (<strong>DSM</strong>) in the menu at the top of your screen. This will bring up the dialogue box below, and then pick <code>Delimited Text</code> (as in the image below).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Data Source Manager</figcaption><p></p>
+<p><a href="./img/dmg.png" class="lightbox" title="Data Source Manager" data-gallery="quarto-lightbox-gallery-21"><img src="./img/dmg.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>You now need to follow these steps <strong>carefully</strong>:</p>
+<ol class="example" type="1">
+<li>Make sure that <code>Delimitted Text</code> is selected in the left-hand area.</li>
+<li>Click on the <code>...</code> to the right of ‘File name’ in the DSM manager.</li>
+<li>Find where you saved the <code>Census_2001_2011.csv</code> file, select it, and pick <code>Open</code>.</li>
+</ol>
+<p>You can see that there are <em>data types</em> in the Sample Data area (double, string, etc.). We’ll accept the defaults that QGIS has chosen for us, but we <em>could</em>, for instace, tell QGIS to use integers instead of double-precision floats for House Prices since people don’t pay £157,340.26 for a house! <em>Before</em> you click ‘Add’, we need to tell QGIS that there’s no geometry (i.e.&nbsp;nothing to actually map):</p>
+<ol start="4" class="example" type="1">
+<li>Click on the black triangle next to <code>Geometry Definition</code> and make sure that <code>No geometry (attribute only table)</code> is selected.</li>
+<li>Now click <code>Add</code>, then <code>Close</code> once the DSM turns blank and…</li>
+</ol>
+<p><strong>Nothing has changed! WTF???</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Adding a CSV file to QGIS</figcaption><p></p>
+<p><a href="./img/adding-csv.mov" class="lightbox" title="Adding a CSV file to QGIS" data-gallery="quarto-lightbox-gallery-22"><video src="./img/adding-csv.mov" class="img-fluid" controls=""></video></a><a href="./img/adding-csv.mov">Video</a></p>
+</figure>
+</div>
+<p>The reason we can’t see any changes on the map is that we’ve just added data, not <em>mapped</em> data.</p>
+</section>
+<section id="joining-data" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="joining-data"><span class="header-section-number">8</span> Joining Data</h2>
+<p>This is the <em>last</em> thing we want to do before breaking, and it’s the hardest. We need to help QGIS to show, say, house prices in 2001 by linking (<strong>joining</strong>) the CSV data that we just added to the LSOA layer that we added earlier.</p>
+<p>There’s a set of videos to show you how it’s done.</p>
+<section id="part-1-creating-the-join" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="part-1-creating-the-join"><span class="header-section-number">8.1</span> Part 1: Creating the Join</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Part 1: Creating the Join</figcaption><p></p>
+<p><a href="./img/join_part1.mov" class="lightbox" title="Part 1: Creating the Join" data-gallery="quarto-lightbox-gallery-23"><video src="./img/join_part1.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part1.mov">Video</a></p>
+</figure>
+</div>
+<p>Step-by-step this is:</p>
+<ol type="1">
+<li>Right-click on the LSOA layer and select <code>Properties</code>.</li>
+<li>Select <code>Joins</code> from the left-hand side of the Layers popup.</li>
+<li>Click the <code>+</code> button.</li>
+<li>In the <code>Add Vector Join</code> popup:
+<ul>
+<li>Change the <code>Join layer</code> to the CSV file.</li>
+<li>The <code>Join Field</code> should change to <code>lsoacd</code> automatically, but in case it doesn’t…</li>
+<li>The <code>Target Field</code> should already be <code>LSOA11CD</code>, but in case it isn’t…</li>
+</ul></li>
+<li>Click <code>OK</code></li>
+</ol>
+<p>Again, nothing <em>seems</em> to have changed!</p>
+</section>
+<section id="part-2-checking-the-join" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="part-2-checking-the-join"><span class="header-section-number">8.2</span> Part 2: Checking the Join</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Part 2: Checking the Join</figcaption><p></p>
+<p><a href="./img/join_part2.mov" class="lightbox" title="Part 2: Checking the Join" data-gallery="quarto-lightbox-gallery-24"><video src="./img/join_part2.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part2.mov">Video</a></p>
+</figure>
+</div>
+<p>If nothing has changed, how do we know if it ‘worked’, or even what the heck happened:</p>
+<ol type="1">
+<li>Right-click on the LSOA layer <em>again</em> and select <code>Open Attribute Table</code>.</li>
+<li>In the resulting popup, scroll all the way to the right.</li>
+<li>You should see that the columns from the Census data CSV file have been <em>added</em> to the LSOA data file, row-by-row!</li>
+</ol>
+<p>Close the table now that we’ve checked the data was added.</p>
+</section>
+<section id="part-3-changing-the-symbology" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="part-3-changing-the-symbology"><span class="header-section-number">8.3</span> Part 3: Changing the Symbology</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Part 3: Changing the Symbology</figcaption><p></p>
+<p><a href="./img/join_part3.mov" class="lightbox" title="Part 3: Changing the Symbology" data-gallery="quarto-lightbox-gallery-25"><video src="./img/join_part3.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part3.mov">Video</a></p>
+</figure>
+</div>
+<p>Now let’s see what we can do with our joined data:</p>
+<ol type="1">
+<li>Select the <code>Layer Properties</code> and pick <code>Symbology</code> from the left-hand side of the popup.</li>
+<li>At the top of the popup change <code>Single Symbol</code> to <code>Graduated</code>, which means that the colour will now depend on a <em>data value</em>!</li>
+<li>Set the <code>Value</code> to the 2001 house price data.</li>
+<li>Change the <code>Color ramp</code> (if you like)</li>
+<li>Change the number of <code>Classes</code> (if you like)</li>
+<li>Change the <code>Mode</code> (if you like)</li>
+<li>Click <code>Apply</code> and then <code>OK</code></li>
+</ol>
+<p><strong>Now</strong> your map looks different!</p>
+</section>
+<section id="part-4-checking-the-results" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="part-4-checking-the-results"><span class="header-section-number">8.4</span> Part 4: Checking the Results</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Part 4: Checking the Results</figcaption><p></p>
+<p><a href="./img/join_part4.mov" class="lightbox" title="Part 4: Checking the Results" data-gallery="quarto-lightbox-gallery-26"><video src="./img/join_part4.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part4.mov">Video</a></p>
+</figure>
+</div>
+<p>In this last part we just want to check the results make some kind of sense. In my video, using <code>Rocket</code> colour ramp, the lightest colours are the highest values. Here is use the ‘info’ button again to find the highest value in the data set and check based on the colour and check what the price was in 2001.</p>
+</section>
+</section>
+<section id="save-get-coffee" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="save-get-coffee"><span class="header-section-number">9</span> Save &amp; Get Coffee</h2>
+<p>One <em>last</em> thing: let’s save our work.</p>
+<ol type="1">
+<li>The join is temporary (you will lose it if you shut down QGIS) so let’s save a new layer.</li>
+</ol>
+<ul>
+<li>Right-click on the LSOA layer.</li>
+<li>Select <code>Export</code> and <code>Save Features As...</code></li>
+<li>Click on the <code>...</code> next to <code>File name</code> and choose a place to save your new file. We will use the <code>GeoPackage</code> format because it’s easy to save/load.</li>
+<li>Make sure that <code>Add saved file to map</code> is ticked at the bottom of the popup.</li>
+<li>Click <code>OK</code> and you should see a green feedback message appear after a few seconds saying <code>Layer Exported: Success...</code> and a new layer <strong>without any colouring</strong> appear in the Layers area of QGIS.</li>
+</ul>
+<ol start="2" type="1">
+<li>Copy the layer style:</li>
+</ol>
+<ul>
+<li>We don’t want to have to recreate the colour-scheme that we created above <em>again</em>, so let’s copy+paste!</li>
+<li>Right-click on the <em>original</em> LSOA layer and pick <code>Styles</code> then <code>Copy style</code> and <code>All style categories</code>.</li>
+<li>Now select the <em>new</em> LSOA layer and pick <code>Styles</code> then <code>Paste style</code> and <code>All style categories</code>.</li>
+<li>Both layers should now have the same styles: <strong>how could you check this using the Layers options in QGIS?</strong></li>
+</ul>
+<ol start="3" type="1">
+<li>Save the QGIS project by clicking on the <code>Save</code> icon and giving your project a name.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Save the Join to a new GeoPackage</figcaption><p></p>
+<p><a href="./img/join_save_and_copy.mov" class="lightbox" title="Save the Join to a new GeoPackage" data-gallery="quarto-lightbox-gallery-27"><video src="./img/join_save_and_copy.mov" class="img-fluid" controls=""></video></a><a href="./img/join_save_and_copy.mov">Video</a></p>
+</figure>
+</div>
+</section>
+<section id="congratulations" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="congratulations"><span class="header-section-number">10</span> Congratulations!</h2>
+<p>Congrats, you’ve created your first <strong>choropleth map</strong> in addition to running a query on a spatial database, and doing a non-spatial database join.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 2022, Jon Reades</div>   
+      <div class="nav-footer-center"><a href="../img/favicon-16x16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="../img/favicon-16x16.png" class="height:10px img-fluid"></a> Foundations of Spatial Data Science</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jreades/fsds">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jreades">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"fade","descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"fade"});</script>
+
+
+
+</body></html>
