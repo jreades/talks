@@ -10,13 +10,15 @@
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
 // @import url(https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:400,700);
 @import url(https://fonts.googleapis.com/css?family=Ranga:400,700);
+@import url(https://fonts.googleapis.com/css?family=Allan:400);
 
 
 $font-family-monospace: "JetBrains Mono", "Courier New", monospace !default;
 $font-family-sans-serif: "Amatic SC", sans-serif !default;
 $font-family-serif: "Source Serif Pro", "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif !default;
+$font-family-cursive: "Allan", cursive;
 $presentation-heading-font: $font-family-sans-serif !default;
-$blockquote-font: $font-family-serif !default; //"Zilla Slab Highlight", "Ranga", "Source Serif Pro" !default;
+$blockquote-font: $font-family-cursive !default; //"Zilla Slab Highlight", "Ranga", "Source Serif Pro" !default;
 $table-font: "Source Sans Pro", "Amatic SC", sans-serif !default;
 $font-family-base: $font-family-serif !default;
 $mainfont: $font-family-serif !default;
@@ -68,14 +70,16 @@ $code-block-border-left-width: 5px;
 .reveal .slide blockquote p {
     position: relative;
     font-family: $blockquote-font;
+    font-size: larger;
+    line-height: 1.5em;
     display: flex;
     align-items: center; // stretch?
     justify-content: center;
-    color:#fff;
-    background-color: $full-casa;
-    padding: 1em;
-    padding-left: .2em;
-    padding-right: .2em
+    color: $full-casa;
+    //background-color: $fade-casa;
+    padding: 2em;
+    //padding-left: 2em;
+    //padding-right: 2em
     //top: 1em;
     //left: 1em;
     //margin-top: 5em; //450px;
