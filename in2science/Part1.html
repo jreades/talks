@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
 </style>
 
 
@@ -54,10 +59,12 @@ ul.task-list{list-style: none;}
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -68,40 +75,47 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../index.html">
-    <img src="../img/CASA_Logo_no_text.png" alt="">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/CASA_Logo_no_text.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Presentations</span>
-  </a>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">Welcome</a>
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Welcome</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-recent-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recent Talks</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-recent-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Recent Talks</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-recent-talks">    
         <li>
-    <a class="dropdown-item" href="../dcdc22/index.html">
+    <a class="dropdown-item" href="../dcdc22/index.html" rel="" target="">
  <span class="dropdown-text">DCDC22</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../in2science/index.html">
+    <a class="dropdown-item" href="../in2science/index.html" rel="" target="">
  <span class="dropdown-text">In2Science UK</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -111,20 +125,20 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started"> <span class="header-section-number">1</span> Getting Started</a></li>
-  <li><a href="#adding-osm-data" id="toc-adding-osm-data" class="nav-link" data-scroll-target="#adding-osm-data"> <span class="header-section-number">2</span> Adding OSM Data</a></li>
-  <li><a href="#get-the-remaining-data" id="toc-get-the-remaining-data" class="nav-link" data-scroll-target="#get-the-remaining-data"> <span class="header-section-number">3</span> Get the Remaining Data</a></li>
-  <li><a href="#add-the-boroughs" id="toc-add-the-boroughs" class="nav-link" data-scroll-target="#add-the-boroughs"> <span class="header-section-number">4</span> Add the Boroughs</a></li>
-  <li><a href="#adding-lsoas" id="toc-adding-lsoas" class="nav-link" data-scroll-target="#adding-lsoas"> <span class="header-section-number">5</span> Adding LSOAs</a></li>
-  <li><a href="#lets-talk-data" id="toc-lets-talk-data" class="nav-link" data-scroll-target="#lets-talk-data"> <span class="header-section-number">6</span> Let’s Talk Data</a></li>
-  <li><a href="#add-the-census-data" id="toc-add-the-census-data" class="nav-link" data-scroll-target="#add-the-census-data"> <span class="header-section-number">7</span> Add the Census Data</a></li>
-  <li><a href="#joining-data" id="toc-joining-data" class="nav-link" data-scroll-target="#joining-data"> <span class="header-section-number">8</span> Joining Data</a></li>
-  <li><a href="#save-get-coffee" id="toc-save-get-coffee" class="nav-link" data-scroll-target="#save-get-coffee"> <span class="header-section-number">9</span> Save &amp; Get Coffee</a></li>
-  <li><a href="#congratulations" id="toc-congratulations" class="nav-link" data-scroll-target="#congratulations"> <span class="header-section-number">10</span> Congratulations!</a></li>
+  <ul class="collapse">
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started"><span class="header-section-number">1</span> Getting Started</a></li>
+  <li><a href="#adding-osm-data" id="toc-adding-osm-data" class="nav-link" data-scroll-target="#adding-osm-data"><span class="header-section-number">2</span> Adding OSM Data</a></li>
+  <li><a href="#get-the-remaining-data" id="toc-get-the-remaining-data" class="nav-link" data-scroll-target="#get-the-remaining-data"><span class="header-section-number">3</span> Get the Remaining Data</a></li>
+  <li><a href="#add-the-boroughs" id="toc-add-the-boroughs" class="nav-link" data-scroll-target="#add-the-boroughs"><span class="header-section-number">4</span> Add the Boroughs</a></li>
+  <li><a href="#adding-lsoas" id="toc-adding-lsoas" class="nav-link" data-scroll-target="#adding-lsoas"><span class="header-section-number">5</span> Adding LSOAs</a></li>
+  <li><a href="#lets-talk-data" id="toc-lets-talk-data" class="nav-link" data-scroll-target="#lets-talk-data"><span class="header-section-number">6</span> Let’s Talk Data</a></li>
+  <li><a href="#add-the-census-data" id="toc-add-the-census-data" class="nav-link" data-scroll-target="#add-the-census-data"><span class="header-section-number">7</span> Add the Census Data</a></li>
+  <li><a href="#joining-data" id="toc-joining-data" class="nav-link" data-scroll-target="#joining-data"><span class="header-section-number">8</span> Joining Data</a></li>
+  <li><a href="#save-get-coffee" id="toc-save-get-coffee" class="nav-link" data-scroll-target="#save-get-coffee"><span class="header-section-number">9</span> Save &amp; Get Coffee</a></li>
+  <li><a href="#congratulations" id="toc-congratulations" class="nav-link" data-scroll-target="#congratulations"><span class="header-section-number">10</span> Congratulations!</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jreades/presentations/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -141,6 +155,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -152,14 +167,14 @@ ul.task-list{list-style: none;}
 <p>QGIS can be found under the Raspberry Pi menu (top-left) and then in <em>Education</em>. Start QGIS and you’ll get a welcome page showing previously created projects (if any) and some general information about QGIS. Next, create a new, empty document by clicking on the… wait for it… `New Empty Document’ area visible on the Welcome Page <em>or</em> on the ‘blank’ document icon at the top-left of the screenshot below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">QGIS Welcome Screen</figcaption><p></p>
-<p><a href="./img/qgis-welcome.png" class="lightbox" data-gallery="start-up" title="QGIS Welcome Screen"><img src="./img/qgis-welcome.png" class="img-fluid figure-img" alt="The QGIS Welcome Screen"></a></p>
+<figcaption class="figure-caption">QGIS Welcome Screen</figcaption>
+<p><a href="./img/qgis-welcome.png" class="lightbox" title="QGIS Welcome Screen" data-gallery="start-up"><img src="./img/qgis-welcome.png" class="img-fluid figure-img" alt="The QGIS Welcome Screen"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Ready to Begin</figcaption><p></p>
-<p><a href="./img/qgis.png" class="lightbox" data-gallery="start-up" title="Ready to Begin"><img src="./img/qgis.png" class="img-fluid figure-img" alt="An empty QGIS document"></a></p>
+<figcaption class="figure-caption">Ready to Begin</figcaption>
+<p><a href="./img/qgis.png" class="lightbox" title="Ready to Begin" data-gallery="start-up"><img src="./img/qgis.png" class="img-fluid figure-img" alt="An empty QGIS document"></a></p>
 </figure>
 </div>
 </section>
@@ -177,8 +192,8 @@ ul.task-list{list-style: none;}
 </ol>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Adding the OSM Layer</figcaption><p></p>
-<p><a href="./img/adding-osm.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Adding the OSM Layer"><img src="./img/adding-osm.png" class="img-fluid figure-img" alt="Screenshot from QGIS on a Mac showing location of the QuickMapServices OSM layer" style="width:50.0%"></a></p>
+<figcaption class="figure-caption">Adding the OSM Layer</figcaption>
+<p><a href="./img/adding-osm.png" class="lightbox" title="Adding the OSM Layer" data-gallery="quarto-lightbox-gallery-3"><img src="./img/adding-osm.png" class="img-fluid figure-img" style="width:50.0%" alt="Screenshot from QGIS on a Mac showing location of the QuickMapServices OSM layer"></a></p>
 </figure>
 </div>
 </section>
@@ -187,33 +202,33 @@ ul.task-list{list-style: none;}
 <p>Now zoom in on London using the magnifying glass (with the <code>+</code>) as below:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Zooming In</figcaption><p></p>
-<p><a href="./img/zoom.png" class="lightbox" data-gallery="controls" title="Zooming In"><img src="./img/zoom.png" class="img-fluid figure-img" alt="Zooming in on Brixton in OSM"></a></p>
+<figcaption class="figure-caption">Zooming In</figcaption>
+<p><a href="./img/zoom.png" class="lightbox" title="Zooming In" data-gallery="controls"><img src="./img/zoom.png" class="img-fluid figure-img" alt="Zooming in on Brixton in OSM"></a></p>
 </figure>
 </div>
 <p>Panning (keeping the same zoom level but noving the map) is done using the Hand icon or by pressing the space bar and dragging the mouse. If you leave the mouse hovering over a button you will get some simple help to tell you what the button <em>does</em>. See if you can get Brixton in the centre of the map!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Controls</figcaption><p></p>
-<p><a href="./img/zoom-pan-controls.png" class="lightbox" data-gallery="controls" title="Controls"><img src="./img/zoom-pan-controls.png" class="img-fluid figure-img" alt="Zooming and panning controls"></a></p>
+<figcaption class="figure-caption">Controls</figcaption>
+<p><a href="./img/zoom-pan-controls.png" class="lightbox" title="Controls" data-gallery="controls"><img src="./img/zoom-pan-controls.png" class="img-fluid figure-img" alt="Zooming and panning controls"></a></p>
 </figure>
 </div>
 </section>
 <section id="check-out-street-view" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="check-out-street-view"><span class="header-section-number">2.3</span> Check Out Street View</h3>
-<p>If you click on the Google Street View icon (<a href="./img/street_view.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Street View icon"><img src="./img/street_view.png" height="20" alt="Street View icon"></a>) and then click+drag anywhere on the map you will open Google Street View in your web browser showing the view from that point in the direction selected.</p>
+<p>If you click on the Google Street View icon (<a href="./img/street_view.png" class="lightbox" title="Street View icon" data-gallery="quarto-lightbox-gallery-6"><img src="./img/street_view.png" height="20" alt="Street View icon"></a>) and then click+drag anywhere on the map you will open Google Street View in your web browser showing the view from that point in the direction selected.</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Street View Tool in Action</figcaption><p></p>
-<p><a href="./img/street_view_ui.png" class="lightbox" data-gallery="streetview" title="Street View Tool in Action"><img src="./img/street_view_ui.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Street View Tool in Action</figcaption>
+<p><a href="./img/street_view_ui.png" class="lightbox" title="Street View Tool in Action" data-gallery="streetview"><img src="./img/street_view_ui.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Street View Tool Output</figcaption><p></p>
-<p><a href="./img/street_view_output.png" class="lightbox" data-gallery="streetview" title="Street View Tool Output"><img src="./img/street_view_output.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Street View Tool Output</figcaption>
+<p><a href="./img/street_view_output.png" class="lightbox" title="Street View Tool Output" data-gallery="streetview"><img src="./img/street_view_output.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -223,12 +238,12 @@ ul.task-list{list-style: none;}
 <h3 data-number="2.4" class="anchored" data-anchor-id="add-some-real-data"><span class="header-section-number">2.4</span> Add Some ‘Real’ Data</h3>
 <p>Under the <code>Vector</code> menu you’ll see a <code>QuickOSM</code> option, and then a second <code>QuickOSM</code> menu item. select this. This will open a new popup menu.</p>
 <p>We are now going to build a <em>query</em>, meaning that we’ll be asking OpenStreetMap’s servers to find us locations fitting a particular description/having a particular tag. There are <em>many</em> tags and many <em>choices</em>, so a good way to find out what you want is to Google <code>OSM wiki &lt;x&gt;</code> where <code>&lt;x&gt;</code> is whatever you’re looking for (<em>e.g.</em> yoga studios, bars, etc.).</p>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Data Volumes
 </div>
 </div>
@@ -239,15 +254,15 @@ Data Volumes
 <p>As a first go, your query could look like this one for ‘local bars’:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Quick OSM Query for Bars in the Area</figcaption><p></p>
-<p><a href="./img/amenity.png" class="lightbox" data-gallery="osm-query" title="Quick OSM Query for Bars in the Area"><img src="./img/amenity.png" class="img-fluid figure-img" alt="A query for local bars (i.e. those on the canvas) in OSM"></a></p>
+<figcaption class="figure-caption">Quick OSM Query for Bars in the Area</figcaption>
+<p><a href="./img/amenity.png" class="lightbox" title="Quick OSM Query for Bars in the Area" data-gallery="osm-query"><img src="./img/amenity.png" class="img-fluid figure-img" alt="A query for local bars (i.e. those on the canvas) in OSM"></a></p>
 </figure>
 </div>
 <p>Depending on how far you were zoomed in when you created this query, after clicking <code>Run Query</code> you might get an answer nearly instantly or have to wait up to a couple of minutes! When the query completes you <em>should</em> see that <em>two</em> new layers have appeared in the lower left-hand corner of the QGIS app:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Amenity layers created by Quick OSM Query</figcaption><p></p>
-<p><a href="./img/amenity_layers.png" class="lightbox" data-gallery="osm-query" title="Amenity layers created by Quick OSM Query"><img src="./img/amenity_layers.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Amenity layers created by Quick OSM Query</figcaption>
+<p><a href="./img/amenity_layers.png" class="lightbox" title="Amenity layers created by Quick OSM Query" data-gallery="osm-query"><img src="./img/amenity_layers.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>If you’re having trouble seeing the bars that you’ve added, try turning off the <code>OSM Standard</code> layer by clicking the tic-box next to its name!</p>
@@ -255,12 +270,12 @@ Data Volumes
 <section id="more-information-please" class="level3" data-number="2.5">
 <h3 data-number="2.5" class="anchored" data-anchor-id="more-information-please"><span class="header-section-number">2.5</span> More Information Please!</h3>
 <p>Select one of the two new <code>amenity_bar</code> layers by clicking on it in the Layers area, and then pick the ‘info’ button (it’s an arrow with an <em>i</em> in a blue circle). See what information you can find out about some of the bars!</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Active Layers
 </div>
 </div>
@@ -270,8 +285,8 @@ Active Layers
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Inspecting an individual element</figcaption><p></p>
-<p><a href="./img/amenity_info.png" class="lightbox" data-gallery="osm-query" title="Inspecting an individual element"><img src="./img/amenity_info.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Inspecting an individual element</figcaption>
+<p><a href="./img/amenity_info.png" class="lightbox" title="Inspecting an individual element" data-gallery="osm-query"><img src="./img/amenity_info.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -283,12 +298,12 @@ Active Layers
 <li>Using the tip below, see if you can use <em>multiple</em> criteria in your QuickOSM search to find Yoga Studios in the area. <em>Hint:</em> this will be a Boolean logic problem that you would encounter in any programming class.</li>
 <li>Using what you’ve been discussing in previous classes together with some ideas contained in <a href="https://twitter.com/cynthiagreenlee/status/1559317089487167489?s=21&amp;t=TrhkqzcSkf645oJ6NlcqWA">this Twitter thread</a> see if you can come up with some other QuickOSM queries to pull data on possible markers of gentrification in the Brixton area.</li>
 </ol>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Using the OSM Wiki
 </div>
 </div>
@@ -314,22 +329,22 @@ Using the OSM Wiki
 <p>‘Vector’ data that is <em>already</em> ready to display on a map is easy to add to QGIS. Under the <code>Layer</code> menu option select <code>Add Layer</code> then <code>Add Vector Layer</code> as shown below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Adding a Vector Layer</figcaption><p></p>
-<p><a href="./img/add_vector_layer.png" class="lightbox" data-gallery="adding-layer" title="Adding a Vector Layer"><img src="./img/add_vector_layer.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Adding a Vector Layer</figcaption>
+<p><a href="./img/add_vector_layer.png" class="lightbox" title="Adding a Vector Layer" data-gallery="adding-layer"><img src="./img/add_vector_layer.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>This will bring up the <code>Add Vector Layer</code> popup and you then click on the <code>...</code> to navigate to where you saved <code>London.gpkg</code>. Select this, click <code>Add</code>, and see what happens!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Vector Layer Popup</figcaption><p></p>
-<p><a href="./img/add_vector_layer_ui.png" class="lightbox" data-gallery="adding-layer" title="Vector Layer Popup"><img src="./img/add_vector_layer_ui.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Vector Layer Popup</figcaption>
+<p><a href="./img/add_vector_layer_ui.png" class="lightbox" title="Vector Layer Popup" data-gallery="adding-layer"><img src="./img/add_vector_layer_ui.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Hmmmmm, what is <em>this</em>?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Transform Choices</figcaption><p></p>
-<p><a href="./img/add_vector_layer_transforms.png" class="lightbox" data-gallery="adding-layer" title="Transform Choices"><img src="./img/add_vector_layer_transforms.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Transform Choices</figcaption>
+<p><a href="./img/add_vector_layer_transforms.png" class="lightbox" title="Transform Choices" data-gallery="adding-layer"><img src="./img/add_vector_layer_transforms.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>For now, just take the selected the option, click <code>OK</code> to make the Transform popup go away, and then click <code>Close</code> to make the Add Vector Layer popup disappear.</p>
@@ -339,8 +354,8 @@ Using the OSM Wiki
 <p>Take a close look at the Layers area in QGIS. If London has ended up in between your <code>amenity...</code> layers you may want to rearrange things so that it’s at the <strong>bottom</strong>, just above the <strong>OSM Standard</strong> layer. You do that by clicking-and-dragging as shown here:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Dragging layers to rearrage</figcaption><p></p>
-<p><a href="./img/dragging_layers.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Dragging layers to rearrage"><img src="./img/dragging_layers.gif" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Dragging layers to rearrage</figcaption>
+<p><a href="./img/dragging_layers.gif" class="lightbox" title="Dragging layers to rearrage" data-gallery="quarto-lightbox-gallery-15"><img src="./img/dragging_layers.gif" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -356,21 +371,21 @@ Using the OSM Wiki
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Video of Changing Layer Style</figcaption><p></p>
-<p><a href="./img/change_layer_style.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Video of Changing Layer Style"><video src="./img/change_layer_style.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/change_layer_style.mov">Video</a></p>
+<figcaption class="figure-caption">Video of Changing Layer Style</figcaption>
+<p><a href="./img/change_layer_style.mov" class="lightbox" title="Video of Changing Layer Style" data-gallery="quarto-lightbox-gallery-16"><video src="./img/change_layer_style.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/change_layer_style.mov">Video</a></p>
 </figure>
 </div>
 <p>Your Layer Properties should look something like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/lp-boroughs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="./img/lp-boroughs.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/lp-boroughs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="./img/lp-boroughs.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Click <code>OK</code> and have a close look at your map of London. You should now see the boroughs outlined in red with the OSM Standard layer visible ‘behind’ and any QuickOSM layers visible ‘on top’.</p>
 </section>
 <section id="labelling-boroughs" class="level3" data-number="4.3">
 <h3 data-number="4.3" class="anchored" data-anchor-id="labelling-boroughs"><span class="header-section-number">4.3</span> Labelling Boroughs</h3>
-<p>Right-click on the London layer again to bring up <code>Layer Properties</code>, but this time pick <code>Labels</code> from the left-hand side:</p>
+<p>Right-click on the London layer again to bring up <code>Properties</code>, but this time pick <code>Labels</code> from the left-hand side:</p>
 <ol type="1">
 <li>Change <code>No labels</code> to <code>Single labels</code>.</li>
 <li>The <code>Value</code> should already be set to <code>NAME</code> (which is what we want)</li>
@@ -379,8 +394,8 @@ Using the OSM Wiki
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Video of Adding Layer Labels</figcaption><p></p>
-<p><a href="./img/adding-labels.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Video of Adding Layer Labels"><video src="./img/adding-labels.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/adding-labels.mov">Video</a></p>
+<figcaption class="figure-caption">Video of Adding Layer Labels</figcaption>
+<p><a href="./img/adding-labels.mov" class="lightbox" title="Video of Adding Layer Labels" data-gallery="quarto-lightbox-gallery-18"><video src="./img/adding-labels.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/adding-labels.mov">Video</a></p>
 </figure>
 </div>
 </section>
@@ -396,12 +411,12 @@ Using the OSM Wiki
 <li>Select <code>LSOA_2011_London_gen_MHW.shp</code></li>
 <li>Click <code>Add</code></li>
 </ol>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Rearrange the Layers
 </div>
 </div>
@@ -412,8 +427,8 @@ Rearrange the Layers
 <p>See if you can change the style of the LSOA layer to something like the image below. Remember that you do this through <code>Layer Properties</code>!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Map with LSOAs added</figcaption><p></p>
-<p><a href="./img/add_lsoa_data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Map with LSOAs added"><img src="./img/add_lsoa_data.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Map with LSOAs added</figcaption>
+<p><a href="./img/add_lsoa_data.png" class="lightbox" title="Map with LSOAs added" data-gallery="quarto-lightbox-gallery-19"><img src="./img/add_lsoa_data.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -532,8 +547,8 @@ Rearrange the Layers
 <p>Click on the <code>Layer</code> menu and then pick <code>Data Source Manager</code> (<strong>DSM</strong>) in the menu at the top of your screen. This will bring up the dialogue box below, and then pick <code>Delimited Text</code> (as in the image below).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Data Source Manager</figcaption><p></p>
-<p><a href="./img/dmg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Data Source Manager"><img src="./img/dmg.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Data Source Manager</figcaption>
+<p><a href="./img/dmg.png" class="lightbox" title="Data Source Manager" data-gallery="quarto-lightbox-gallery-20"><img src="./img/dmg.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>You now need to follow these steps <strong>carefully</strong>:</p>
@@ -550,8 +565,8 @@ Rearrange the Layers
 <p><strong>Nothing has changed! WTF???</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Adding a CSV file to QGIS</figcaption><p></p>
-<p><a href="./img/adding-csv.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Adding a CSV file to QGIS"><video src="./img/adding-csv.mov" class="img-fluid" controls=""></video></a><a href="./img/adding-csv.mov">Video</a></p>
+<figcaption class="figure-caption">Adding a CSV file to QGIS</figcaption>
+<p><a href="./img/adding-csv.mov" class="lightbox" title="Adding a CSV file to QGIS" data-gallery="quarto-lightbox-gallery-21"><video src="./img/adding-csv.mov" class="img-fluid" controls=""></video></a><a href="./img/adding-csv.mov">Video</a></p>
 </figure>
 </div>
 <p>The reason we can’t see any changes on the map is that we’ve just added data, not <em>mapped</em> data.</p>
@@ -564,8 +579,8 @@ Rearrange the Layers
 <h3 data-number="8.1" class="anchored" data-anchor-id="part-1-creating-the-join"><span class="header-section-number">8.1</span> Part 1: Creating the Join</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Part 1: Creating the Join</figcaption><p></p>
-<p><a href="./img/join_part1.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Part 1: Creating the Join"><video src="./img/join_part1.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part1.mov">Video</a></p>
+<figcaption class="figure-caption">Part 1: Creating the Join</figcaption>
+<p><a href="./img/join_part1.mov" class="lightbox" title="Part 1: Creating the Join" data-gallery="quarto-lightbox-gallery-22"><video src="./img/join_part1.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part1.mov">Video</a></p>
 </figure>
 </div>
 <p>Step-by-step this is:</p>
@@ -587,8 +602,8 @@ Rearrange the Layers
 <h3 data-number="8.2" class="anchored" data-anchor-id="part-2-checking-the-join"><span class="header-section-number">8.2</span> Part 2: Checking the Join</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Part 2: Checking the Join</figcaption><p></p>
-<p><a href="./img/join_part2.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Part 2: Checking the Join"><video src="./img/join_part2.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part2.mov">Video</a></p>
+<figcaption class="figure-caption">Part 2: Checking the Join</figcaption>
+<p><a href="./img/join_part2.mov" class="lightbox" title="Part 2: Checking the Join" data-gallery="quarto-lightbox-gallery-23"><video src="./img/join_part2.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part2.mov">Video</a></p>
 </figure>
 </div>
 <p>If nothing has changed, how do we know if it ‘worked’, or even what the heck happened:</p>
@@ -603,8 +618,8 @@ Rearrange the Layers
 <h3 data-number="8.3" class="anchored" data-anchor-id="part-3-changing-the-symbology"><span class="header-section-number">8.3</span> Part 3: Changing the Symbology</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Part 3: Changing the Symbology</figcaption><p></p>
-<p><a href="./img/join_part3.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Part 3: Changing the Symbology"><video src="./img/join_part3.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part3.mov">Video</a></p>
+<figcaption class="figure-caption">Part 3: Changing the Symbology</figcaption>
+<p><a href="./img/join_part3.mov" class="lightbox" title="Part 3: Changing the Symbology" data-gallery="quarto-lightbox-gallery-24"><video src="./img/join_part3.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part3.mov">Video</a></p>
 </figure>
 </div>
 <p>Now let’s see what we can do with our joined data:</p>
@@ -615,6 +630,7 @@ Rearrange the Layers
 <li>Change the <code>Color ramp</code> (if you like)</li>
 <li>Change the number of <code>Classes</code> (if you like)</li>
 <li>Change the <code>Mode</code> (if you like)</li>
+<li>Click <code>Classify</code> to see your changes.</li>
 <li>Click <code>Apply</code> and then <code>OK</code></li>
 </ol>
 <p><strong>Now</strong> your map looks different!</p>
@@ -623,8 +639,8 @@ Rearrange the Layers
 <h3 data-number="8.4" class="anchored" data-anchor-id="part-4-checking-the-results"><span class="header-section-number">8.4</span> Part 4: Checking the Results</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Part 4: Checking the Results</figcaption><p></p>
-<p><a href="./img/join_part4.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Part 4: Checking the Results"><video src="./img/join_part4.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part4.mov">Video</a></p>
+<figcaption class="figure-caption">Part 4: Checking the Results</figcaption>
+<p><a href="./img/join_part4.mov" class="lightbox" title="Part 4: Checking the Results" data-gallery="quarto-lightbox-gallery-25"><video src="./img/join_part4.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part4.mov">Video</a></p>
 </figure>
 </div>
 <p>In this last part we just want to check the results make some kind of sense. In my video, using <code>Rocket</code> colour ramp, the lightest colours are the highest values. Here is use the ‘info’ button again to find the highest value in the data set and check based on the colour and check what the price was in 2001.</p>
@@ -657,8 +673,8 @@ Rearrange the Layers
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Save the Join to a new GeoPackage</figcaption><p></p>
-<p><a href="./img/join_save_and_copy.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Save the Join to a new GeoPackage"><video src="./img/join_save_and_copy.mov" class="img-fluid" controls=""></video></a><a href="./img/join_save_and_copy.mov">Video</a></p>
+<figcaption class="figure-caption">Save the Join to a new GeoPackage</figcaption>
+<p><a href="./img/join_save_and_copy.mov" class="lightbox" title="Save the Join to a new GeoPackage" data-gallery="quarto-lightbox-gallery-26"><video src="./img/join_save_and_copy.mov" class="img-fluid" controls=""></video></a><a href="./img/join_save_and_copy.mov">Video</a></p>
 </figure>
 </div>
 </section>
@@ -697,9 +713,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -711,7 +741,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -739,31 +786,136 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
@@ -771,7 +923,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 2022, Jon Reades</div>   
-      <div class="nav-footer-center"><a href="../img/favicon-16x16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="../img/favicon-16x16.png" class="height:10px img-fluid"></a> Foundations of Spatial Data Science</div>
+    <div class="nav-footer-center"><a href="../img/favicon-16x16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="../img/favicon-16x16.png" class="height:10px img-fluid"></a> Foundations of Spatial Data Science</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -790,7 +942,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"fade","descPosition":"bottom","closeEffect":"fade","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":true,"openEffect":"fade","closeEffect":"fade"});</script>
 
 
 

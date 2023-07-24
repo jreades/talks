@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
 </style>
 
 
@@ -54,7 +59,8 @@ ul.task-list{list-style: none;}
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -67,40 +73,47 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../index.html">
-    <img src="../img/CASA_Logo_no_text.png" alt="">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/CASA_Logo_no_text.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Presentations</span>
-  </a>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">Welcome</a>
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Welcome</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-recent-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recent Talks</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-recent-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Recent Talks</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-recent-talks">    
         <li>
-    <a class="dropdown-item" href="../dcdc22/index.html">
+    <a class="dropdown-item" href="../dcdc22/index.html" rel="" target="">
  <span class="dropdown-text">DCDC22</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../in2science/index.html">
+    <a class="dropdown-item" href="../in2science/index.html" rel="" target="">
  <span class="dropdown-text">In2Science UK</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -110,15 +123,15 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#distributions" id="toc-distributions" class="nav-link active" data-scroll-target="#distributions"> <span class="header-section-number">1</span> Distributions</a></li>
-  <li><a href="#deriving-a-variable" id="toc-deriving-a-variable" class="nav-link" data-scroll-target="#deriving-a-variable"> <span class="header-section-number">2</span> Deriving a Variable</a></li>
-  <li><a href="#making-a-comparison" id="toc-making-a-comparison" class="nav-link" data-scroll-target="#making-a-comparison"> <span class="header-section-number">3</span> Making a Comparison</a></li>
-  <li><a href="#extending-your-map" id="toc-extending-your-map" class="nav-link" data-scroll-target="#extending-your-map"> <span class="header-section-number">4</span> Extending Your Map</a></li>
-  <li><a href="#outputting-a-map" id="toc-outputting-a-map" class="nav-link" data-scroll-target="#outputting-a-map"> <span class="header-section-number">5</span> Outputting a Map</a></li>
+  <ul class="collapse">
+  <li><a href="#distributions" id="toc-distributions" class="nav-link active" data-scroll-target="#distributions"><span class="header-section-number">1</span> Distributions</a></li>
+  <li><a href="#deriving-a-variable" id="toc-deriving-a-variable" class="nav-link" data-scroll-target="#deriving-a-variable"><span class="header-section-number">2</span> Deriving a Variable</a></li>
+  <li><a href="#making-a-comparison" id="toc-making-a-comparison" class="nav-link" data-scroll-target="#making-a-comparison"><span class="header-section-number">3</span> Making a Comparison</a></li>
+  <li><a href="#extending-your-map" id="toc-extending-your-map" class="nav-link" data-scroll-target="#extending-your-map"><span class="header-section-number">4</span> Extending Your Map</a></li>
+  <li><a href="#outputting-a-map" id="toc-outputting-a-map" class="nav-link" data-scroll-target="#outputting-a-map"><span class="header-section-number">5</span> Outputting a Map</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jreades/presentations/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -135,6 +148,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -153,8 +167,8 @@ ul.task-list{list-style: none;}
 <p>You should see this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">2001 House Price Histogram</figcaption><p></p>
-<p><a href="./img/house_prices-histogram.png" class="lightbox" title="2001 House Price Histogram" data-gallery="quarto-lightbox-gallery-2"><img src="./img/house_prices-histogram.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">2001 House Price Histogram</figcaption>
+<p><a href="./img/house_prices-histogram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="2001 House Price Histogram"><img src="./img/house_prices-histogram.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <section id="questions" class="level3" data-number="1.1">
@@ -176,14 +190,30 @@ ul.task-list{list-style: none;}
 <p>Here’s roughly what your map should look like:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Partially Transparent Map of House Prices in 2001</figcaption><p></p>
-<p><a href="./img/part_2_start.png" class="lightbox" title="Partially Transparent Map of House Prices in 2001" data-gallery="quarto-lightbox-gallery-3"><img src="./img/part_2_start.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Partially Transparent Map of House Prices in 2001</figcaption>
+<p><a href="./img/part_2_start.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Partially Transparent Map of House Prices in 2001"><img src="./img/part_2_start.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
 </section>
 <section id="deriving-a-variable" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="deriving-a-variable"><span class="header-section-number">2</span> Deriving a Variable</h2>
+<p>Let’s focus on house prices for a bit longer…</p>
+<section id="change-between-20012011" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="change-between-20012011"><span class="header-section-number">2.1</span> Change Between 2001–2011</h3>
+<p>How could we compare the amount by which house prices have changed in order to see where has changed the most? The <em>simplest</em> way would be to subtract one from the other, so let’s do that!</p>
+<ol type="1">
+<li>Open the <code>Attribute Table</code> by right-clicking on the LSOA layer and selecting this option.</li>
+<li>Scroll to the right until you can see the House Price data. The exact column names are: <code>Census_2001-2011_House Prices 2001</code> and <code>Census_2001-2011_House Prices 2011</code>.</li>
+<li>Click on the <code>Field Calculator</code> (<a href="./img/field_calculator.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="./img/field_calculator.png" height="20"></a>)</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption class="figure-caption">Deriving House Price Change</figcaption>
+<p><a href="./img/house_price_change.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Deriving House Price Change"><video src="./img/house_price_change.mov" class="img-fluid" controls=""></video></a><a href="./img/house_price_change.mov">Video</a></p>
+</figure>
+</div>
+</section>
 </section>
 <section id="making-a-comparison" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="making-a-comparison"><span class="header-section-number">3</span> Making a Comparison</h2>
@@ -200,8 +230,8 @@ ul.task-list{list-style: none;}
 <p>The movie will show you how to output a (bad) map because there are a <em>lot</em> more dials to twiddle in order to get the map looking <em>good</em>!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Making a (bad) map in under 2 minutes</figcaption><p></p>
-<p><a href="./img/making_a_bad_map.mov" class="lightbox" title="Making a (bad) map in under 2 minutes" data-gallery="quarto-lightbox-gallery-4"><video src="./img/making_a_bad_map.mov" class="img-fluid" controls=""></video></a><a href="./img/making_a_bad_map.mov">Video</a></p>
+<figcaption class="figure-caption">Making a (bad) map in under 2 minutes</figcaption>
+<p><a href="./img/making_a_bad_map.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Making a (bad) map in under 2 minutes"><video src="./img/making_a_bad_map.mov" class="img-fluid" controls=""></video></a><a href="./img/making_a_bad_map.mov">Video</a></p>
 </figure>
 </div>
 
@@ -209,10 +239,10 @@ ul.task-list{list-style: none;}
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1" role="doc-endnote"><p>You might also find it interesting to play with the number of <code>Classes</code> – some schemes won’t let you, others will allow you to pick any number!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>You might also find it interesting to play with the number of <code>Classes</code> – some schemes won’t let you, others will allow you to pick any number!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -242,9 +272,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -256,7 +300,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -284,31 +345,136 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
@@ -316,7 +482,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 2022, Jon Reades</div>   
-      <div class="nav-footer-center"><a href="../img/favicon-16x16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="../img/favicon-16x16.png" class="height:10px img-fluid"></a> Foundations of Spatial Data Science</div>
+    <div class="nav-footer-center"><a href="../img/favicon-16x16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="../img/favicon-16x16.png" class="height:10px img-fluid"></a> Foundations of Spatial Data Science</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -335,7 +501,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"fade","openEffect":"fade"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"fade","descPosition":"bottom","selector":".lightbox","openEffect":"fade"});</script>
 
 
 
