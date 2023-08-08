@@ -162,25 +162,57 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>QGIS is constantly evolving, so from time to time they make changes that impact the UI (User Interface). <strong>Don’t stress</strong> if what you’re seeing in QGIS on your monitor differs <em>slightly</em> from the screenshots here: take a minute to see if things are similar but just look a bit different, look around to see if things have just moved, and use Google if you need to.</p>
+</div>
+</div>
 <section id="getting-started" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">1</span> Getting Started</h2>
 <p>QGIS can be found under the Raspberry Pi menu (top-left) and then in <em>Education</em>. Start QGIS and you’ll get a welcome page showing previously created projects (if any) and some general information about QGIS. Next, create a new, empty document by clicking on the… wait for it… `New Empty Document’ area visible on the Welcome Page <em>or</em> on the ‘blank’ document icon at the top-left of the screenshot below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">QGIS Welcome Screen</figcaption>
-<p><a href="./img/qgis-welcome.png" class="lightbox" title="QGIS Welcome Screen" data-gallery="start-up"><img src="./img/qgis-welcome.png" class="img-fluid figure-img" alt="The QGIS Welcome Screen"></a></p>
+<p><a href="./img/qgis-welcome.png" class="lightbox" data-gallery="start-up" title="QGIS Welcome Screen"><img src="./img/qgis-welcome.png" class="img-fluid figure-img" alt="The QGIS Welcome Screen"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Ready to Begin</figcaption>
-<p><a href="./img/qgis.png" class="lightbox" title="Ready to Begin" data-gallery="start-up"><img src="./img/qgis.png" class="img-fluid figure-img" alt="An empty QGIS document"></a></p>
+<p><a href="./img/qgis.png" class="lightbox" data-gallery="start-up" title="Ready to Begin"><img src="./img/qgis.png" class="img-fluid figure-img" alt="An empty QGIS document"></a></p>
 </figure>
 </div>
 </section>
 <section id="adding-osm-data" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="adding-osm-data"><span class="header-section-number">2</span> Adding OSM Data</h2>
 <p>OSM stands for ‘Open Street Map’ and it’s the largest open data set in the world – companies like Apple and Uber rely on OSM (and contribute data to it) so that they aren’t dependent on Google!</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What if you don’t see <em>Quick Map Services</em> under the Web menu? <strong>Don’t panic!</strong> This service is a <em>plugin</em> and you can you can install it by clicking on the plugin menu item, selecting ’’</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figcaption class="figure-caption">Installing a Plugin</figcaption>
+<p><a href="./img/install_plugin.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Installing a Plugin"><img src="./img/install_plugin.png" class="img-fluid figure-img" width="300"></a></p>
+</figure>
+</div>
+</div>
+</div>
 <section id="add-osm-map-layer" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="add-osm-map-layer"><span class="header-section-number">2.1</span> Add OSM Map Layer</h3>
 <p>Under the <code>Web</code> menu item at the top of your screen is a QuickMapServices option:</p>
@@ -193,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <figcaption class="figure-caption">Adding the OSM Layer</figcaption>
-<p><a href="./img/adding-osm.png" class="lightbox" title="Adding the OSM Layer" data-gallery="quarto-lightbox-gallery-3"><img src="./img/adding-osm.png" class="img-fluid figure-img" style="width:50.0%" alt="Screenshot from QGIS on a Mac showing location of the QuickMapServices OSM layer"></a></p>
+<p><a href="./img/adding-osm.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Adding the OSM Layer"><img src="./img/adding-osm.png" class="img-fluid figure-img" style="width:50.0%" alt="Screenshot from QGIS on a Mac showing location of the QuickMapServices OSM layer"></a></p>
 </figure>
 </div>
 </section>
@@ -203,32 +235,45 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Zooming In</figcaption>
-<p><a href="./img/zoom.png" class="lightbox" title="Zooming In" data-gallery="controls"><img src="./img/zoom.png" class="img-fluid figure-img" alt="Zooming in on Brixton in OSM"></a></p>
+<p><a href="./img/zoom.png" class="lightbox" data-gallery="controls" title="Zooming In"><img src="./img/zoom.png" class="img-fluid figure-img" alt="Zooming in on Brixton in OSM"></a></p>
 </figure>
 </div>
 <p>Panning (keeping the same zoom level but noving the map) is done using the Hand icon or by pressing the space bar and dragging the mouse. If you leave the mouse hovering over a button you will get some simple help to tell you what the button <em>does</em>. See if you can get Brixton in the centre of the map!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Controls</figcaption>
-<p><a href="./img/zoom-pan-controls.png" class="lightbox" title="Controls" data-gallery="controls"><img src="./img/zoom-pan-controls.png" class="img-fluid figure-img" alt="Zooming and panning controls"></a></p>
+<p><a href="./img/zoom-pan-controls.png" class="lightbox" data-gallery="controls" title="Controls"><img src="./img/zoom-pan-controls.png" class="img-fluid figure-img" alt="Zooming and panning controls"></a></p>
 </figure>
 </div>
 </section>
 <section id="check-out-street-view" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="check-out-street-view"><span class="header-section-number">2.3</span> Check Out Street View</h3>
-<p>If you click on the Google Street View icon (<a href="./img/street_view.png" class="lightbox" title="Street View icon" data-gallery="quarto-lightbox-gallery-6"><img src="./img/street_view.png" height="20" alt="Street View icon"></a>) and then click+drag anywhere on the map you will open Google Street View in your web browser showing the view from that point in the direction selected.</p>
+<p>If you click on the Google Street View icon (<a href="./img/street_view.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Street View icon"><img src="./img/street_view.png" height="20" alt="Street View icon"></a>) and then click+drag anywhere on the map you will open Google Street View in your web browser showing the view from that point in the direction selected.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Google Street View is <em>also</em> a plugin that you can install yourself. Many bits of useful functionality are provided by others: that’s the open source benefit… occassionally a cost when a useful plugin is abandoned.</p>
+</div>
+</div>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
 <figcaption class="figure-caption">Street View Tool in Action</figcaption>
-<p><a href="./img/street_view_ui.png" class="lightbox" title="Street View Tool in Action" data-gallery="streetview"><img src="./img/street_view_ui.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/street_view_ui.png" class="lightbox" data-gallery="streetview" title="Street View Tool in Action"><img src="./img/street_view_ui.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
 <figcaption class="figure-caption">Street View Tool Output</figcaption>
-<p><a href="./img/street_view_output.png" class="lightbox" title="Street View Tool Output" data-gallery="streetview"><img src="./img/street_view_output.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/street_view_output.png" class="lightbox" data-gallery="streetview" title="Street View Tool Output"><img src="./img/street_view_output.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -255,14 +300,14 @@ Data Volumes
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Quick OSM Query for Bars in the Area</figcaption>
-<p><a href="./img/amenity.png" class="lightbox" title="Quick OSM Query for Bars in the Area" data-gallery="osm-query"><img src="./img/amenity.png" class="img-fluid figure-img" alt="A query for local bars (i.e. those on the canvas) in OSM"></a></p>
+<p><a href="./img/amenity.png" class="lightbox" data-gallery="osm-query" title="Quick OSM Query for Bars in the Area"><img src="./img/amenity.png" class="img-fluid figure-img" alt="A query for local bars (i.e. those on the canvas) in OSM"></a></p>
 </figure>
 </div>
 <p>Depending on how far you were zoomed in when you created this query, after clicking <code>Run Query</code> you might get an answer nearly instantly or have to wait up to a couple of minutes! When the query completes you <em>should</em> see that <em>two</em> new layers have appeared in the lower left-hand corner of the QGIS app:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Amenity layers created by Quick OSM Query</figcaption>
-<p><a href="./img/amenity_layers.png" class="lightbox" title="Amenity layers created by Quick OSM Query" data-gallery="osm-query"><img src="./img/amenity_layers.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/amenity_layers.png" class="lightbox" data-gallery="osm-query" title="Amenity layers created by Quick OSM Query"><img src="./img/amenity_layers.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>If you’re having trouble seeing the bars that you’ve added, try turning off the <code>OSM Standard</code> layer by clicking the tic-box next to its name!</p>
@@ -286,7 +331,7 @@ Active Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Inspecting an individual element</figcaption>
-<p><a href="./img/amenity_info.png" class="lightbox" title="Inspecting an individual element" data-gallery="osm-query"><img src="./img/amenity_info.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/amenity_info.png" class="lightbox" data-gallery="osm-query" title="Inspecting an individual element"><img src="./img/amenity_info.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -330,21 +375,21 @@ Using the OSM Wiki
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Adding a Vector Layer</figcaption>
-<p><a href="./img/add_vector_layer.png" class="lightbox" title="Adding a Vector Layer" data-gallery="adding-layer"><img src="./img/add_vector_layer.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/add_vector_layer.png" class="lightbox" data-gallery="adding-layer" title="Adding a Vector Layer"><img src="./img/add_vector_layer.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>This will bring up the <code>Add Vector Layer</code> popup and you then click on the <code>...</code> to navigate to where you saved <code>London.gpkg</code>. Select this, click <code>Add</code>, and see what happens!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Vector Layer Popup</figcaption>
-<p><a href="./img/add_vector_layer_ui.png" class="lightbox" title="Vector Layer Popup" data-gallery="adding-layer"><img src="./img/add_vector_layer_ui.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/add_vector_layer_ui.png" class="lightbox" data-gallery="adding-layer" title="Vector Layer Popup"><img src="./img/add_vector_layer_ui.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Hmmmmm, what is <em>this</em>?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Transform Choices</figcaption>
-<p><a href="./img/add_vector_layer_transforms.png" class="lightbox" title="Transform Choices" data-gallery="adding-layer"><img src="./img/add_vector_layer_transforms.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/add_vector_layer_transforms.png" class="lightbox" data-gallery="adding-layer" title="Transform Choices"><img src="./img/add_vector_layer_transforms.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>For now, just take the selected the option, click <code>OK</code> to make the Transform popup go away, and then click <code>Close</code> to make the Add Vector Layer popup disappear.</p>
@@ -355,7 +400,7 @@ Using the OSM Wiki
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Dragging layers to rearrage</figcaption>
-<p><a href="./img/dragging_layers.gif" class="lightbox" title="Dragging layers to rearrage" data-gallery="quarto-lightbox-gallery-15"><img src="./img/dragging_layers.gif" class="img-fluid figure-img"></a></p>
+<p><a href="./img/dragging_layers.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Dragging layers to rearrage"><img src="./img/dragging_layers.gif" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -372,7 +417,7 @@ Using the OSM Wiki
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Video of Changing Layer Style</figcaption>
-<p><a href="./img/change_layer_style.mov" class="lightbox" title="Video of Changing Layer Style" data-gallery="quarto-lightbox-gallery-16"><video src="./img/change_layer_style.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/change_layer_style.mov">Video</a></p>
+<p><a href="./img/change_layer_style.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Video of Changing Layer Style"><video src="./img/change_layer_style.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/change_layer_style.mov">Video</a></p>
 </figure>
 </div>
 <p>Your Layer Properties should look something like this:</p>
@@ -395,7 +440,7 @@ Using the OSM Wiki
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Video of Adding Layer Labels</figcaption>
-<p><a href="./img/adding-labels.mov" class="lightbox" title="Video of Adding Layer Labels" data-gallery="quarto-lightbox-gallery-18"><video src="./img/adding-labels.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/adding-labels.mov">Video</a></p>
+<p><a href="./img/adding-labels.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Video of Adding Layer Labels"><video src="./img/adding-labels.mov" class="img-fluid" style="width:75.0%" controls=""></video></a><a href="./img/adding-labels.mov">Video</a></p>
 </figure>
 </div>
 </section>
@@ -428,7 +473,7 @@ Rearrange the Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Map with LSOAs added</figcaption>
-<p><a href="./img/add_lsoa_data.png" class="lightbox" title="Map with LSOAs added" data-gallery="quarto-lightbox-gallery-19"><img src="./img/add_lsoa_data.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/add_lsoa_data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Map with LSOAs added"><img src="./img/add_lsoa_data.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -548,7 +593,7 @@ Rearrange the Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Data Source Manager</figcaption>
-<p><a href="./img/dmg.png" class="lightbox" title="Data Source Manager" data-gallery="quarto-lightbox-gallery-20"><img src="./img/dmg.png" class="img-fluid figure-img"></a></p>
+<p><a href="./img/dmg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Data Source Manager"><img src="./img/dmg.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>You now need to follow these steps <strong>carefully</strong>:</p>
@@ -566,7 +611,7 @@ Rearrange the Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Adding a CSV file to QGIS</figcaption>
-<p><a href="./img/adding-csv.mov" class="lightbox" title="Adding a CSV file to QGIS" data-gallery="quarto-lightbox-gallery-21"><video src="./img/adding-csv.mov" class="img-fluid" controls=""></video></a><a href="./img/adding-csv.mov">Video</a></p>
+<p><a href="./img/adding-csv.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Adding a CSV file to QGIS"><video src="./img/adding-csv.mov" class="img-fluid" controls=""></video></a><a href="./img/adding-csv.mov">Video</a></p>
 </figure>
 </div>
 <p>The reason we can’t see any changes on the map is that we’ve just added data, not <em>mapped</em> data.</p>
@@ -580,7 +625,7 @@ Rearrange the Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Part 1: Creating the Join</figcaption>
-<p><a href="./img/join_part1.mov" class="lightbox" title="Part 1: Creating the Join" data-gallery="quarto-lightbox-gallery-22"><video src="./img/join_part1.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part1.mov">Video</a></p>
+<p><a href="./img/join_part1.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Part 1: Creating the Join"><video src="./img/join_part1.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part1.mov">Video</a></p>
 </figure>
 </div>
 <p>Step-by-step this is:</p>
@@ -603,7 +648,7 @@ Rearrange the Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Part 2: Checking the Join</figcaption>
-<p><a href="./img/join_part2.mov" class="lightbox" title="Part 2: Checking the Join" data-gallery="quarto-lightbox-gallery-23"><video src="./img/join_part2.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part2.mov">Video</a></p>
+<p><a href="./img/join_part2.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Part 2: Checking the Join"><video src="./img/join_part2.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part2.mov">Video</a></p>
 </figure>
 </div>
 <p>If nothing has changed, how do we know if it ‘worked’, or even what the heck happened:</p>
@@ -619,7 +664,7 @@ Rearrange the Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Part 3: Changing the Symbology</figcaption>
-<p><a href="./img/join_part3.mov" class="lightbox" title="Part 3: Changing the Symbology" data-gallery="quarto-lightbox-gallery-24"><video src="./img/join_part3.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part3.mov">Video</a></p>
+<p><a href="./img/join_part3.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Part 3: Changing the Symbology"><video src="./img/join_part3.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part3.mov">Video</a></p>
 </figure>
 </div>
 <p>Now let’s see what we can do with our joined data:</p>
@@ -640,7 +685,7 @@ Rearrange the Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Part 4: Checking the Results</figcaption>
-<p><a href="./img/join_part4.mov" class="lightbox" title="Part 4: Checking the Results" data-gallery="quarto-lightbox-gallery-25"><video src="./img/join_part4.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part4.mov">Video</a></p>
+<p><a href="./img/join_part4.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Part 4: Checking the Results"><video src="./img/join_part4.mov" class="img-fluid" controls=""></video></a><a href="./img/join_part4.mov">Video</a></p>
 </figure>
 </div>
 <p>In this last part we just want to check the results make some kind of sense. In my video, using <code>Rocket</code> colour ramp, the lightest colours are the highest values. Here is use the ‘info’ button again to find the highest value in the data set and check based on the colour and check what the price was in 2001.</p>
@@ -674,7 +719,7 @@ Rearrange the Layers
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Save the Join to a new GeoPackage</figcaption>
-<p><a href="./img/join_save_and_copy.mov" class="lightbox" title="Save the Join to a new GeoPackage" data-gallery="quarto-lightbox-gallery-26"><video src="./img/join_save_and_copy.mov" class="img-fluid" controls=""></video></a><a href="./img/join_save_and_copy.mov">Video</a></p>
+<p><a href="./img/join_save_and_copy.mov" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Save the Join to a new GeoPackage"><video src="./img/join_save_and_copy.mov" class="img-fluid" controls=""></video></a><a href="./img/join_save_and_copy.mov">Video</a></p>
 </figure>
 </div>
 </section>
@@ -942,7 +987,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":true,"openEffect":"fade","closeEffect":"fade"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"fade","loop":true,"closeEffect":"fade","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 
