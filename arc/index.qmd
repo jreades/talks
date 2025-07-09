@@ -23,37 +23,85 @@ logo: ../img/CASA_Logo_no_text.png
 fig-cap-location: top
 history: false
 css: ../css/slides.css
+bib: ../bib/Reades.bib
+csl: ../bib/chicago-author-date.csl
 ---
 
-```{python}
-#| echo: false
-import re
-import numpy as np
-import pandas as pd
-import seaborn as sns
-from matplotlib import pyplot as plt
-```
+# {background-image="./img/There and Back.png" background-opacity=".32"}
 
-# {background-image="./img/SDSV pic 1-edited.png" background-opacity=".12"}
+<h1>&nbsp;</h1>
+<h3 style="padding-left:150px; padding-top:15px;">From Reproducible Research to Teaching, and Back</h3>
 
-::: {.r-fit-text} 
-
-There and Back Again<br />
-A Reproducibility Tale
-
+::: {.notes}
+The benefits of open and reproducible software in academia are often understood in terms of their impact on research and research practice, but their potential to transform pedagogical practice should be seen as equally important. Over the past four years, CASA has invested heavily in the adoption of Quarto across several modules taught in Python and R. In this presentation, we show how Quarto supports the integration and automatic assembly (building) of lectures, handouts, practicals, answer sheets, module and bibliographic information, and even assessments now hosted on GitHub.io. The work has now freed us to focus on module content, instead of administrative tasks, while also making our taught content open to the wider world. We then combine Quarto with Docker and PodMan to expose students to the power of tangled and woven documents (Knuth, 1984), developing their understanding of reproducible research and the interactions between code and argument while also imparting a working understanding of virtualisation. Ultimately, we have come to better understand how to employ these tools in our own work, bringing us 'back again' to the original motivation for our adoption of these toolsets.
 :::
+
+## What Do We Want?
+
+| As (Literate) Researchers   | As (Technical) Instructors |
+| :-------------------------- | :------------------------- |
+| Easy editing and formatting | Code that doesn't break without warning |
+| An up-to-date bibliography  | Tools that work for us, not against us |
+| A polished final output     | An easy to manage module web site |
+| One tool to rule them all   | One tool to rule them all |
+
+# That Tool is Quarto {background-image="./img/One_Ring_Blender_Render.png" background-opacity=".12"}
+
+## What is Quarto?
+
+- From the people who brought you (R) Bookdown
+- Now with added Python and Julia goodness
+- Everything in one place and in Markdown
+- Code is integrated with flexibility as to how it's used
+- Output web sites, PDFs, Reveal.js presentations, even Word!
 
 ::: {.notes}
 
-:::
-
-## {background-image="./img/SDSV pic 2-edited.png" background-opacity=.15}
-
-::: {.r-fit-text}
-
-Questions?
+If, like me, you teach a vaguely technical subject using data that is constantly changing then your priorities are probably something around making sure that the code works this year and that your outputs look right and are up-to-date. All of this is stuff we've dealt with as researchers.
 
 :::
+
+## Why Use It?
+
+- More accessible than $\LaTeX$ (just get on with your writing!)
+- More accessible that PowerPoint or Word (see above)
+- Fully tangled and woven documents [ @knuth:1984 ]
+- Workflow that makes sense for researchers/devs
+- Extensible plug-in framework for custom features^[Unfortunately, this is in Lua.] 
+
+## How We Use It
+
+- One Git/GitHub repo for *everything*
+- Web site is rendered to HTML
+- Lectures are rendered to Reveal.js
+- Practicals are rendered to Jupyter (workbooks) and PDFs (answer sheets)
+- Assessment guidance is rendered to PDF with... 
+- Due dates, weightings, data sources, etc. are parameterised
+- Code Camp uses Pyodide for in-browser execution
+
+## One More Thing...
+
+- Automate *all* the things:
+  - Presentations are converted to PNG via node's `decktape`
+  - Audio recorded to M4A in `ocenaudio`
+  - `ffmpeg` splices together image and audio to create flipped lecture
+  - Intro/Outro rendered on the fly (copyright always up-to-date!)
+  - Orchestrated in Python with custom classes + scripts
+  - Will publish this at *some* point (happy to have help!)
+- Master repo and student work managed via Docker
+  - Looking at Podman, but needs testing
+  - Write once - Run anywhere gains
+
+# All Free, All Open  {background-image="./img/Eye_of_Sauron.png" background-opacity=.15}
+
+# Questions? {background-image="./img/SDSV pic 2-edited.png" background-opacity=.15}
+
+In practice...
+
+| Source            | Site             |
+| :---------------- | :--------------- |
+| [github.com/jreades/code-camp/](https://github.com/jreades/code-camp/) | [jreades.github.io/code-camp/](https://jreades.github.io/code-camp/) |
+| [github.com/jreades/fsds/](https://github.com/jreades/fsds/) | [jreades.github.io/fsds/](https://jreades.github.io/fsds/)
 
 ::: {.notes}
 
