@@ -12,5 +12,47 @@
     "title": "Presentations",
     "section": "",
     "text": "Questions?"
+  },
+  {
+    "objectID": "arc/index.html#section-2",
+    "href": "arc/index.html#section-2",
+    "title": "Presentations",
+    "section": "",
+    "text": "Questions?"
+  },
+  {
+    "objectID": "arc/index.html#what-do-we-want",
+    "href": "arc/index.html#what-do-we-want",
+    "title": "Presentations",
+    "section": "What Do We Want?",
+    "text": "What Do We Want?\n\n\n\n\n\n\n\nAs (Literate) Researchers\nAs (Technical) Instructors\n\n\n\n\nEasy editing and formatting\nCode that doesn’t break without warning\n\n\nAn up-to-date bibliography\nTools that work for us, not against us\n\n\nA polished final output\nAn easy to manage module web site\n\n\nOne tool to rule them all\nOne tool to rule them all"
+  },
+  {
+    "objectID": "arc/index.html#what-is-quarto",
+    "href": "arc/index.html#what-is-quarto",
+    "title": "Presentations",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\nFrom the people who brought you (R) Bookdown\nNow with added Python and Julia goodness\nEverything in one place and in Markdown\nCode is integrated with flexibility as to how it’s used\nOutput web sites, PDFs, Reveal.js presentations, even Word!\n\n\nIf, like me, you teach a vaguely technical subject using data that is constantly changing then your priorities are probably something around making sure that the code works this year and that your outputs look right and are up-to-date. All of this is stuff we’ve dealt with as researchers."
+  },
+  {
+    "objectID": "arc/index.html#why-use-it",
+    "href": "arc/index.html#why-use-it",
+    "title": "Presentations",
+    "section": "Why Use It?",
+    "text": "Why Use It?\n\nMore accessible than \\(\\LaTeX\\) (just get on with your writing!)\nMore accessible that PowerPoint or Word (see above)\nFully tangled and woven documents (Knuth 1984)\nWorkflow that makes sense for researchers/devs\nExtensible plug-in framework for custom features1\n\nUnfortunately, this is in Lua."
+  },
+  {
+    "objectID": "arc/index.html#how-we-use-it",
+    "href": "arc/index.html#how-we-use-it",
+    "title": "Presentations",
+    "section": "How We Use It",
+    "text": "How We Use It\n\nOne Git/GitHub repo for everything\nWeb site is rendered to HTML\nLectures are rendered to Reveal.js\nPracticals are rendered to Jupyter (workbooks) and PDFs (answer sheets)\nAssessment guidance is rendered to PDF with…\nDue dates, weightings, data sources, etc. are parameterised\nCode Camp uses Pyodide for in-browser execution"
+  },
+  {
+    "objectID": "arc/index.html#one-more-thing",
+    "href": "arc/index.html#one-more-thing",
+    "title": "Presentations",
+    "section": "One More Thing…",
+    "text": "One More Thing…\n\nAutomate all the things:\n\nPresentations are converted to PNG via node’s decktape\nAudio recorded to M4A in ocenaudio\nffmpeg splices together image and audio to create flipped lecture\nIntro/Outro rendered on the fly (copyright always up-to-date!)\nOrchestrated in Python with custom classes + scripts\nWill publish this at some point (happy to have help!)\n\nMaster repo and student work managed via Docker\n\nLooking at Podman, but needs testing\nWrite once - Run anywhere gains"
   }
 ]

@@ -29,7 +29,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-25838019fa8d9ca28daaf5ba63c1f04b.css">
   <link rel="stylesheet" href="../css/slides.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -130,13 +150,16 @@
 
 
 <section>
-<section id="section" class="title-slide slide level1 center" data-background-image="./img/SDSV pic 1-edited.png" data-background-opacity=".12">
+<section id="section" class="title-slide slide level1 center" data-background-image="./img/There and Back.png" data-background-opacity=".32">
 <h1></h1>
-<div class="r-fit-text">
-<p>There and Back Again<br> A Reproducibility Tale</p>
-</div>
+<h1>
+&nbsp;
+</h1>
+<h3 style="padding-left:150px; padding-top:15px;">
+From Reproducible Research to Teaching, and Back
+</h3>
 <aside class="notes">
-
+<p>The benefits of open and reproducible software in academia are often understood in terms of their impact on research and research practice, but their potential to transform pedagogical practice should be seen as equally important. Over the past four years, CASA has invested heavily in the adoption of Quarto across several modules taught in Python and R. In this presentation, we show how Quarto supports the integration and automatic assembly (building) of lectures, handouts, practicals, answer sheets, module and bibliographic information, and even assessments now hosted on GitHub.io. The work has now freed us to focus on module content, instead of administrative tasks, while also making our taught content open to the wider world. We then combine Quarto with Docker and PodMan to expose students to the power of tangled and woven documents (Knuth, 1984), developing their understanding of reproducible research and the interactions between code and argument while also imparting a working understanding of virtualisation. Ultimately, we have come to better understand how to employ these tools in our own work, bringing us ‘back again’ to the original motivation for our adoption of these toolsets.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -149,11 +172,134 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-1" class="slide level2" data-background-image="./img/SDSV pic 2-edited.png" data-background-opacity=".15">
-<h2></h2>
-<div class="r-fit-text">
-<p>Questions?</p>
-</div>
+<section id="what-do-we-want" class="slide level2">
+<h2>What Do We Want?</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">As (Literate) Researchers</th>
+<th style="text-align: left;">As (Technical) Instructors</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Easy editing and formatting</td>
+<td style="text-align: left;">Code that doesn’t break without warning</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">An up-to-date bibliography</td>
+<td style="text-align: left;">Tools that work for us, not against us</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A polished final output</td>
+<td style="text-align: left;">An easy to manage module web site</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">One tool to rule them all</td>
+<td style="text-align: left;">One tool to rule them all</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="that-tool-is-quarto" class="title-slide slide level1 center" data-background-image="./img/One_Ring_Blender_Render.png" data-background-opacity=".12">
+<h1>That Tool is Quarto</h1>
+
+</section>
+<section id="what-is-quarto" class="slide level2">
+<h2>What is Quarto?</h2>
+<ul>
+<li>From the people who brought you (R) Bookdown</li>
+<li>Now with added Python and Julia goodness</li>
+<li>Everything in one place and in Markdown</li>
+<li>Code is integrated with flexibility as to how it’s used</li>
+<li>Output web sites, PDFs, Reveal.js presentations, even Word!</li>
+</ul>
+<aside class="notes">
+<p>If, like me, you teach a vaguely technical subject using data that is constantly changing then your priorities are probably something around making sure that the code works this year and that your outputs look right and are up-to-date. All of this is stuff we’ve dealt with as researchers.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-use-it" class="slide level2">
+<h2>Why Use It?</h2>
+<ul>
+<li>More accessible than <span class="math inline">\(\LaTeX\)</span> (just get on with your writing!)</li>
+<li>More accessible that PowerPoint or Word (see above)</li>
+<li>Fully tangled and woven documents <span class="citation" data-cites="knuth:1984">(<a href="#/questions" role="doc-biblioref" onclick="">Knuth 1984</a>)</span></li>
+<li>Workflow that makes sense for researchers/devs</li>
+<li>Extensible plug-in framework for custom features<sup>1</sup></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Unfortunately, this is in Lua.</p></li></ol></aside></section>
+<section id="how-we-use-it" class="slide level2">
+<h2>How We Use It</h2>
+<ul>
+<li>One Git/GitHub repo for <em>everything</em></li>
+<li>Web site is rendered to HTML</li>
+<li>Lectures are rendered to Reveal.js</li>
+<li>Practicals are rendered to Jupyter (workbooks) and PDFs (answer sheets)</li>
+<li>Assessment guidance is rendered to PDF with…</li>
+<li>Due dates, weightings, data sources, etc. are parameterised</li>
+<li>Code Camp uses Pyodide for in-browser execution</li>
+</ul>
+</section>
+<section id="one-more-thing" class="slide level2">
+<h2>One More Thing…</h2>
+<ul>
+<li>Automate <em>all</em> the things:
+<ul>
+<li>Presentations are converted to PNG via node’s <code>decktape</code></li>
+<li>Audio recorded to M4A in <code>ocenaudio</code></li>
+<li><code>ffmpeg</code> splices together image and audio to create flipped lecture</li>
+<li>Intro/Outro rendered on the fly (copyright always up-to-date!)</li>
+<li>Orchestrated in Python with custom classes + scripts</li>
+<li>Will publish this at <em>some</em> point (happy to have help!)</li>
+</ul></li>
+<li>Master repo and student work managed via Docker
+<ul>
+<li>Looking at Podman, but needs testing</li>
+<li>Write once - Run anywhere gains</li>
+</ul></li>
+</ul>
+</section></section>
+<section id="all-free-all-open" class="title-slide slide level1 center" data-background-image="./img/Eye_of_Sauron.png" data-background-opacity=".15">
+<h1>All Free, All Open</h1>
+
+</section>
+
+<section id="questions" class="title-slide slide level1 smaller scrollable" data-background-image="./img/SDSV pic 2-edited.png" data-background-opacity=".15">
+<h1>Questions?</h1>
+<p>In practice…</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Source</th>
+<th style="text-align: left;">Site</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/jreades/code-camp/">github.com/jreades/code-camp/</a></td>
+<td style="text-align: left;"><a href="https://jreades.github.io/code-camp/">jreades.github.io/code-camp/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/jreades/fsds/">github.com/jreades/fsds/</a></td>
+<td style="text-align: left;"><a href="https://jreades.github.io/fsds/">jreades.github.io/fsds/</a></td>
+</tr>
+</tbody>
+</table>
 <aside class="notes">
 
 <style type="text/css">
@@ -169,7 +315,14 @@
       }</style></aside>
 
 
-</section></section>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-knuth:1984" class="csl-entry" role="listitem">
+Knuth, Donald Ervin. 1984. <span>“Literate Programming.”</span> <em><span>The Computer Journal</span></em> 27 (2). Oxford University Press:97–111.
+</div>
+</div>
+</section>
+
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../img/CASA_Logo_no_text.png" class="slide-logo"></p>
