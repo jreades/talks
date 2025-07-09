@@ -1,0 +1,61 @@
+---
+format:
+  revealjs:
+    theme: [serif, ../css/slides.scss]
+    transition: slide
+    transition-speed: fast
+    background-transition: fade
+  html:
+    standalone: true
+    embed-resources: true
+author: "Jon Reades & Andy MacLachlan"
+footer: "Jon Reades & Andy MacLachlan (CASA @ UCL)"
+highlight-style: github
+code-copy: true
+code-line-numbers: true
+slide-level: 2
+title-slide-attributes:
+  data-background-image: ../img/CASA_Logo_no_text.png
+  data-background-size: cover
+  data-background-position: center
+  data-background-opacity: "0.17"
+logo: ../img/CASA_Logo_no_text.png
+fig-cap-location: top
+history: false
+css: ../css/slides.css
+---
+
+```{python}
+#| echo: false
+import re
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from matplotlib import pyplot as plt
+```
+
+# {background-image="./img/SDSV pic 1-edited.png" background-opacity=".12"}
+
+::: {.r-fit-text} 
+
+There and Back Again<br />
+A Reproducibility Tale
+
+:::
+
+::: {.notes}
+
+:::
+
+## {background-image="./img/SDSV pic 2-edited.png" background-opacity=.15}
+
+::: {.r-fit-text}
+
+Questions?
+
+:::
+
+::: {.notes}
+
+:::
+

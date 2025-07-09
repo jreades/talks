@@ -1,0 +1,20 @@
+/* https://fonts.google.com */
+
+/* General */
+/*.reveal-viewport {
+    background: rgb(245,245,245)
+} */
+
+.verysmall table thead tr th, .verysmall table tbody tr, .verysmall table tbody tr td {
+  font-size: 75%;
+}
+
+#tbl-panel-1 table thead tr th, #tbl-panel-1 table tbody tr td, #tbl-panel-2 table thead tr th, #tbl-panel-2 table tbody tr td, #tbl-panel-3 table thead tr th, #tbl-panel-3 table tbody tr td {
+  font-size: 75%;
+}
+
+.reveal .slide p .caption {
+  position: absolute;
+  top: 25px;
+  border: dotted 15px red;
+}

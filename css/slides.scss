@@ -1,0 +1,130 @@
+/*-- scss:defaults --*/
+
+// https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables 
+
+// fonts
+
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono:100,400,700);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+// @import url(https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:400,700);
+@import url(https://fonts.googleapis.com/css?family=Ranga:400,700);
+@import url(https://fonts.googleapis.com/css?family=Allan:400);
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Hurricane&family=Meddon&family=Imperial+Script&display=swap');
+
+
+$font-family-monospace: "JetBrains Mono", "Courier New", monospace !default;
+$font-family-sans-serif: "Amatic SC", sans-serif !default;
+$font-family-serif: "Source Serif Pro", "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif !default;
+$font-family-cursive: Hurricane, Meddon, Allison, cursive;
+$presentation-heading-font: $font-family-sans-serif !default;
+$blockquote-font: $font-family-cursive !default; //"Zilla Slab Highlight", "Ranga", "Source Serif Pro" !default;
+$table-font: "Source Sans Pro", "Amatic SC", sans-serif !default;
+$font-family-base: $font-family-serif !default;
+$mainfont: $font-family-serif !default;
+
+// headings
+//$presentation-heading-text-transform: uppercase !default;
+$presentation-heading-color: rgb(78,60,86) !default;
+$presentation-heading-font-weight: 700 !default;
+
+// body
+$presentation-font-size-root: 33px !default;
+$presentation-line-height: 1.15 !default;
+$presentation-h1-font-size: 1.9em !default;
+$presentation-h2-font-size: 1.65em !default;
+$presentation-h3-font-size: 1.4em !default;
+$code-block-font-size: .92em !default;
+
+// colors
+$body-bg: #fff;
+$body-color: #000;
+$link-color: #6b9e9b; //#e38119;
+$full-casa : rgb(78,60,86);
+$fade-casa : #9e6b88;
+$comp-casa : #6b9e9b;
+
+// code blocks
+$code-block-border: none;
+$code-block-border-left: $fade-casa !default;
+$code-block-border-left-style: dotted;
+$code-block-border-left-width: 5px;
+
+/*-- scss:mixin --*/
+.reveal p .title, .reveal p .subtitle, .reveal .subtitle, .subtitle {
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+}
+
+
+.reveal code {
+    font-size: .92em;
+}
+
+.reveal p, .reveal p i, .reveal p b {
+    font-family: $font-family-serif;
+    line-height: 1.25em;
+}
+
+.reveal ol li, .reveal ul li {
+    font-family: $font-family-serif;
+    line-height: 1.25em;
+}
+
+.r-fit-text, .r-fit-text p {
+    font-family: $font-family-sans-serif;
+    font-weight: 900;
+    color: $full-casa;
+}
+
+// https://www.w3docs.com/snippets/css/how-to-vertically-center-text-with-css.html#example-of-vertically-aligning-a-text-with-flexbox-11
+.reveal .slide blockquote p {
+    position: relative;
+    font-family: $blockquote-font;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center; // stretch?
+    justify-content: center;
+    color: $full-casa;
+    //background-color: $fade-casa;
+    //padding: 2em;
+    padding-left: 2em;
+    //padding-right: 2em
+    top: 0.5em;
+    left: 0.5em;
+    //margin-top: 5em; //450px;
+    //margin-left: 2em; //250px;
+    //margin-bottom: 2em;
+}
+
+.reveal .h2 {
+    margin-bottom: 30px;
+}
+
+.reveal table thead {
+    font-family: $table-font;
+    font-weight: 300;
+}
+
+.reveal table td, {
+    font-family: $table-font;
+    font-weight: 100;
+}
+
+.reveal .csl-entry {
+    font-family: $font-family-serif;
+    font-size: smaller;
+}
+
+/*-- scss:rules --*/
+
+.reveal .sourceCode {
+    border-style: none;
+    border-left-style: dotted 5px $fade-casa;
+}
+
+// Fix links so they are not cut off
+.reveal a {
+    line-height: 1.3em;
+}

@@ -1,0 +1,44 @@
+/*-- scss:defaults --*/
+
+// fonts
+
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono:100,400,700);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700,900);
+// @import url(https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:400,700);
+//@import url(https://fonts.googleapis.com/css?family=Ranga:400,700);
+
+
+$font-family-monospace: "JetBrains Mono", "Courier New", monospace !default;
+$font-family-sans-serif: "Amatic SC", sans-serif !default;
+$font-family-serif: "Source Serif Pro", "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif !default;
+$presentation-heading-font: $font-family-serif !default;
+$blockquote-font: $font-family-serif !default; //"Zilla Slab Highlight", "Ranga", "Source Serif Pro" !default;
+$table-font: "Amatic SC", "Source Sans Pro", sans-serif !default;
+$font-family-base: $font-family-serif !default;
+$mainfont: $font-family-serif !default;
+
+
+// colors
+$body-bg: #fff;
+$body-color: #000;
+$link-color: #6b9e9b; //#e38119;
+$full-casa : rgb(78,60,86);
+$fade-casa : #9e6b88;
+$comp-casa : #6b9e9b;
+
+// code blocks
+$code-block-border: none;
+$code-block-border-left: $fade-casa !default;
+$code-block-border-left-style: dotted;
+$code-block-border-left-width: 5px;
+
+/*-- scss:mixin --*/
+
+/*-- scss:rules --*/
+
+h1, h2, h3, h4, h5, .r-fit-text, .r-fit-text p, .figure-caption {
+    font-family: $font-family-sans-serif;
+    font-weight: 900;
+}
