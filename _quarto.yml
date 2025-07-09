@@ -24,36 +24,6 @@ website:
     right: 
       - icon: github
         href: https://github.com/jreades/fsds
-      - icon: twitter 
-        href: https://twitter.com/jreades
-  navbar:
-    background: primary
-    search: true
-    logo: "/img/CASA_Logo_no_text.png"
-    collapse: true
-    collapse-below: md
-    left:
-      - text: "Welcome"
-        href: index.qmd
-      - sidebar:recent
-
-  sidebar:
-    - id: recent
-      title: "Recent Talks"
-      style: "docked"
-      collapse-level: 2
-      background: light
-      contents:
-        - text: "DCDC22"
-          href: dcdc22/index.qmd
-        - text: "In2Science UK"
-          href: in2science/index.qmd
-
-    - id: all 
-      title: "All Talks"
-      contents:
-        - text: "All"
-          href: talks.qmd
 
 bibliography: bib/Reades.bib
 csl: bib/chicago-author-date.csl
