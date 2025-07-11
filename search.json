@@ -54,5 +54,138 @@
     "title": "Presentations",
     "section": "One More Thing…",
     "text": "One More Thing…\n\nAutomate all the things:\n\nPresentations are converted to PNG via node’s decktape\nAudio recorded to M4A in ocenaudio\nffmpeg splices together image and audio to create flipped lecture\nIntro/Outro rendered on the fly (copyright always up-to-date!)\nOrchestrated in Python with custom classes + scripts\nWill publish this at some point (happy to have help!)\n\nMaster repo and student work managed via Docker\n\nLooking at Podman, but needs testing\nWrite once - Run anywhere gains"
+  },
+  {
+    "objectID": "digital_twins/index.html#so-whats-a-digital-twin",
+    "href": "digital_twins/index.html#so-whats-a-digital-twin",
+    "title": "Digital Twins in City Planning",
+    "section": "So What’s a Digital Twin?",
+    "text": "So What’s a Digital Twin?\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM-generated model for 9 US cities — and attempts to understand the relationship between difference forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface.\nBut the twin isn’t intended just to represent the real world, it’s intended to enable prediction and control. The twin is thus tightly coupled with the system that it represents and this forms the foundation for its capacity to act upon the real world. As our access to ‘compute’ has expanded so has our ambition for the scale of system to be monitored and controlled, and it’s at this point that the digital twin concept starts to align with the ‘smart city’ initiatives undertaken in many cities around the world, and embodied in the governmental rhetoric of countries such as India."
+  },
+  {
+    "objectID": "digital_twins/index.html#flow-of-information",
+    "href": "digital_twins/index.html#flow-of-information",
+    "title": "Digital Twins in City Planning",
+    "section": "Flow of Information",
+    "text": "Flow of Information\n\nMirrors reflect\nTwins interact\n\n\nThe iterative advance from the simpler ‘smart city’ approaches — which might be understood to mirror what is happening in the real world for monitoring purposes — and the digital twin would therefore seem to be the express control that the latter appears to impart. But physical processes are much easier to model in a tightly-coupled way than social and economic ones, which are necessarily much more abstract representations of any underlying reality.\nIn the latter case, the flow of information can take more complex forms: whereas for simple physical systems the flow of information can be explicitly bidirectional and automated (as they are between BIM and the physical plant of an estate), in the case of cities the transfer is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!"
+  },
+  {
+    "objectID": "digital_twins/index.html#frequency-of-update",
+    "href": "digital_twins/index.html#frequency-of-update",
+    "title": "Digital Twins in City Planning",
+    "section": "Frequency of Update",
+    "text": "Frequency of Update\n\nUrban Analytics \\(\\approx\\) High Frequency\nUrban Theory \\(\\approx\\) Low Frequency\n\n\nI think also that the ‘smart city’ is associated with high frequency change: with the instrumentation of infrastructures and mobility platforms, the spread of computation into every thing around us. You can think of the ‘smart trees’ at this year’s Chelsea Garden Show which report their needs on a regular basis to a centralised home hub, or the ongoing monitoring of sewerage for early warnings of new pandemics.\nIn the high-frequency world we can use the twin to influence the real thing. Real-time data about the Tube system doesn’t just mirror what’s happening in the Tube, it is used to shape and change the physical infrastructure. So the idea of the smart city in that it is not just about an embedding of soft into hard but of hard becoming soft.\nBut when we try to use high frequency data to forecast what cities might look like in ten, twenty, or thirty years we run into problems: predictability dissolves, and “our current predictions for many social processes are at present not better than two-to-three-day weather forecasting.”"
+  },
+  {
+    "objectID": "digital_twins/index.html#shallow-deep-copies",
+    "href": "digital_twins/index.html#shallow-deep-copies",
+    "title": "Digital Twins in City Planning",
+    "section": "Shallow & Deep Copies",
+    "text": "Shallow & Deep Copies\n\nShallow copy \\(\\approx\\) Copy by reference\nDeep copy \\(\\approx\\) Copy by value\n\n\nThe world of the smart city is one where IT is embedded into the city fabric order to copy data about the real world into the digital world and optimised decisions can copied back. But the Digital Twin therefore has to be something more than this: the twin essentially merges with with the artifact and can no longer function separately. But for any model to function, there must be some latency between the real thing and the thing simulated – the model.\nProgrammers distinguish between shallow and deep copies. They mean this in a very particular way about copying references (pointers to the real data) and copying values (the data itself). But I can’t help thinking that the idea of copying values inadvertently throws up its deeper meaning as well: our digital twins copy normative values about what matters to us and to our systems? Maybe there is no such thing as a deep copy of a city?"
+  },
+  {
+    "objectID": "digital_twins/index.html#a-federation-of-computers",
+    "href": "digital_twins/index.html#a-federation-of-computers",
+    "title": "Digital Twins in City Planning",
+    "section": "A Federation of Computers",
+    "text": "A Federation of Computers\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
+  },
+  {
+    "objectID": "digital_twins/index.html#a-federation-of-twins",
+    "href": "digital_twins/index.html#a-federation-of-twins",
+    "title": "Digital Twins in City Planning",
+    "section": "A Federation of Twins",
+    "text": "A Federation of Twins\n\n\\(\\ldots\\) in social systems, we can define many types of twins that reflect a multitude of theoretical perspectives, each of which reflect different features of the real system\n\n\nIn the absence of deep copy — which we’d argue is impossible due to the computational complexity highlighted in the previous slide — we need to look closely at what we model and acknowledge their essential incompleteness. So rather than thinking about ‘the one true twin’, we have a plethora of perspectives that are rooted in the slow cycles of theory. They are hierarchical and contradictory, overlapping and multi-scalar."
+  },
+  {
+    "objectID": "digital_twins/index.html#the-human-in-the-loop",
+    "href": "digital_twins/index.html#the-human-in-the-loop",
+    "title": "Digital Twins in City Planning",
+    "section": "The Human in the Loop",
+    "text": "The Human in the Loop\n\nSomething here about the importance of human judgement and the need for planners and government to think about what is ‘copied’ into the twin and how its outputs are copied back into the real world…"
+  },
+  {
+    "objectID": "digital_twins/index.html#efficiency-resilience",
+    "href": "digital_twins/index.html#efficiency-resilience",
+    "title": "Digital Twins in City Planning",
+    "section": "Efficiency & Resilience",
+    "text": "Efficiency & Resilience\n\nHighly efficient system \\(\\approx\\) brittle\nHighly redundant system \\(\\approx\\) resilient\n\n\nA note on the risks of optimisation without the human-in-the-loop: AI-optimises-everything leaves a system that is higly optimised but almost certainly extremely brittle in the event of catastrphic failures. But efficiency is also an economic problem: the hyper-efficient allocation of ‘resources’ does not lead to the kinds of innovation that arise in places where ‘friction’ and ‘redundancy’ create new pathways for development."
+  },
+  {
+    "objectID": "digital_twins/index.html#thank-you",
+    "href": "digital_twins/index.html#thank-you",
+    "title": "Digital Twins in City Planning",
+    "section": "Thank you!",
+    "text": "Thank you!\n\n\n\n\n\nArribas-Bel, D., and J. Reades. 2018. “Geography and Computers: Past, Present, and Future.” Geography Compass 12 (e12403). https://doi.org/10.1111/gec3.12403.\n\n\nBatty, M. 1990. “Invisible Cities.” Environment and Planning B 17 (2):127–30.\n\n\n———. 2013. “Big Data, Smart Cities and City Planning.” Dialogues in Human Geography 3 (3). SAGE Publications:274–79.\n\n\n———. 2018. “Digital Twins.” Environment and Planning B: Urban Analytics and City Science. Sage Publications Sage UK: London, England.\n\n\n———. 2019. “A Map Is Not the Territory, or Is It?” Environment and Planning B: Urban Analytics and City Science. SAGE Publications Sage UK: London, England.\n\n\n———. 2021. “Multiple Models.” Environment and Planning B: Urban Analytics and City Science. SAGE Publications Sage UK: London, England.\n\n\n———. 2024. “Digital Twins in City Planning.” Nature Computational Science 4 (3). Nature Publishing Group US New York:192–99.\n\n\nBatty, M., and R. Milton. 2023. “Building a Digital Twin for British Cities.” arXiv Preprint arXiv:2312.03674.\n\n\nGelernter, David. 1993. Mirror Worlds: Or the Day Software Puts the Universe in a Shoebox... How It Will Happen and What It Will Mean. Oxford University Press.\n\n\nReades, J., F. Calabrese, A. Sevtsuk, and C. Ratti. 2007. “Cellular census: Explorations in urban data collection.” IEEE Pervasive Computing 6 (3):30–38.\n\n\nReades, J., J. De Souza, and P. Hubbard. 2019. “Understanding Urban Gentrification Through Machine Learning.” Urban Studies 56 (5):922–42."
+  },
+  {
+    "objectID": "casa/Overview.html",
+    "href": "casa/Overview.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Founded in 1995…\n\nCASA is an interdisciplinary institute focusing on the science of cities within The Bartlett Faculty of the Built Environment at UCL. We bring together some of the brightest minds from multiple disciplines to tackle the challenges facing modern urban environments. Among our staff are physicists, planners, geographers, data scientists, architects, mathematicians and computer scientists all working on the same projects.\n\n\n\n1995: established as pure research institute with Prof. Michael Batty as director.\n2000: first PhD cohort\n2010: first MSc cohort (Smart Cities & Urban Analytics; Spatial Data Science & Visualisation)\n\n2011: Mike ‘retires’, Prof. Andy Hudson-Smith director.\n2017: Andy steps down, Prof. Adam Dennett director.\n2021: MSc Connected Environments (IoT) launched.\n2023: MSc Urban Spatial Science merges earlier ‘smart cities’ and data viz programmes.\n2023: Adam steps down, Prof. Jon Reades director.\n\nToday: 23 FTE academics; more than a dozen post-docs; 20+ PhD researchers; over 150 MSc students."
+  },
+  {
+    "objectID": "casa/Overview.html#what-is-casa",
+    "href": "casa/Overview.html#what-is-casa",
+    "title": "Presentations",
+    "section": "",
+    "text": "Founded in 1995…\n\nCASA is an interdisciplinary institute focusing on the science of cities within The Bartlett Faculty of the Built Environment at UCL. We bring together some of the brightest minds from multiple disciplines to tackle the challenges facing modern urban environments. Among our staff are physicists, planners, geographers, data scientists, architects, mathematicians and computer scientists all working on the same projects.\n\n\n\n1995: established as pure research institute with Prof. Michael Batty as director.\n2000: first PhD cohort\n2010: first MSc cohort (Smart Cities & Urban Analytics; Spatial Data Science & Visualisation)\n\n2011: Mike ‘retires’, Prof. Andy Hudson-Smith director.\n2017: Andy steps down, Prof. Adam Dennett director.\n2021: MSc Connected Environments (IoT) launched.\n2023: MSc Urban Spatial Science merges earlier ‘smart cities’ and data viz programmes.\n2023: Adam steps down, Prof. Jon Reades director.\n\nToday: 23 FTE academics; more than a dozen post-docs; 20+ PhD researchers; over 150 MSc students."
+  },
+  {
+    "objectID": "casa/Overview.html#research-excellence",
+    "href": "casa/Overview.html#research-excellence",
+    "title": "Presentations",
+    "section": "Research Excellence",
+    "text": "Research Excellence\nSince 2020, we have received funding from the UK’s social, physical, and medical sciences, strategic computing infrastructure, and arts and humanities funding councils, as well as the Royal Society and British Academy, EU Horizon, and UK government in areas including:\n\nExascale Computation & Digital Twins.\nComplexity, Networks & ABM/CA Simulation.\n(Spatial) Data Science, Visualisation & Urban Analytics.\nLow-cost IoT sensors for environmental monitoring.\nModelling Urban Mobility & Neighbourhood Change with ML.\nApplications of AI to spatial, temporal and textual urban data.\n\nThese — together with a grounding in complexity and systems theory — form the spine of our teaching to more than 150 MSc students from around the world.\n\nIn line with best-practice in UCL, all of our teaching is research-led, with best-practice in areas such as reproducibility and open science feeding into our teaching, and what we learn in the classroom informing our research trajectory."
+  },
+  {
+    "objectID": "digital_twins/casa.html#a-brief-history",
+    "href": "digital_twins/casa.html#a-brief-history",
+    "title": "CASA in 2 Slides",
+    "section": "A Brief History",
+    "text": "A Brief History"
+  },
+  {
+    "objectID": "digital_twins/casa.html#today",
+    "href": "digital_twins/casa.html#today",
+    "title": "CASA in 2 Slides",
+    "section": "Today",
+    "text": "Today"
+  },
+  {
+    "objectID": "digital_twins/index.html#some-history",
+    "href": "digital_twins/index.html#some-history",
+    "title": "Digital Twins in City Planning",
+    "section": "Some History",
+    "text": "Some History\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM Architect generated model for 9 US cities — and attempts to understand the relationship between different forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface."
+  },
+  {
+    "objectID": "digital_twins/index.html#models-and-abstractions",
+    "href": "digital_twins/index.html#models-and-abstractions",
+    "title": "Digital Twins in City Planning",
+    "section": "Models and Abstractions",
+    "text": "Models and Abstractions\n\n\nA model is an abstraction or simplification of the real thing, where the model-builder throws away most of the real thing leaving only its essence.\n\n\n\nModels can represent the actual system, or they can be a conceptual or mathematical version of the system. However, it’s fairly uncontroversial to acknowledge that they are a simplification of the real thing where choices are made to further the function of the model. Obviously, as our access to ‘compute’ has expanded so has our ambition for the scale of system to be monitored and controlled, but the fundamental limitation remains: our understanding of function will vary from person to person, or group to group, so it’s highly likely that, even if we’re trying to build the same model we’ll end up with something different."
+  },
+  {
+    "objectID": "digital_twins/index.html#models-and-twins",
+    "href": "digital_twins/index.html#models-and-twins",
+    "title": "Digital Twins in City Planning",
+    "section": "Models and Twins",
+    "text": "Models and Twins\n\n\nModels reflect\n\nTwins interact\n\n\nBut the twin isn’t intended just to represent the real world, it it built to interact. It is therefore simultaneously tightly coupled\nThe iterative advance from the simpler ‘smart city’ approaches — which might be understood to mirror what is happening in the real world for monitoring purposes — and the digital twin would therefore seem to be the express control that the latter appears to impart. But physical processes are much easier to model in a tightly-coupled way than social and economic ones, which are necessarily much more abstract representations of any underlying reality.\nIn the latter case, the flow of information can take more complex forms: whereas for simple physical systems the flow of information can be explicitly bidirectional and automated (as they are between BIM and the physical plant of an estate), in the case of cities the transfer is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!"
+  },
+  {
+    "objectID": "digital_twins/index.html#section",
+    "href": "digital_twins/index.html#section",
+    "title": "Digital Twins in City Planning",
+    "section": "",
+    "text": "Models reflect\n\n\n\n\n\nTwins interact\n\n\n\n\nBut the twin isn’t intended just to represent the real world, it it built to interact. It is therefore simultaneously tightly coupled\nThe iterative advance from the simpler ‘smart city’ approaches — which might be understood to mirror what is happening in the real world for monitoring purposes — and the digital twin would therefore seem to be the express control that the latter appears to impart. But physical processes are much easier to model in a tightly-coupled way than social and economic ones, which are necessarily much more abstract representations of any underlying reality.\nIn the latter case, the flow of information can take more complex forms: whereas for simple physical systems the flow of information can be explicitly bidirectional and automated (as they are between BIM and the physical plant of an estate), in the case of cities the transfer is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!"
+  },
+  {
+    "objectID": "digital_twins/index.html#frequency",
+    "href": "digital_twins/index.html#frequency",
+    "title": "Digital Twins in City Planning",
+    "section": "Frequency",
+    "text": "Frequency\n\n\n\n\nUrban Analytics\n\nHigh Frequency\n\n\nUrban Theory1\n\nLow Frequency\n\n\n\n\n\nThe instrumentation of infrastructures and mobility platforms, and the spread of computation into every thing around us, also presents us with the challenge of frequency. For high frequency, you can think of ‘smart’ systems, whether they are the ‘smart trees’ at this year’s Chelsea Garden Show or the ‘smart cities’ that have been a developmental priority in many countries. For most models and twins it’s relatively straightforward to peer a short way into the future.\nThat’s why, in the high-frequency world of urban analytics it seems plausible that we can use the twin to influence the real thing. Real-time data about the Tube system doesn’t just mirror what’s happening in the Tube, it can be used to shape and change the deployment of people and infrastructures.\nBut when we try to use high frequency data to forecast what cities might look like in ten, twenty, or thirty years we run into huge problems: indeed, “our current predictions for many social processes are at present not better than two-to-three-day weather forecasting.”\n\nOr politics!"
   }
 ]
