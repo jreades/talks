@@ -2,23 +2,19 @@
 
 // https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables 
 
-// fonts
-
-@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,500,700);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,500,700);
-@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono:100,400,700);
-@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
-// @import url(https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:400,700);
-@import url(https://fonts.googleapis.com/css?family=Ranga:400,700);
-@import url(https://fonts.googleapis.com/css?family=Allan:400);
-@import url('https://fonts.googleapis.com/css2?family=Allison&family=Hurricane&family=Meddon&family=Imperial+Script&display=swap');
-
+// Fonts
+// @import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,500,700);
+// @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,500,700);
+// @import url(https://fonts.googleapis.com/css?family=JetBrains+Mono:100,400,700);
+// @import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+@import url(https://fonts.googleapis.com/css2?family=Amatic+SC&family=JetBrains+Mono&family=Source+Sans+Pro&family=Source+Serif+Pro&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Caveat&family=Marck+Script&family=Qwitcher+Grypen&display=swap);
 
 $font-family-monospace: "JetBrains Mono", "Courier New", monospace !default;
-$font-family-sans-serif: "Amatic SC", sans-serif !default;
+$font-family-sans-serif: "Source Sans Pro", "Amatic SC", sans-serif !default;
 $font-family-serif: "Source Serif Pro", "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif !default;
-$font-family-cursive: Hurricane, Meddon, Allison, cursive;
-$presentation-heading-font: $font-family-sans-serif !default;
+$presentation-heading-font: "Amatic SC", $font-family-sans-serif !default;
+$font-family-cursive: Caveat, "Marck Script", "Qwitcher Grypen", cursive; 
 $blockquote-font: $font-family-cursive !default; //"Zilla Slab Highlight", "Ranga", "Source Serif Pro" !default;
 $table-font: "Source Sans Pro", "Amatic SC", sans-serif !default;
 $font-family-base: $font-family-serif !default;

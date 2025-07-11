@@ -1,0 +1,26 @@
+---
+title: "CASA in 2 Slides"
+format:
+  revealjs:
+    theme: [serif, ../css/slides.scss]
+    embed-resources: true
+    standalone: true
+author: "Mike Batty & Jon Reades"
+footer: "CASA in 2 Slides • Mike Batty & Jon Reades"
+fig-cap-location: top
+slide-level: 2
+#title-slide-attributes:
+#  data-background-image: ../img/CASA_Logo_no_text.png
+#  data-background-size: cover
+#  data-background-position: center
+#  data-background-opacity: '0.17'
+logo: ../img/CASA_logo.png
+history: false
+css: ../css/slides.css
+---
+
+## A Brief History
+
+
+
+## Today

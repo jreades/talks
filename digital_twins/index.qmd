@@ -1,0 +1,182 @@
+---
+title: "Digital Twins in City Planning"
+format:
+  revealjs:
+    theme: [serif, ../css/slides.scss]
+    embed-resources: true
+    standalone: true
+author: "Mike Batty & Jon Reades"
+footer: "Digital Twins • Mike Batty & Jon Reades"
+fig-cap-location: top
+slide-level: 2
+bibliography: talk.bib
+title-slide-attributes:
+  data-background-image: ../img/CASA_Logo_no_text.png
+  data-background-size: cover
+  data-background-position: center
+  data-background-opacity: '0.17'
+  data-notes: "In UCL’s Centre for Advanced Spatial Analysis (CASA), we build computer simulation
+models of cities and regions. Recently as computers have become faster and more powerful, we
+not only build bigger models but also we can construct many different models of the same thing,
+such as the same building, neighbourhood, city, region or even nation. This variety of models are
+called ‘digital twins’, and they not only let us experiment on virtual versions of the same thing,
+they let us explore different futures. When we build more than one twin, we continually strive to
+get the twin to replicate the real system as closely as possible, but we can never produce a perfect
+replica because then the twin would be the real thing. In this talk, we will show various digital
+twins of different city systems, focused on applications in London and the UK, showing how new
+developments in digital computing are providing rich environments within which we can think
+digitally about what our cities might be like in the near and far future. Mike Batty will outline some
+examples from London and Jon Reades will speculate on how these might be used for generating
+more sustainable cities."
+logo: ../img/CASA_logo.png
+history: false
+css: ../css/slides.css
+nocite: |
+  @*
+---
+
+## Some History
+
+![](./img/3D.png)
+
+::: {.notes}
+
+Ask 10 academics and get 10 different answers, but at it's most basic we're talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it's not hard to trace it back substantially further to, for example, @gelernter:1993's *Mirror World, or the Day Software Puts the Universe in a Shoebox...*. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM Architect generated model for 9 US cities — and attempts to understand the relationship between different forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface.
+
+:::
+
+## Models and Abstractions
+
+::: {style="padding:100px"}
+
+> A model is an abstraction or simplification of the real thing, where the model-builder throws away most of the real thing leaving only its essence.
+
+:::
+
+::: {.notes}
+
+Models can represent the **actual** system, or they can be a **conceptual** or **mathematical** version of the system. However, it's fairly uncontroversial to acknowledge that they are a **simplification** of the real thing where choices are made to further the function of the model. Obviously, as our access to 'compute' has expanded so has our ambition for the **scale of system** to be monitored and controlled, but the fundamental limitation remains: our understanding of function will vary from person to person, or group to group, so it's highly likely that, even if we're trying to build **the same model** we'll end up with something different. 
+
+:::
+
+--- 
+
+::::: {.columns}
+
+:::: {.column width="45%"}
+
+::: {style="padding-top:300px;align='center';"}
+<h1>Models *reflect*</h1>
+:::
+
+::::
+:::: {.column width="45%"}
+
+::: {style="padding-top:300px;align='center';"}
+<h1>Twins *interact*</h1>
+:::
+
+::::
+
+:::::
+
+::: {.notes}
+
+So we often think of models as a way to reflect some real-world system in a mathematical or computational context; however the twin **isn't intended just to represent** the real world, it is built to **interact** with it in some way. For **physical processes**, such as electrical or mechanical systems the difference between a model and a twin can be fairly minimal, and the model itself may be *reasonably* close to the real thing. The twin will be **tightly coupled**. To put it another way, with the right tooling, the flow of information between model and world can be bidirectional and relatively simple.
+
+But for **social and economic processes** – such as cities – the representations of any underlying reality is far more *abstract* and the interactions are far more *complex*. In the latter case, **the flow of information is also complex**: even if we did manage to model the entire city, the transfer of information from twin to reality is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle! 
+
+So the attempt to make, for example, an urban digital twin is deeply problematic – which is not to say that it's not worth doing – because of the interaction element.
+
+:::
+
+---
+
+::: {style="padding-top:200px;font-size:48pt;"}
+|                 |   |              |
+| :-------------- | - | :------------- |
+| Urban Analytics |   | High Frequency |
+| Urban Theory^[Or politics!] |   | Low Frequency |
+::: 
+
+::: {.notes}
+
+The instrumentation of infrastructures and mobility platforms, and the spread of computation into every *thing* around us, also presents us with the challenge of frequency. For **high frequency**, you can think of 'smart' systems, whether they are the 'smart trees' at this year's Chelsea Garden Show or the 'smart cities' that have been a developmental priority in many countries. For most models and twins it's relatively straightforward to peer a short way into the future.
+
+That's why, in the high-frequency world of urban analytics it seems plausible that **we can use the twin to *influence* the real thing**. **Real-time data** about the Tube system doesn't just mirror what's happening in the Tube, it can be used to **shape and change** the deployment of people and infrastructures.  
+
+But when we try to use high frequency data to forecast **what cities might look like in ten, twenty, or thirty years** we run into huge issues: indeed, "our current predictions for many social processes are at present not better than two-to-three-day weather forecasting." So there is a real danger in attempting to use high-frequency data or urban analytics techniques on low frequency problems, and a big part of that is the absence of guardrails when you don't begin with any kind of **theory** about the system you are modelling. 
+
+:::
+
+---
+
+::: {style="padding-top:200px;font-size:48pt;"}
+|                 |   |                |
+| :-------------- | - | :------------- |
+| Shallow copy    |   | Copy by reference |
+| Deep copy       |   | Copy by value |
+::: 
+
+::: {.notes}
+
+If we pull the ideas from the preceding slides together, there's a nice analogy to how programmers distinguish between shallow and deep copies of objects and data structures. They mean this in a very particular way about **copying references** (pointers to the real data) and **copying values** (the data itself). 
+
+Copying by reference is fast and efficient -- especially when you're dealing with large volumes of data -- but changes to the reference update the original. Copying by value replicates the object itself in a new memory space where changes to the copy don't affect the original. So that's slower, less efficient, but can also be safer. When you copy by value on large data sets you often have to think rather carefully about what data you actually *need*.
+
+So at the risk of stretching this analogy to breaking point, all of this throws up a deeper meaning as well: perhaps our digital twins **copy normative values as well**? Like the model-builder, in building a digital twin we make choices about what to keep and what to throw away. Clearly, we also seek to interact with the real-world, but we need to decide if our aim is high- or low-frequency interaction. 
+
+If the interaction is low frequency then things get harder: is the flow of information direct, or is there a human-in-the-loop which necessarily going to profoundly alter the nature of the interaction. What we're getting to here is that maybe there is no such thing as a shallow copy of a city?
+
+:::
+
+## A Federation of Computers
+
+![](./img/QUANT.png)
+
+::: {.notes}
+
+Something about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?
+
+:::
+
+## A Federation of Twins
+
+> $\ldots$ in social systems, we can define many types of twins that reflect a multitude of theoretical perspectives, each of which reflect different features of the real system
+
+::: {.notes}
+
+In the absence of deep copy — which we'd argue is impossible due to the computational complexity highlighted in the previous slide — we need to look closely at what we model and acknowledge their essential incompleteness. So rather than thinking about 'the one true twin', we have a plethora of perspectives that are rooted in the slow cycles of theory. They are hierarchical and contradictory, overlapping and multi-scalar. 
+
+:::
+
+## The Human in the Loop
+
+
+
+::: {.notes}
+
+Something here about the importance of human judgement and the need for planners and government to think about what is 'copied' into the twin and how its outputs are copied back into the real world...
+
+:::
+
+## Efficiency & Resilience
+
+- Highly efficient system $\approx$ brittle
+- Highly redundant system $\approx$ resilient
+
+::: {.notes}
+
+A note on the risks of optimisation without the human-in-the-loop: AI-optimises-everything leaves a system that is higly optimised but almost certainly extremely brittle in the event of catastrphic failures. But efficiency is also an economic problem: the hyper-efficient allocation of 'resources' does not lead to the kinds of innovation that arise in places where 'friction' and 'redundancy' create new pathways for development.
+
+:::
+
+## Thank you!
+
+<div style="float:right">
+  <img src="../img/CASA_logo.png" height="150" />
+</div>
+
+::: {#refs} 
+
+:::

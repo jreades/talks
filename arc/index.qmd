@@ -94,7 +94,7 @@ If, like me, you teach a vaguely technical subject using data that is constantly
 
 # All Free, All Open  {background-image="./img/Eye_of_Sauron.png" background-opacity=.15}
 
-# Questions? {background-image="./img/SDSV pic 2-edited.png" background-opacity=.15}
+# Questions? {background-image="./img/joshua-harris-9yoPEVoSTcA-unsplash.jpg" background-opacity=.2}
 
 In practice...
 
@@ -102,6 +102,18 @@ In practice...
 | :---------------- | :--------------- |
 | [github.com/jreades/code-camp/](https://github.com/jreades/code-camp/) | [jreades.github.io/code-camp/](https://jreades.github.io/code-camp/) |
 | [github.com/jreades/fsds/](https://github.com/jreades/fsds/) | [jreades.github.io/fsds/](https://jreades.github.io/fsds/)
+
+::: {style="font-size: 50%;"}
+
+Photo by <a href="https://unsplash.com/@j_harris_391?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Joshua Harris</a> on <a href="https://unsplash.com/photos/green-and-brown-tunnel-surrounded-by-green-trees-during-daytime-9yoPEVoSTcA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+:::      
+
+# References
+
+::: {.refs}
+
+:::
 
 ::: {.notes}
 
