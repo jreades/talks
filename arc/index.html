@@ -172,6 +172,90 @@ From Reproducible Research to Teaching, and Back
           display:block!important;
       }</style></aside>
 </section>
+<section id="our-vision" class="slide level2" data-background-image="./img/IMG_3898.png" data-background-opacity=".28">
+<h2>Our Vision…</h2>
+<blockquote>
+<p>“Our vision for the modern teacher-scholar is having consistent reproducibility practices in how they conduct research, what they teach to students, and how they prepare teaching materials. We distinguish the three aspects as <strong>reproducible research</strong>, <strong>teaching reproducibility</strong>, and <strong>reproducible teaching</strong>…” <span class="citation" data-cites="dogucu:2022">(<a href="#/references" role="doc-biblioref" onclick="">Dogucu and Çetinkaya-Rundel 2022</a>)</span></p>
+</blockquote>
+<aside class="notes">
+<p>Well we didn’t really have one, we’d just been tasked with building it! Which is why I really like this quote: it captures something the almost magical way that, in certain disciplinary contexts, teaching, research, and research on teaching can reinforce one another.</p>
+<p>The authors went on to argue that “All teaching materials should be: <strong>computationally reproducible</strong>, <strong>well-documented</strong>, and <strong>open</strong>.” And for many teachers that is a scary prospect, particularly those within more traditional, less computationally-intensive, domains within the social sciences, arts and humanities.</p>
+<p>So I want to be clear at the outset that I think this is currently a vision for a particular set of subdomains within fields: the Digital Humanities and the Computational Social Sciences, for example. The picture gets a lot more complex as we move into other areas though, of course, the fact that nearly <em>everything</em> is ‘born digital’ and the rise of LLMs — such as ChatGPT — implies that we’ll see greater impacts down the line.</p>
+<p>So within the fields that the benefits are most obvious — or least problematic — what might they be?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="some-benefits-of-reproducible-workflows" class="slide level2">
+<h2>Some Benefits of Reproducible Workflows</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>For Students</th>
+<th>For Teacher-Scholars</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Abstraction</td>
+<td>Abstraction</td>
+</tr>
+<tr class="even">
+<td>Employability</td>
+<td>Employability</td>
+</tr>
+<tr class="odd">
+<td>Learning-by-Seeing</td>
+<td>Learning-by-Seeing</td>
+</tr>
+<tr class="even">
+<td>Learning-by-Breaking</td>
+<td>Learning-by-Breaking</td>
+</tr>
+<tr class="odd">
+<td>Workload Management</td>
+<td>Workload Management</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>I’m going to confess up-front that this is a slightly optimistic assessment of what reproducibility can bring to our teaching on reproducibility, but the point I’d like to make here is that many of things that we <em>ourselves</em> benefit from when we work reproducibly can also attach to our students.</p>
+<p>Perhaps the extent of the alignment of interest is more obvious we move away from the mixed terminology of economic geography and computer science:</p>
+<p>Our staff <em>typically</em> want to:</p>
+<ul>
+<li>Spend less time in Moodle/Blackboard.</li>
+<li>Spend less time distributing/updating materials.</li>
+<li>Spend more time on the interesting stuff.</li>
+<li>Get to some useful results as quickly as possible.</li>
+</ul>
+<p>Our students <em>typically</em> want to:</p>
+<ul>
+<li>Have little prior experience of coding or data science.</li>
+<li>Have first degrees in Social Sciences/far-STEM.</li>
+<li>Get employability credential.</li>
+<li>Get to the answer as quickly as possible.</li>
+</ul>
+<p>I’d argue that these benefits appear at all stages of the student and teacher journey, but that they become <em>more</em> obvious as students make the transition from undergraduate to post-graduate to post-doc to instructor. And this module sits at the point in that journey where students transition from undergraduate in a non-CS pathway to someone apparently planning to use code/practice coding everyday.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="what-do-we-want" class="slide level2">
 <h2>What Do We Want?</h2>
 <table class="caption-top">
@@ -215,8 +299,8 @@ From Reproducible Research to Teaching, and Back
 <ul>
 <li>From the people who brought you (R) Bookdown</li>
 <li>Now with added Python and Julia goodness</li>
-<li>Everything in one place and in Markdown</li>
-<li>Code is integrated with flexibility as to how it’s used</li>
+<li>Everything in one place in Markdown/YAML</li>
+<li>Integrated code, with flexibility as to how it’s used/displayed</li>
 <li>Output web sites, PDFs, Reveal.js presentations, even Word!</li>
 </ul>
 <aside class="notes">
@@ -250,9 +334,11 @@ From Reproducible Research to Teaching, and Back
 <li>Web site is rendered to HTML</li>
 <li>Lectures are rendered to Reveal.js</li>
 <li>Practicals are rendered to Jupyter (workbooks) and PDFs (answer sheets)</li>
-<li>Assessment guidance is rendered to PDF with…</li>
+<li>Assessment guidance is rendered to PDF with…
+<ul>
 <li>Due dates, weightings, data sources, etc. are parameterised</li>
-<li>Code Camp uses Pyodide for in-browser execution</li>
+</ul></li>
+<li>Pyodide for in-browser execution in some demonstrations</li>
 </ul>
 </section>
 <section id="one-more-thing" class="slide level2">
@@ -267,7 +353,7 @@ From Reproducible Research to Teaching, and Back
 <li>Orchestrated in Python with custom classes + scripts</li>
 <li>Will publish this at <em>some</em> point (happy to have help!)</li>
 </ul></li>
-<li>Master repo and student work managed via Docker
+<li>Both rendering and student work managed via… Docker
 <ul>
 <li>Looking at Podman, but needs testing</li>
 <li>Write once - Run anywhere gains</li>
@@ -326,6 +412,9 @@ From Reproducible Research to Teaching, and Back
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-dogucu:2022" class="csl-entry" role="listitem">
+Dogucu, Mine, and Mine Çetinkaya-Rundel. 2022. <span>“Tools and Recommendations for Reproducible Teaching.”</span> <em>Journal of Statistics and Data Science Education</em> 30 (3). Taylor &amp; Francis:251–60. <a href="https://doi.org/10.1080/26939169.2022.2138645">https://doi.org/10.1080/26939169.2022.2138645</a>.
+</div>
 <div id="ref-knuth:1984" class="csl-entry" role="listitem">
 Knuth, Donald Ervin. 1984. <span>“Literate Programming.”</span> <em><span>The Computer Journal</span></em> 27 (2). Oxford University Press:97–111.
 </div>

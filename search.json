@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Talks",
     "section": "",
-    "text": "ARC Festival"
+    "text": "ARC Festival:\n\nDigital Twins w/ Mike Batty\nFrom Reproducible Research to Teaching, and Back"
   },
   {
     "objectID": "arc/index.html#section-1",
@@ -32,7 +32,7 @@
     "href": "arc/index.html#what-is-quarto",
     "title": "Presentations",
     "section": "What is Quarto?",
-    "text": "What is Quarto?\n\nFrom the people who brought you (R) Bookdown\nNow with added Python and Julia goodness\nEverything in one place and in Markdown\nCode is integrated with flexibility as to how it’s used\nOutput web sites, PDFs, Reveal.js presentations, even Word!\n\n\nIf, like me, you teach a vaguely technical subject using data that is constantly changing then your priorities are probably something around making sure that the code works this year and that your outputs look right and are up-to-date. All of this is stuff we’ve dealt with as researchers."
+    "text": "What is Quarto?\n\nFrom the people who brought you (R) Bookdown\nNow with added Python and Julia goodness\nEverything in one place in Markdown/YAML\nIntegrated code, with flexibility as to how it’s used/displayed\nOutput web sites, PDFs, Reveal.js presentations, even Word!\n\n\nIf, like me, you teach a vaguely technical subject using data that is constantly changing then your priorities are probably something around making sure that the code works this year and that your outputs look right and are up-to-date. All of this is stuff we’ve dealt with as researchers."
   },
   {
     "objectID": "arc/index.html#why-use-it",
@@ -46,14 +46,14 @@
     "href": "arc/index.html#how-we-use-it",
     "title": "Presentations",
     "section": "How We Use It",
-    "text": "How We Use It\n\nOne Git/GitHub repo for everything\nWeb site is rendered to HTML\nLectures are rendered to Reveal.js\nPracticals are rendered to Jupyter (workbooks) and PDFs (answer sheets)\nAssessment guidance is rendered to PDF with…\nDue dates, weightings, data sources, etc. are parameterised\nCode Camp uses Pyodide for in-browser execution"
+    "text": "How We Use It\n\nOne Git/GitHub repo for everything\nWeb site is rendered to HTML\nLectures are rendered to Reveal.js\nPracticals are rendered to Jupyter (workbooks) and PDFs (answer sheets)\nAssessment guidance is rendered to PDF with…\n\nDue dates, weightings, data sources, etc. are parameterised\n\nPyodide for in-browser execution in some demonstrations"
   },
   {
     "objectID": "arc/index.html#one-more-thing",
     "href": "arc/index.html#one-more-thing",
     "title": "Presentations",
     "section": "One More Thing…",
-    "text": "One More Thing…\n\nAutomate all the things:\n\nPresentations are converted to PNG via node’s decktape\nAudio recorded to M4A in ocenaudio\nffmpeg splices together image and audio to create flipped lecture\nIntro/Outro rendered on the fly (copyright always up-to-date!)\nOrchestrated in Python with custom classes + scripts\nWill publish this at some point (happy to have help!)\n\nMaster repo and student work managed via Docker\n\nLooking at Podman, but needs testing\nWrite once - Run anywhere gains"
+    "text": "One More Thing…\n\nAutomate all the things:\n\nPresentations are converted to PNG via node’s decktape\nAudio recorded to M4A in ocenaudio\nffmpeg splices together image and audio to create flipped lecture\nIntro/Outro rendered on the fly (copyright always up-to-date!)\nOrchestrated in Python with custom classes + scripts\nWill publish this at some point (happy to have help!)\n\nBoth rendering and student work managed via… Docker\n\nLooking at Podman, but needs testing\nWrite once - Run anywhere gains"
   },
   {
     "objectID": "digital_twins/index.html#so-whats-a-digital-twin",
@@ -102,7 +102,7 @@
     "href": "digital_twins/index.html#the-human-in-the-loop",
     "title": "Digital Twins in City Planning",
     "section": "The Human in the Loop",
-    "text": "The Human in the Loop\n\nSomething here about the importance of human judgement and the need for planners and government to think about what is ‘copied’ into the twin and how its outputs are copied back into the real world…"
+    "text": "The Human in the Loop\n\n\\(\\ldots\\) in social systems, we can define many types of twins that reflect a multitude of theoretical perspectives, each of which reflect different features of the real system\n\n\nIn the absence of deep copy — which we’d argue is impossible due to computational complexity — we need to look closely at what we model and acknowledge their essential incompleteness. So rather than thinking about ‘the one true twin’, we have a plethora of perspectives that are rooted in the slow cycles of theory. They are hierarchical and contradictory, overlapping and multi-scalar. This highlights the importance of human judgement and the need for planners and government to think about what is ‘copied’ into the twin and how its outputs are copied back into the real world…\nWithout the human-in-the-loop, AI-optimises-everything leaves a system that is higly optimised but almost certainly extremely brittle in the event of catastrophic failures. Efficiency is, paradoxically, an economic problem: the hyper-efficient allocation of ‘resources’ does not lead to the kinds of innovation that arise in places where ‘friction’ and ‘redundancy’ and ‘collision’ create new pathways for development. And our point is that conceptualising the value of the human in all of this is absolutely critical: without that feedback loop it’s highly likely we end up with cities that boring, fragile, and deeply unpleasant."
   },
   {
     "objectID": "digital_twins/index.html#efficiency-resilience",
@@ -179,7 +179,7 @@
     "href": "digital_twins/index.html#section",
     "title": "Digital Twins in City Planning",
     "section": "",
-    "text": "Models reflect\n\n\n\n\n\nTwins interact\n\n\n\n\nBut the twin isn’t intended just to represent the real world, it it built to interact. It is therefore simultaneously tightly coupled\nThe iterative advance from the simpler ‘smart city’ approaches — which might be understood to mirror what is happening in the real world for monitoring purposes — and the digital twin would therefore seem to be the express control that the latter appears to impart. But physical processes are much easier to model in a tightly-coupled way than social and economic ones, which are necessarily much more abstract representations of any underlying reality.\nIn the latter case, the flow of information can take more complex forms: whereas for simple physical systems the flow of information can be explicitly bidirectional and automated (as they are between BIM and the physical plant of an estate), in the case of cities the transfer is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!"
+    "text": "Models reflect\n\n\n\n\n\nTwins interact\n\n\n\n\nSo we often think of models as a way to reflect some real-world system in a mathematical or computational context; however the twin isn’t intended just to represent the real world, it is built to interact with it in some way. For physical processes, such as electrical or mechanical systems the difference between a model and a twin can be fairly minimal, and the model itself may be reasonably close to the real thing. The twin will be tightly coupled. To put it another way, with the right tooling, the flow of information between model and world can be bidirectional and relatively simple.\nBut for social and economic processes – such as cities – the representations of any underlying reality is far more abstract and the interactions are far more complex. In the latter case, the flow of information is also complex: even if we did manage to model the entire city, the transfer of information from twin to reality is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!\nSo the attempt to make, for example, an urban digital twin is deeply problematic – which is not to say that it’s not worth doing – because of the interaction element."
   },
   {
     "objectID": "digital_twins/index.html#frequency",
@@ -187,5 +187,89 @@
     "title": "Digital Twins in City Planning",
     "section": "Frequency",
     "text": "Frequency\n\n\n\n\nUrban Analytics\n\nHigh Frequency\n\n\nUrban Theory1\n\nLow Frequency\n\n\n\n\n\nThe instrumentation of infrastructures and mobility platforms, and the spread of computation into every thing around us, also presents us with the challenge of frequency. For high frequency, you can think of ‘smart’ systems, whether they are the ‘smart trees’ at this year’s Chelsea Garden Show or the ‘smart cities’ that have been a developmental priority in many countries. For most models and twins it’s relatively straightforward to peer a short way into the future.\nThat’s why, in the high-frequency world of urban analytics it seems plausible that we can use the twin to influence the real thing. Real-time data about the Tube system doesn’t just mirror what’s happening in the Tube, it can be used to shape and change the deployment of people and infrastructures.\nBut when we try to use high frequency data to forecast what cities might look like in ten, twenty, or thirty years we run into huge problems: indeed, “our current predictions for many social processes are at present not better than two-to-three-day weather forecasting.”\n\nOr politics!"
+  },
+  {
+    "objectID": "arc/index.html#our-vision",
+    "href": "arc/index.html#our-vision",
+    "title": "Presentations",
+    "section": "Our Vision…",
+    "text": "Our Vision…\n\n“Our vision for the modern teacher-scholar is having consistent reproducibility practices in how they conduct research, what they teach to students, and how they prepare teaching materials. We distinguish the three aspects as reproducible research, teaching reproducibility, and reproducible teaching…” (Dogucu and Çetinkaya-Rundel 2022)\n\n\nWell we didn’t really have one, we’d just been tasked with building it! Which is why I really like this quote: it captures something the almost magical way that, in certain disciplinary contexts, teaching, research, and research on teaching can reinforce one another.\nThe authors went on to argue that “All teaching materials should be: computationally reproducible, well-documented, and open.” And for many teachers that is a scary prospect, particularly those within more traditional, less computationally-intensive, domains within the social sciences, arts and humanities.\nSo I want to be clear at the outset that I think this is currently a vision for a particular set of subdomains within fields: the Digital Humanities and the Computational Social Sciences, for example. The picture gets a lot more complex as we move into other areas though, of course, the fact that nearly everything is ‘born digital’ and the rise of LLMs — such as ChatGPT — implies that we’ll see greater impacts down the line.\nSo within the fields that the benefits are most obvious — or least problematic — what might they be?"
+  },
+  {
+    "objectID": "arc/index.html#some-benefits-of-reproducible-workflows",
+    "href": "arc/index.html#some-benefits-of-reproducible-workflows",
+    "title": "Presentations",
+    "section": "Some Benefits of Reproducible Workflows",
+    "text": "Some Benefits of Reproducible Workflows\n\n\n\nFor Students\nFor Teacher-Scholars\n\n\n\n\nAbstraction\nAbstraction\n\n\nEmployability\nEmployability\n\n\nLearning-by-Seeing\nLearning-by-Seeing\n\n\nLearning-by-Breaking\nLearning-by-Breaking\n\n\nWorkload Management\nWorkload Management\n\n\n\n\nI’m going to confess up-front that this is a slightly optimistic assessment of what reproducibility can bring to our teaching on reproducibility, but the point I’d like to make here is that many of things that we ourselves benefit from when we work reproducibly can also attach to our students.\nPerhaps the extent of the alignment of interest is more obvious we move away from the mixed terminology of economic geography and computer science:\nOur staff typically want to:\n\nSpend less time in Moodle/Blackboard.\nSpend less time distributing/updating materials.\nSpend more time on the interesting stuff.\nGet to some useful results as quickly as possible.\n\nOur students typically want to:\n\nHave little prior experience of coding or data science.\nHave first degrees in Social Sciences/far-STEM.\nGet employability credential.\nGet to the answer as quickly as possible.\n\nI’d argue that these benefits appear at all stages of the student and teacher journey, but that they become more obvious as students make the transition from undergraduate to post-graduate to post-doc to instructor. And this module sits at the point in that journey where students transition from undergraduate in a non-CS pathway to someone apparently planning to use code/practice coding everyday."
+  },
+  {
+    "objectID": "digital_twins/index.html#some-history-analog-dreams",
+    "href": "digital_twins/index.html#some-history-analog-dreams",
+    "title": "Digital Twins in City Planning",
+    "section": "Some History: Analog Dreams",
+    "text": "Some History: Analog Dreams"
+  },
+  {
+    "objectID": "digital_twins/index.html#some-history-in-three-d",
+    "href": "digital_twins/index.html#some-history-in-three-d",
+    "title": "Digital Twins in City Planning",
+    "section": "Some History: In Three-D!",
+    "text": "Some History: In Three-D!\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM Architect generated model for 9 US cities — and attempts to understand the relationship between different forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface."
+  },
+  {
+    "objectID": "digital_twins/index.html#models-of-models",
+    "href": "digital_twins/index.html#models-of-models",
+    "title": "Digital Twins in City Planning",
+    "section": "Models of Models",
+    "text": "Models of Models\n\n\n\n\nIn short, can we embed models into other models such that the output of one is the input to another. Or the same models are running at multiple scales or in multiple contexts? For some kinds of problems this might be relatively straightforward, but in cities — each with its unique history of technologies, policy and political contexts, and data environment — this is non-trivial."
+  },
+  {
+    "objectID": "digital_twins/index.html#analogue-dreams",
+    "href": "digital_twins/index.html#analogue-dreams",
+    "title": "Digital Twins in City Planning",
+    "section": "Analogue Dreams",
+    "text": "Analogue Dreams"
+  },
+  {
+    "objectID": "digital_twins/index.html#into-the-third-dimension",
+    "href": "digital_twins/index.html#into-the-third-dimension",
+    "title": "Digital Twins in City Planning",
+    "section": "Into the Third Dimension",
+    "text": "Into the Third Dimension\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM Architect generated model for 9 US cities — and attempts to understand the relationship between different forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface."
+  },
+  {
+    "objectID": "digital_twins/index.html#data-fied-urban-environments",
+    "href": "digital_twins/index.html#data-fied-urban-environments",
+    "title": "Digital Twins in City Planning",
+    "section": "Data-fied Urban Environments",
+    "text": "Data-fied Urban Environments"
+  },
+  {
+    "objectID": "digital_twins/index.html#scaling-up",
+    "href": "digital_twins/index.html#scaling-up",
+    "title": "Digital Twins in City Planning",
+    "section": "Scaling Up",
+    "text": "Scaling Up\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
+  },
+  {
+    "objectID": "digital_twins/index.html#towards-a-federation-of-twins",
+    "href": "digital_twins/index.html#towards-a-federation-of-twins",
+    "title": "Digital Twins in City Planning",
+    "section": "Towards a Federation of Twins",
+    "text": "Towards a Federation of Twins\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
+  },
+  {
+    "objectID": "digital_twins/index.html#growing-complexity",
+    "href": "digital_twins/index.html#growing-complexity",
+    "title": "Digital Twins in City Planning",
+    "section": "Growing Complexity",
+    "text": "Growing Complexity"
+  },
+  {
+    "objectID": "digital_twins/index.html#exascale-computation",
+    "href": "digital_twins/index.html#exascale-computation",
+    "title": "Digital Twins in City Planning",
+    "section": "Exascale Computation",
+    "text": "Exascale Computation\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
   }
 ]
