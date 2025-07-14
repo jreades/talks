@@ -1,6 +1,7 @@
 # Quarto
 /.quarto/
 /_site/
+/digital_twins/mov/big_files/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

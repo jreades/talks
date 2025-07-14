@@ -1,0 +1,30 @@
+---
+
+::::: {.columns}
+
+:::: {.column width="45%"}
+
+::: {style="padding-top:300px;align='center';"}
+<h1>Models *reflect*</h1>
+:::
+
+::::
+:::: {.column width="45%"}
+
+::: {style="padding-top:300px;align='center';"}
+<h1>Twins *interact*</h1>
+:::
+
+::::
+
+:::::
+
+::: {.notes}
+
+So we often think of models as a way to reflect some real-world system in a mathematical or computational context; however the twin **isn't intended just to represent** the real world, it is built to **interact** with it in some way. For **physical processes**, such as electrical or mechanical systems the difference between a model and a twin can be fairly minimal, and the model itself may be *reasonably* close to the real thing. The twin will be **tightly coupled**. To put it another way, with the right tooling, the flow of information between model and world can be bidirectional and relatively simple.
+
+But for **social and economic processes** – such as cities – the representations of any underlying reality is far more *abstract* and the interactions are far more *complex*. In the latter case, **the flow of information is also complex**: even if we did manage to model the entire city, the transfer of information from twin to reality is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle! 
+
+So the attempt to make, for example, an urban digital twin is deeply problematic – which is not to say that it's not worth doing – because of the interaction element.
+
+:::
