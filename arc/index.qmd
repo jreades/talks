@@ -36,6 +36,56 @@ csl: ../bib/chicago-author-date.csl
 The benefits of open and reproducible software in academia are often understood in terms of their impact on research and research practice, but their potential to transform pedagogical practice should be seen as equally important. Over the past four years, CASA has invested heavily in the adoption of Quarto across several modules taught in Python and R. In this presentation, we show how Quarto supports the integration and automatic assembly (building) of lectures, handouts, practicals, answer sheets, module and bibliographic information, and even assessments now hosted on GitHub.io. The work has now freed us to focus on module content, instead of administrative tasks, while also making our taught content open to the wider world. We then combine Quarto with Docker and PodMan to expose students to the power of tangled and woven documents (Knuth, 1984), developing their understanding of reproducible research and the interactions between code and argument while also imparting a working understanding of virtualisation. Ultimately, we have come to better understand how to employ these tools in our own work, bringing us 'back again' to the original motivation for our adoption of these toolsets.
 :::
 
+## Our Vision... {background-image="./img/IMG_3898.png" background-opacity=".28"}
+
+>  "Our vision for the modern teacher-scholar is having consistent reproducibility practices in how they conduct research, what they teach to students, and how they prepare teaching materials. We distinguish the three aspects as **reproducible research**, **teaching reproducibility**, and **reproducible teaching**..." [@dogucu:2022]
+
+::: {.notes}
+
+Well we didn't really have one, we'd just been tasked with building it! Which is why I really like this quote: it captures something the almost magical way that, in certain disciplinary contexts, teaching, research, and research on teaching can reinforce one another.
+
+The authors went on to argue that "All teaching materials should be: **computationally reproducible**, **well-documented**, and **open**." And for many teachers that is a scary prospect, particularly those within more traditional, less computationally-intensive, domains within the social sciences, arts and humanities. 
+
+So I want to be clear at the outset that I think this is currently a vision for a particular set of subdomains within fields: the Digital Humanities and the Computational Social Sciences, for example. The picture gets a lot more complex as we move into other areas though, of course, the fact that nearly *everything* is 'born digital' and the rise of LLMs — such as ChatGPT — implies that we'll see greater impacts down the line.
+
+So within the fields that the benefits are most obvious — or least problematic — what might they be?
+
+::: 
+
+## Some Benefits of Reproducible Workflows
+
+| For Students         | For Teacher-Scholars |
+| -------------------- | -------------------- |
+| Abstraction          | Abstraction          |
+| Employability        | Employability        |
+| Learning-by-Seeing   | Learning-by-Seeing   |
+| Learning-by-Breaking | Learning-by-Breaking |
+| Workload Management  | Workload Management  |
+
+::: {.notes}
+
+I'm going to confess up-front that this is a slightly optimistic assessment of what reproducibility can bring to our teaching on reproducibility, but the point I'd like to make here is that many of things that we *ourselves* benefit from when we work reproducibly can also attach to our students.
+
+Perhaps the extent of the alignment of interest is more obvious we move away from the mixed terminology of economic geography and computer science:
+
+Our staff *typically* want to:
+
+- Spend less time in Moodle/Blackboard.
+- Spend less time distributing/updating materials.
+- Spend more time on the interesting stuff.
+- Get to some useful results as quickly as possible.
+
+Our students *typically* want to: 
+
+- Have little prior experience of coding or data science.
+- Have first degrees in Social Sciences/far-STEM.
+- Get employability credential.
+- Get to the answer as quickly as possible.
+
+I'd argue that these benefits appear at all stages of the student and teacher journey, but that they become *more* obvious as students make the transition from undergraduate to post-graduate to post-doc to instructor. And this module sits at the point in that journey where students transition from undergraduate in a non-CS pathway to someone apparently planning to use code/practice coding everyday.
+
+:::
+
 ## What Do We Want?
 
 | As (Literate) Researchers   | As (Technical) Instructors |
@@ -51,8 +101,8 @@ The benefits of open and reproducible software in academia are often understood 
 
 - From the people who brought you (R) Bookdown
 - Now with added Python and Julia goodness
-- Everything in one place and in Markdown
-- Code is integrated with flexibility as to how it's used
+- Everything in one place in Markdown/YAML
+- Integrated code, with flexibility as to how it's used/displayed
 - Output web sites, PDFs, Reveal.js presentations, even Word!
 
 ::: {.notes}
@@ -76,8 +126,8 @@ If, like me, you teach a vaguely technical subject using data that is constantly
 - Lectures are rendered to Reveal.js
 - Practicals are rendered to Jupyter (workbooks) and PDFs (answer sheets)
 - Assessment guidance is rendered to PDF with... 
-- Due dates, weightings, data sources, etc. are parameterised
-- Code Camp uses Pyodide for in-browser execution
+  - Due dates, weightings, data sources, etc. are parameterised
+- Pyodide for in-browser execution in some demonstrations
 
 ## One More Thing...
 
@@ -88,7 +138,7 @@ If, like me, you teach a vaguely technical subject using data that is constantly
   - Intro/Outro rendered on the fly (copyright always up-to-date!)
   - Orchestrated in Python with custom classes + scripts
   - Will publish this at *some* point (happy to have help!)
-- Master repo and student work managed via Docker
+- Both rendering and student work managed via... Docker
   - Looking at Podman, but needs testing
   - Write once - Run anywhere gains
 

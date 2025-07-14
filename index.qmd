@@ -1,7 +1,10 @@
 ---
 title: Talks
+author: Jon reades
+date: 7/14/2025
 ---
 
-- [ARC Festival](./arc/index.qmd)
-
+- ARC Festival:
+  - [Digital Twins w/ Mike Batty](./digital_twins/index.qmd)
+  - [From Reproducible Research to Teaching, and Back](./arc/index.qmd)
 
