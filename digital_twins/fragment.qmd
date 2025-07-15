@@ -1,5 +1,6 @@
 ---
-
+title: Fragments
+---
 ::::: {.columns}
 
 :::: {.column width="45%"}
