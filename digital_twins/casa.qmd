@@ -3,8 +3,8 @@ title: "CASA in 2 Slides"
 format:
   revealjs:
     theme: [serif, ../css/slides.scss]
-    embed-resources: true
-    standalone: true
+    embed-resources: false
+    standalone: false
 author: "Mike Batty & Jon Reades"
 footer: "CASA in 2 Slides • Mike Batty & Jon Reades"
 fig-cap-location: top

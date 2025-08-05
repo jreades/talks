@@ -3,8 +3,8 @@ title: "Digital Twins in City Planning"
 format:
   revealjs:
     theme: [serif, ../css/slides.scss]
-    embed-resources: true
-    standalone: true
+    embed-resources: false
+    standalone: false
 author: "Mike Batty & Jon Reades"
 footer: "Digital Twins • Mike Batty & Jon Reades"
 fig-cap-location: top
