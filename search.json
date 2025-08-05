@@ -1,24 +1,115 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Talks",
-    "section": "",
-    "text": "ARC Festival:\n\nDigital Twins w/ Mike Batty\nFrom Reproducible Research to Teaching, and Back"
+    "objectID": "digital_twins/index.html#analogue-dreams",
+    "href": "digital_twins/index.html#analogue-dreams",
+    "title": "Digital Twins in City Planning",
+    "section": "Analogue Dreams",
+    "text": "Analogue Dreams"
   },
   {
-    "objectID": "arc/index.html#section-1",
-    "href": "arc/index.html#section-1",
-    "title": "Presentations",
-    "section": "",
-    "text": "Questions?"
+    "objectID": "digital_twins/index.html#into-the-third-dimension",
+    "href": "digital_twins/index.html#into-the-third-dimension",
+    "title": "Digital Twins in City Planning",
+    "section": "Into the Third Dimension",
+    "text": "Into the Third Dimension\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM Architect generated model for 9 US cities — and attempts to understand the relationship between different forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface."
   },
   {
-    "objectID": "arc/index.html#section-2",
-    "href": "arc/index.html#section-2",
+    "objectID": "digital_twins/index.html#data-fied-urban-environments",
+    "href": "digital_twins/index.html#data-fied-urban-environments",
+    "title": "Digital Twins in City Planning",
+    "section": "Data-fied Urban Environments",
+    "text": "Data-fied Urban Environments"
+  },
+  {
+    "objectID": "digital_twins/index.html#growing-complexity",
+    "href": "digital_twins/index.html#growing-complexity",
+    "title": "Digital Twins in City Planning",
+    "section": "Growing Complexity",
+    "text": "Growing Complexity"
+  },
+  {
+    "objectID": "digital_twins/index.html#exascale-computation",
+    "href": "digital_twins/index.html#exascale-computation",
+    "title": "Digital Twins in City Planning",
+    "section": "Exascale Computation",
+    "text": "Exascale Computation\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
+  },
+  {
+    "objectID": "digital_twins/index.html#models-of-models",
+    "href": "digital_twins/index.html#models-of-models",
+    "title": "Digital Twins in City Planning",
+    "section": "Models of Models",
+    "text": "Models of Models\n\n\n\n\nIn short, can we embed models into other models such that the output of one is the input to another. Or the same models are running at multiple scales or in multiple contexts? For some kinds of problems this might be relatively straightforward, but in cities — each with its unique history of technologies, policy and political contexts, and data environment — this is non-trivial."
+  },
+  {
+    "objectID": "digital_twins/index.html#models-and-abstractions",
+    "href": "digital_twins/index.html#models-and-abstractions",
+    "title": "Digital Twins in City Planning",
+    "section": "Models and Abstractions",
+    "text": "Models and Abstractions\n\n\nA model is an abstraction or simplification of the real thing, where the model-builder throws away most of the real thing leaving only its essence.\n\n\n\nModels can represent the actual system, or they can be a conceptual or mathematical version of the system. However, it’s fairly uncontroversial to acknowledge that they are a simplification of the real thing where choices are made to further the function of the model. Obviously, as our access to ‘compute’ has expanded so has our ambition for the scale of system to be monitored and controlled, but the fundamental limitation remains: our understanding of function will vary from person to person, or group to group, so it’s highly likely that, even if we’re trying to build the same model we’ll end up with something different."
+  },
+  {
+    "objectID": "digital_twins/index.html#the-human-in-the-loop",
+    "href": "digital_twins/index.html#the-human-in-the-loop",
+    "title": "Digital Twins in City Planning",
+    "section": "The Human in the Loop",
+    "text": "The Human in the Loop\n\n\n\n\n\n\\(\\ldots\\) in social systems, we can define many types of twins that reflect a multitude of theoretical perspectives, each of which reflect different features of the real system\n\n\n\nIn the absence of deep copy — which we’d argue is impossible due to computational complexity — we need to look closely at what we model and acknowledge their essential incompleteness. So rather than thinking about ‘the one true twin’, we have a plethora of perspectives that are rooted in the slow cycles of theory. They are hierarchical and contradictory, overlapping and multi-scalar. This highlights the importance of human judgement and the need for planners and government to think about what is ‘copied’ into the twin and how its outputs are copied back into the real world…\nWithout the human-in-the-loop, AI-optimises-everything leaves a system that is higly optimised but almost certainly extremely brittle in the event of catastrophic failures. Efficiency is, paradoxically, an economic problem: the hyper-efficient allocation of ‘resources’ does not lead to the kinds of innovation that arise in places where ‘friction’ and ‘redundancy’ and ‘collision’ create new pathways for development. And our point is that conceptualising the value of the human in all of this is absolutely critical: without that feedback loop it’s highly likely we end up with cities that boring, fragile, and deeply unpleasant."
+  },
+  {
+    "objectID": "digital_twins/index.html#thank-you",
+    "href": "digital_twins/index.html#thank-you",
+    "title": "Digital Twins in City Planning",
+    "section": "Thank you!",
+    "text": "Thank you!\n\n\n\n\n\nArribas-Bel, D., and J. Reades. 2018. “Geography and Computers: Past, Present, and Future.” Geography Compass 12 (e12403). https://doi.org/10.1111/gec3.12403.\n\n\nBatty, M. 1990. “Invisible Cities.” Environment and Planning B 17 (2):127–30.\n\n\n———. 2013. “Big Data, Smart Cities and City Planning.” Dialogues in Human Geography 3 (3). SAGE Publications:274–79.\n\n\n———. 2018. “Digital Twins.” Environment and Planning B: Urban Analytics and City Science. Sage Publications Sage UK: London, England.\n\n\n———. 2019. “A Map Is Not the Territory, or Is It?” Environment and Planning B: Urban Analytics and City Science. SAGE Publications Sage UK: London, England.\n\n\n———. 2021. “Multiple Models.” Environment and Planning B: Urban Analytics and City Science. SAGE Publications Sage UK: London, England.\n\n\n———. 2024. “Digital Twins in City Planning.” Nature Computational Science 4 (3). Nature Publishing Group US New York:192–99.\n\n\nBatty, M., and R. Milton. 2023. “Building a Digital Twin for British Cities.” arXiv Preprint arXiv:2312.03674.\n\n\nGelernter, David. 1993. Mirror Worlds: Or the Day Software Puts the Universe in a Shoebox... How It Will Happen and What It Will Mean. Oxford University Press.\n\n\nReades, J., F. Calabrese, A. Sevtsuk, and C. Ratti. 2007. “Cellular census: Explorations in urban data collection.” IEEE Pervasive Computing 6 (3):30–38.\n\n\nReades, J., J. De Souza, and P. Hubbard. 2019. “Understanding Urban Gentrification Through Machine Learning.” Urban Studies 56 (5):922–42."
+  },
+  {
+    "objectID": "digital_twins/casa.html#a-brief-history",
+    "href": "digital_twins/casa.html#a-brief-history",
+    "title": "CASA in 2 Slides",
+    "section": "A Brief History",
+    "text": "A Brief History"
+  },
+  {
+    "objectID": "digital_twins/casa.html#today",
+    "href": "digital_twins/casa.html#today",
+    "title": "CASA in 2 Slides",
+    "section": "Today",
+    "text": "Today"
+  },
+  {
+    "objectID": "casa/Overview.html",
+    "href": "casa/Overview.html",
     "title": "Presentations",
     "section": "",
-    "text": "Questions?"
+    "text": "Founded in 1995…\n\nCASA is an interdisciplinary institute focusing on the science of cities within The Bartlett Faculty of the Built Environment at UCL. We bring together some of the brightest minds from multiple disciplines to tackle the challenges facing modern urban environments. Among our staff are physicists, planners, geographers, data scientists, architects, mathematicians and computer scientists all working on the same projects.\n\n\n\n1995: established as pure research institute with Prof. Michael Batty as director.\n2000: first PhD cohort\n2010: first MSc cohort (Smart Cities & Urban Analytics; Spatial Data Science & Visualisation)\n\n2011: Mike ‘retires’, Prof. Andy Hudson-Smith director.\n2017: Andy steps down, Prof. Adam Dennett director.\n2021: MSc Connected Environments (IoT) launched.\n2023: MSc Urban Spatial Science merges earlier ‘smart cities’ and data viz programmes.\n2023: Adam steps down, Prof. Jon Reades director.\n\nToday: 23 FTE academics; more than a dozen post-docs; 20+ PhD researchers; over 150 MSc students."
+  },
+  {
+    "objectID": "casa/Overview.html#what-is-casa",
+    "href": "casa/Overview.html#what-is-casa",
+    "title": "Presentations",
+    "section": "",
+    "text": "Founded in 1995…\n\nCASA is an interdisciplinary institute focusing on the science of cities within The Bartlett Faculty of the Built Environment at UCL. We bring together some of the brightest minds from multiple disciplines to tackle the challenges facing modern urban environments. Among our staff are physicists, planners, geographers, data scientists, architects, mathematicians and computer scientists all working on the same projects.\n\n\n\n1995: established as pure research institute with Prof. Michael Batty as director.\n2000: first PhD cohort\n2010: first MSc cohort (Smart Cities & Urban Analytics; Spatial Data Science & Visualisation)\n\n2011: Mike ‘retires’, Prof. Andy Hudson-Smith director.\n2017: Andy steps down, Prof. Adam Dennett director.\n2021: MSc Connected Environments (IoT) launched.\n2023: MSc Urban Spatial Science merges earlier ‘smart cities’ and data viz programmes.\n2023: Adam steps down, Prof. Jon Reades director.\n\nToday: 23 FTE academics; more than a dozen post-docs; 20+ PhD researchers; over 150 MSc students."
+  },
+  {
+    "objectID": "casa/Overview.html#research-excellence",
+    "href": "casa/Overview.html#research-excellence",
+    "title": "Presentations",
+    "section": "Research Excellence",
+    "text": "Research Excellence\nSince 2020, we have received funding from the UK’s social, physical, and medical sciences, strategic computing infrastructure, and arts and humanities funding councils, as well as the Royal Society and British Academy, EU Horizon, and UK government in areas including:\n\nExascale Computation & Digital Twins.\nComplexity, Networks & ABM/CA Simulation.\n(Spatial) Data Science, Visualisation & Urban Analytics.\nLow-cost IoT sensors for environmental monitoring.\nModelling Urban Mobility & Neighbourhood Change with ML.\nApplications of AI to spatial, temporal and textual urban data.\n\nThese — together with a grounding in complexity and systems theory — form the spine of our teaching to more than 150 MSc students from around the world.\n\nIn line with best-practice in UCL, all of our teaching is research-led, with best-practice in areas such as reproducibility and open science feeding into our teaching, and what we learn in the classroom informing our research trajectory."
+  },
+  {
+    "objectID": "arc/index.html#our-vision",
+    "href": "arc/index.html#our-vision",
+    "title": "Presentations",
+    "section": "Our Vision…",
+    "text": "Our Vision…\n\n“Our vision for the modern teacher-scholar is having consistent reproducibility practices in how they conduct research, what they teach to students, and how they prepare teaching materials. We distinguish the three aspects as reproducible research, teaching reproducibility, and reproducible teaching…” (Dogucu and Çetinkaya-Rundel 2022)\n\n\nWell we didn’t really have one, we’d just been tasked with building it! Which is why I really like this quote: it captures something the almost magical way that, in certain disciplinary contexts, teaching, research, and research on teaching can reinforce one another.\nThe authors went on to argue that “All teaching materials should be: computationally reproducible, well-documented, and open.” And for many teachers that is a scary prospect, particularly those within more traditional, less computationally-intensive, domains within the social sciences, arts and humanities.\nSo I want to be clear at the outset that I think this is currently a vision for a particular set of subdomains within fields: the Digital Humanities and the Computational Social Sciences, for example. The picture gets a lot more complex as we move into other areas though, of course, the fact that nearly everything is ‘born digital’ and the rise of LLMs — such as ChatGPT — implies that we’ll see greater impacts down the line.\nSo within the fields that the benefits are most obvious — or least problematic — what might they be?"
+  },
+  {
+    "objectID": "arc/index.html#some-benefits-of-reproducible-workflows",
+    "href": "arc/index.html#some-benefits-of-reproducible-workflows",
+    "title": "Presentations",
+    "section": "Some Benefits of Reproducible Workflows",
+    "text": "Some Benefits of Reproducible Workflows\n\n\n\nFor Students\nFor Teacher-Scholars\n\n\n\n\nAbstraction\nAbstraction\n\n\nEmployability\nEmployability\n\n\nLearning-by-Seeing\nLearning-by-Seeing\n\n\nLearning-by-Breaking\nLearning-by-Breaking\n\n\nWorkload Management\nWorkload Management\n\n\n\n\nI’m going to confess up-front that this is a slightly optimistic assessment of what reproducibility can bring to our teaching on reproducibility, but the point I’d like to make here is that many of things that we ourselves benefit from when we work reproducibly can also attach to our students.\nPerhaps the extent of the alignment of interest is more obvious we move away from the mixed terminology of economic geography and computer science:\nOur staff typically want to:\n\nSpend less time in Moodle/Blackboard.\nSpend less time distributing/updating materials.\nSpend more time on the interesting stuff.\nGet to some useful results as quickly as possible.\n\nOur students typically want to:\n\nHave little prior experience of coding or data science.\nHave first degrees in Social Sciences/far-STEM.\nGet employability credential.\nGet to the answer as quickly as possible.\n\nI’d argue that these benefits appear at all stages of the student and teacher journey, but that they become more obvious as students make the transition from undergraduate to post-graduate to post-doc to instructor. And this module sits at the point in that journey where students transition from undergraduate in a non-CS pathway to someone apparently planning to use code/practice coding everyday."
   },
   {
     "objectID": "arc/index.html#what-do-we-want",
@@ -56,221 +147,95 @@
     "text": "One More Thing…\n\nAutomate all the things:\n\nPresentations are converted to PNG via node’s decktape\nAudio recorded to M4A in ocenaudio\nffmpeg splices together image and audio to create flipped lecture\nIntro/Outro rendered on the fly (copyright always up-to-date!)\nOrchestrated in Python with custom classes + scripts\nWill publish this at some point (happy to have help!)\n\nBoth rendering and student work managed via… Docker\n\nLooking at Podman, but needs testing\nWrite once - Run anywhere gains"
   },
   {
-    "objectID": "digital_twins/index.html#so-whats-a-digital-twin",
-    "href": "digital_twins/index.html#so-whats-a-digital-twin",
-    "title": "Digital Twins in City Planning",
-    "section": "So What’s a Digital Twin?",
-    "text": "So What’s a Digital Twin?\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM-generated model for 9 US cities — and attempts to understand the relationship between difference forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface.\nBut the twin isn’t intended just to represent the real world, it’s intended to enable prediction and control. The twin is thus tightly coupled with the system that it represents and this forms the foundation for its capacity to act upon the real world. As our access to ‘compute’ has expanded so has our ambition for the scale of system to be monitored and controlled, and it’s at this point that the digital twin concept starts to align with the ‘smart city’ initiatives undertaken in many cities around the world, and embodied in the governmental rhetoric of countries such as India."
+    "objectID": "dcdc22/index.html#about-ethos",
+    "href": "dcdc22/index.html#about-ethos",
+    "title": "Presentations",
+    "section": "About EThOS",
+    "text": "About EThOS\n\n\nScreenshot of a PhD Thesis from EThOS Web Interface\n\n\n\n\nOur tutorial makes use of the British Library’s EThOS data set. Ethos is, technically, metadata because stores data about theses: the title, author, date of submission, etc. The vast majority of UK doctoral theses have a metadata record in EThOS:\n\nEarliest is in Latin (pre-dates the modern PhD by 100 years)!\nOver 520,000 records (and growing continuously)\nData quality varies widely (and evolving continuously)\n\nEthos has obviously not existed since 1812, so from this you might infer that some universities have been more meticulous than others in entering ‘old data’ into the BL’s data store. As you might expect, data quality varies wildly: the further back you go, the worse the data quality, so we’ve focussed on more ‘recent’ records, dating back to the 1980s."
   },
   {
-    "objectID": "digital_twins/index.html#flow-of-information",
-    "href": "digital_twins/index.html#flow-of-information",
-    "title": "Digital Twins in City Planning",
-    "section": "Flow of Information",
-    "text": "Flow of Information\n\nMirrors reflect\nTwins interact\n\n\nThe iterative advance from the simpler ‘smart city’ approaches — which might be understood to mirror what is happening in the real world for monitoring purposes — and the digital twin would therefore seem to be the express control that the latter appears to impart. But physical processes are much easier to model in a tightly-coupled way than social and economic ones, which are necessarily much more abstract representations of any underlying reality.\nIn the latter case, the flow of information can take more complex forms: whereas for simple physical systems the flow of information can be explicitly bidirectional and automated (as they are between BIM and the physical plant of an estate), in the case of cities the transfer is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!"
+    "objectID": "dcdc22/index.html#completeness",
+    "href": "dcdc22/index.html#completeness",
+    "title": "Presentations",
+    "section": "Completeness",
+    "text": "Completeness\n\nPercentage Complete by Decade\n\n\nField\nOverall\n1970s\n1980s\n1990s\n2000s\n2010s\n\n\n\n\nAbs.\n50\n19\n21\n29\n42\n88\n\n\nKey.\n50\n12\n89\n84\n32\n47\n\n\nDDCs\n91\n93\n98\n98\n97\n83\n\n\nDept.\n29\n17\n16\n13\n21\n53\n\n\nCount\n526,276\n40,318\n59,825\n88,598\n136,172\n176,171\n\n\n\n\nEthos has already been used via manual keyword and topic selection to select theses offering insight into novel chemical compounds (Andrews et al. 2016), post-colonial relations (Montgomery 2019), and career progression in dementia research (Howe 2015).\nBut if we want to categorise dissertations, then things get trickier: there is clear evidence of changing practices in the completeness measures, but the DDC, which as a reminder stands for Dewey Decimal Classification, is fairly consistent throughout."
   },
   {
-    "objectID": "digital_twins/index.html#frequency-of-update",
-    "href": "digital_twins/index.html#frequency-of-update",
-    "title": "Digital Twins in City Planning",
-    "section": "Frequency of Update",
-    "text": "Frequency of Update\n\nUrban Analytics \\(\\approx\\) High Frequency\nUrban Theory \\(\\approx\\) Low Frequency\n\n\nI think also that the ‘smart city’ is associated with high frequency change: with the instrumentation of infrastructures and mobility platforms, the spread of computation into every thing around us. You can think of the ‘smart trees’ at this year’s Chelsea Garden Show which report their needs on a regular basis to a centralised home hub, or the ongoing monitoring of sewerage for early warnings of new pandemics.\nIn the high-frequency world we can use the twin to influence the real thing. Real-time data about the Tube system doesn’t just mirror what’s happening in the Tube, it is used to shape and change the physical infrastructure. So the idea of the smart city in that it is not just about an embedding of soft into hard but of hard becoming soft.\nBut when we try to use high frequency data to forecast what cities might look like in ten, twenty, or thirty years we run into problems: predictability dissolves, and “our current predictions for many social processes are at present not better than two-to-three-day weather forecasting.”"
+    "objectID": "dcdc22/index.html#ddc-as-expert-label",
+    "href": "dcdc22/index.html#ddc-as-expert-label",
+    "title": "Presentations",
+    "section": "DDC as ‘Expert Label’",
+    "text": "DDC as ‘Expert Label’\n\n\n\n\n\n\n\n\nDDC1 Group (‘Class’)\nDDC2 Group (‘Division’)\nCount\n\n\n\n\nScience (500–599)\n Biology (570–579)  Physics (530–539)\n27,095 18,418 8,677\n\n\nSocial Sciences (300–399)\n Economics (330–339)  Social Sciences (300–309)\n21,648 12,625 9,023\n\n\nTotal\n\n48,743\n\n\n\n\nSo to test our approach, we used the DDC to choose four disciplines that we thought would present a range of challenges for an automated approach.\nWe treated the DDC as the expert label, which is a ‘term of art’ from Machine Learning where it’s part of the training process: Google’s image search and street view platforms didn’t spontaneously ‘learn’ how to recognise different types of birds or crosswalks, they were trained by an army of ‘experts’ of varying abilities. If you’ve filled in one of the image-based Captchas, to verify that you’re a human being, then you’ve been dragooned into that army.\nSo if we want to know whether our NLP approach has any merit at all, then we need that ‘expert-assigned label’ and that’s where the DDC comes in: although there are plenty of problems with DDCs, it does give us a sense of where a librarian thinks a piece of work belongs.\nThat sample sample of 48,743 records is what we fed into our NLP pipeline."
   },
   {
-    "objectID": "digital_twins/index.html#shallow-deep-copies",
-    "href": "digital_twins/index.html#shallow-deep-copies",
-    "title": "Digital Twins in City Planning",
-    "section": "Shallow & Deep Copies",
-    "text": "Shallow & Deep Copies\n\nShallow copy \\(\\approx\\) Copy by reference\nDeep copy \\(\\approx\\) Copy by value\n\n\nThe world of the smart city is one where IT is embedded into the city fabric order to copy data about the real world into the digital world and optimised decisions can copied back. But the Digital Twin therefore has to be something more than this: the twin essentially merges with with the artifact and can no longer function separately. But for any model to function, there must be some latency between the real thing and the thing simulated – the model.\nProgrammers distinguish between shallow and deep copies. They mean this in a very particular way about copying references (pointers to the real data) and copying values (the data itself). But I can’t help thinking that the idea of copying values inadvertently throws up its deeper meaning as well: our digital twins copy normative values about what matters to us and to our systems? Maybe there is no such thing as a deep copy of a city?"
-  },
-  {
-    "objectID": "digital_twins/index.html#a-federation-of-computers",
-    "href": "digital_twins/index.html#a-federation-of-computers",
-    "title": "Digital Twins in City Planning",
-    "section": "A Federation of Computers",
-    "text": "A Federation of Computers\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
-  },
-  {
-    "objectID": "digital_twins/index.html#a-federation-of-twins",
-    "href": "digital_twins/index.html#a-federation-of-twins",
-    "title": "Digital Twins in City Planning",
-    "section": "A Federation of Twins",
-    "text": "A Federation of Twins\n\n\\(\\ldots\\) in social systems, we can define many types of twins that reflect a multitude of theoretical perspectives, each of which reflect different features of the real system\n\n\nIn the absence of deep copy — which we’d argue is impossible due to the computational complexity highlighted in the previous slide — we need to look closely at what we model and acknowledge their essential incompleteness. So rather than thinking about ‘the one true twin’, we have a plethora of perspectives that are rooted in the slow cycles of theory. They are hierarchical and contradictory, overlapping and multi-scalar."
-  },
-  {
-    "objectID": "digital_twins/index.html#the-human-in-the-loop",
-    "href": "digital_twins/index.html#the-human-in-the-loop",
-    "title": "Digital Twins in City Planning",
-    "section": "The Human in the Loop",
-    "text": "The Human in the Loop\n\n\n\n\n\n\\(\\ldots\\) in social systems, we can define many types of twins that reflect a multitude of theoretical perspectives, each of which reflect different features of the real system\n\n\n\nIn the absence of deep copy — which we’d argue is impossible due to computational complexity — we need to look closely at what we model and acknowledge their essential incompleteness. So rather than thinking about ‘the one true twin’, we have a plethora of perspectives that are rooted in the slow cycles of theory. They are hierarchical and contradictory, overlapping and multi-scalar. This highlights the importance of human judgement and the need for planners and government to think about what is ‘copied’ into the twin and how its outputs are copied back into the real world…\nWithout the human-in-the-loop, AI-optimises-everything leaves a system that is higly optimised but almost certainly extremely brittle in the event of catastrophic failures. Efficiency is, paradoxically, an economic problem: the hyper-efficient allocation of ‘resources’ does not lead to the kinds of innovation that arise in places where ‘friction’ and ‘redundancy’ and ‘collision’ create new pathways for development. And our point is that conceptualising the value of the human in all of this is absolutely critical: without that feedback loop it’s highly likely we end up with cities that boring, fragile, and deeply unpleasant."
-  },
-  {
-    "objectID": "digital_twins/index.html#efficiency-resilience",
-    "href": "digital_twins/index.html#efficiency-resilience",
-    "title": "Digital Twins in City Planning",
-    "section": "Efficiency & Resilience",
-    "text": "Efficiency & Resilience\n\nHighly efficient system \\(\\approx\\) brittle\nHighly redundant system \\(\\approx\\) resilient\n\n\nA note on the risks of optimisation without the human-in-the-loop: AI-optimises-everything leaves a system that is higly optimised but almost certainly extremely brittle in the event of catastrphic failures. But efficiency is also an economic problem: the hyper-efficient allocation of ‘resources’ does not lead to the kinds of innovation that arise in places where ‘friction’ and ‘redundancy’ create new pathways for development."
-  },
-  {
-    "objectID": "digital_twins/index.html#thank-you",
-    "href": "digital_twins/index.html#thank-you",
-    "title": "Digital Twins in City Planning",
-    "section": "Thank you!",
-    "text": "Thank you!\n\n\n\n\n\nArribas-Bel, D., and J. Reades. 2018. “Geography and Computers: Past, Present, and Future.” Geography Compass 12 (e12403). https://doi.org/10.1111/gec3.12403.\n\n\nBatty, M. 1990. “Invisible Cities.” Environment and Planning B 17 (2):127–30.\n\n\n———. 2013. “Big Data, Smart Cities and City Planning.” Dialogues in Human Geography 3 (3). SAGE Publications:274–79.\n\n\n———. 2018. “Digital Twins.” Environment and Planning B: Urban Analytics and City Science. Sage Publications Sage UK: London, England.\n\n\n———. 2019. “A Map Is Not the Territory, or Is It?” Environment and Planning B: Urban Analytics and City Science. SAGE Publications Sage UK: London, England.\n\n\n———. 2021. “Multiple Models.” Environment and Planning B: Urban Analytics and City Science. SAGE Publications Sage UK: London, England.\n\n\n———. 2024. “Digital Twins in City Planning.” Nature Computational Science 4 (3). Nature Publishing Group US New York:192–99.\n\n\nBatty, M., and R. Milton. 2023. “Building a Digital Twin for British Cities.” arXiv Preprint arXiv:2312.03674.\n\n\nGelernter, David. 1993. Mirror Worlds: Or the Day Software Puts the Universe in a Shoebox... How It Will Happen and What It Will Mean. Oxford University Press.\n\n\nReades, J., F. Calabrese, A. Sevtsuk, and C. Ratti. 2007. “Cellular census: Explorations in urban data collection.” IEEE Pervasive Computing 6 (3):30–38.\n\n\nReades, J., J. De Souza, and P. Hubbard. 2019. “Understanding Urban Gentrification Through Machine Learning.” Urban Studies 56 (5):922–42."
-  },
-  {
-    "objectID": "casa/Overview.html",
-    "href": "casa/Overview.html",
+    "objectID": "dcdc22/index.html#section",
+    "href": "dcdc22/index.html#section",
     "title": "Presentations",
     "section": "",
-    "text": "Founded in 1995…\n\nCASA is an interdisciplinary institute focusing on the science of cities within The Bartlett Faculty of the Built Environment at UCL. We bring together some of the brightest minds from multiple disciplines to tackle the challenges facing modern urban environments. Among our staff are physicists, planners, geographers, data scientists, architects, mathematicians and computer scientists all working on the same projects.\n\n\n\n1995: established as pure research institute with Prof. Michael Batty as director.\n2000: first PhD cohort\n2010: first MSc cohort (Smart Cities & Urban Analytics; Spatial Data Science & Visualisation)\n\n2011: Mike ‘retires’, Prof. Andy Hudson-Smith director.\n2017: Andy steps down, Prof. Adam Dennett director.\n2021: MSc Connected Environments (IoT) launched.\n2023: MSc Urban Spatial Science merges earlier ‘smart cities’ and data viz programmes.\n2023: Adam steps down, Prof. Jon Reades director.\n\nToday: 23 FTE academics; more than a dozen post-docs; 20+ PhD researchers; over 150 MSc students."
+    "text": "Cleaning\n\nRemoval of Punctuation / Symbols / HTML\nNamed Entity Recognition (including acronyms)\nLemmatisation\nRemoval of Stop Words\nPhrase Detection\nReduction of Vocabulary\n\nLearning\nAnalysis\n\nThe purpose of the cleaning stage is to radically reduce the overall vocabulary by standardise word forms, finding meaningful turns of phrase, and stripping out high- and low-frequency words."
   },
   {
-    "objectID": "casa/Overview.html#what-is-casa",
-    "href": "casa/Overview.html#what-is-casa",
+    "objectID": "dcdc22/index.html#section-1",
+    "href": "dcdc22/index.html#section-1",
     "title": "Presentations",
     "section": "",
-    "text": "Founded in 1995…\n\nCASA is an interdisciplinary institute focusing on the science of cities within The Bartlett Faculty of the Built Environment at UCL. We bring together some of the brightest minds from multiple disciplines to tackle the challenges facing modern urban environments. Among our staff are physicists, planners, geographers, data scientists, architects, mathematicians and computer scientists all working on the same projects.\n\n\n\n1995: established as pure research institute with Prof. Michael Batty as director.\n2000: first PhD cohort\n2010: first MSc cohort (Smart Cities & Urban Analytics; Spatial Data Science & Visualisation)\n\n2011: Mike ‘retires’, Prof. Andy Hudson-Smith director.\n2017: Andy steps down, Prof. Adam Dennett director.\n2021: MSc Connected Environments (IoT) launched.\n2023: MSc Urban Spatial Science merges earlier ‘smart cities’ and data viz programmes.\n2023: Adam steps down, Prof. Jon Reades director.\n\nToday: 23 FTE academics; more than a dozen post-docs; 20+ PhD researchers; over 150 MSc students."
+    "text": "Cleaning\nLearning\n\nLearning of Context\nWeighting of Relationships\n‘Training’ of Word Embeddings\n\nAnalysis\n\nContext means the words surrounding our ‘targets’. So in a historical corpus we might see, for example, “Queen X ruled for 25 years” and “King Y ruled for 4 years”. From this we could say that Queen and King are used in similar contexts. Across a large corpus, we might also find that ‘she’ is used in the context of Queens and ‘he’ in the context of Kings.\nUsing Machine Learning we can exploit Firth (1957), p.11 observation that “You shall know a word by the company it keeps”. Working out how to do this using a process called word embedding was the breakthrough that led to the rapid advances in NLP over the past decade."
   },
   {
-    "objectID": "casa/Overview.html#research-excellence",
-    "href": "casa/Overview.html#research-excellence",
+    "objectID": "dcdc22/index.html#section-2",
+    "href": "dcdc22/index.html#section-2",
     "title": "Presentations",
-    "section": "Research Excellence",
-    "text": "Research Excellence\nSince 2020, we have received funding from the UK’s social, physical, and medical sciences, strategic computing infrastructure, and arts and humanities funding councils, as well as the Royal Society and British Academy, EU Horizon, and UK government in areas including:\n\nExascale Computation & Digital Twins.\nComplexity, Networks & ABM/CA Simulation.\n(Spatial) Data Science, Visualisation & Urban Analytics.\nLow-cost IoT sensors for environmental monitoring.\nModelling Urban Mobility & Neighbourhood Change with ML.\nApplications of AI to spatial, temporal and textual urban data.\n\nThese — together with a grounding in complexity and systems theory — form the spine of our teaching to more than 150 MSc students from around the world.\n\nIn line with best-practice in UCL, all of our teaching is research-led, with best-practice in areas such as reproducibility and open science feeding into our teaching, and what we learn in the classroom informing our research trajectory."
-  },
-  {
-    "objectID": "digital_twins/casa.html#a-brief-history",
-    "href": "digital_twins/casa.html#a-brief-history",
-    "title": "CASA in 2 Slides",
-    "section": "A Brief History",
-    "text": "A Brief History"
-  },
-  {
-    "objectID": "digital_twins/casa.html#today",
-    "href": "digital_twins/casa.html#today",
-    "title": "CASA in 2 Slides",
-    "section": "Today",
-    "text": "Today"
-  },
-  {
-    "objectID": "digital_twins/index.html#some-history",
-    "href": "digital_twins/index.html#some-history",
-    "title": "Digital Twins in City Planning",
-    "section": "Some History",
-    "text": "Some History\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM Architect generated model for 9 US cities — and attempts to understand the relationship between different forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface."
-  },
-  {
-    "objectID": "digital_twins/index.html#models-and-abstractions",
-    "href": "digital_twins/index.html#models-and-abstractions",
-    "title": "Digital Twins in City Planning",
-    "section": "Models and Abstractions",
-    "text": "Models and Abstractions\n\n\nA model is an abstraction or simplification of the real thing, where the model-builder throws away most of the real thing leaving only its essence.\n\n\n\nModels can represent the actual system, or they can be a conceptual or mathematical version of the system. However, it’s fairly uncontroversial to acknowledge that they are a simplification of the real thing where choices are made to further the function of the model. Obviously, as our access to ‘compute’ has expanded so has our ambition for the scale of system to be monitored and controlled, but the fundamental limitation remains: our understanding of function will vary from person to person, or group to group, so it’s highly likely that, even if we’re trying to build the same model we’ll end up with something different."
-  },
-  {
-    "objectID": "digital_twins/index.html#models-and-twins",
-    "href": "digital_twins/index.html#models-and-twins",
-    "title": "Digital Twins in City Planning",
-    "section": "Models and Twins",
-    "text": "Models and Twins\n\n\nModels reflect\n\nTwins interact\n\n\nBut the twin isn’t intended just to represent the real world, it it built to interact. It is therefore simultaneously tightly coupled\nThe iterative advance from the simpler ‘smart city’ approaches — which might be understood to mirror what is happening in the real world for monitoring purposes — and the digital twin would therefore seem to be the express control that the latter appears to impart. But physical processes are much easier to model in a tightly-coupled way than social and economic ones, which are necessarily much more abstract representations of any underlying reality.\nIn the latter case, the flow of information can take more complex forms: whereas for simple physical systems the flow of information can be explicitly bidirectional and automated (as they are between BIM and the physical plant of an estate), in the case of cities the transfer is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!"
-  },
-  {
-    "objectID": "digital_twins/index.html#section",
-    "href": "digital_twins/index.html#section",
-    "title": "Digital Twins in City Planning",
     "section": "",
-    "text": "Models reflect\n\n\n\n\n\nTwins interact\n\n\n\n\nSo we often think of models as a way to reflect some real-world system in a mathematical or computational context; however the twin isn’t intended just to represent the real world, it is built to interact with it in some way. For physical processes, such as electrical or mechanical systems the difference between a model and a twin can be fairly minimal, and the model itself may be reasonably close to the real thing. The twin will be tightly coupled. To put it another way, with the right tooling, the flow of information between model and world can be bidirectional and relatively simple.\nBut for social and economic processes – such as cities – the representations of any underlying reality is far more abstract and the interactions are far more complex. In the latter case, the flow of information is also complex: even if we did manage to model the entire city, the transfer of information from twin to reality is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!\nSo the attempt to make, for example, an urban digital twin is deeply problematic – which is not to say that it’s not worth doing – because of the interaction element."
+    "text": "Cleaning\nLearning\nAnalysis\n\nDimensionality Reduction\nHierarchical Clustering\nValidation of Results\n\n\nBut even word embeddings are still too much in their raw form for clustering algorithms, so we use a technique called UMAP, which allows us to distill everything down further.\nAfter that, we cluster the documents and, finally, try to measure how well we did.\nSo let’s now loop back and briefly look at what went in and what came out of each phase."
   },
   {
-    "objectID": "digital_twins/index.html#frequency",
-    "href": "digital_twins/index.html#frequency",
-    "title": "Digital Twins in City Planning",
-    "section": "Frequency",
-    "text": "Frequency\n\n\n\n\nUrban Analytics\n\nHigh Frequency\n\n\nUrban Theory1\n\nLow Frequency\n\n\n\n\n\nThe instrumentation of infrastructures and mobility platforms, and the spread of computation into every thing around us, also presents us with the challenge of frequency. For high frequency, you can think of ‘smart’ systems, whether they are the ‘smart trees’ at this year’s Chelsea Garden Show or the ‘smart cities’ that have been a developmental priority in many countries. For most models and twins it’s relatively straightforward to peer a short way into the future.\nThat’s why, in the high-frequency world of urban analytics it seems plausible that we can use the twin to influence the real thing. Real-time data about the Tube system doesn’t just mirror what’s happening in the Tube, it can be used to shape and change the deployment of people and infrastructures.\nBut when we try to use high frequency data to forecast what cities might look like in ten, twenty, or thirty years we run into huge problems: indeed, “our current predictions for many social processes are at present not better than two-to-three-day weather forecasting.”\n\nOr politics!"
-  },
-  {
-    "objectID": "arc/index.html#our-vision",
-    "href": "arc/index.html#our-vision",
+    "objectID": "dcdc22/index.html#cleaning-3",
+    "href": "dcdc22/index.html#cleaning-3",
     "title": "Presentations",
-    "section": "Our Vision…",
-    "text": "Our Vision…\n\n“Our vision for the modern teacher-scholar is having consistent reproducibility practices in how they conduct research, what they teach to students, and how they prepare teaching materials. We distinguish the three aspects as reproducible research, teaching reproducibility, and reproducible teaching…” (Dogucu and Çetinkaya-Rundel 2022)\n\n\nWell we didn’t really have one, we’d just been tasked with building it! Which is why I really like this quote: it captures something the almost magical way that, in certain disciplinary contexts, teaching, research, and research on teaching can reinforce one another.\nThe authors went on to argue that “All teaching materials should be: computationally reproducible, well-documented, and open.” And for many teachers that is a scary prospect, particularly those within more traditional, less computationally-intensive, domains within the social sciences, arts and humanities.\nSo I want to be clear at the outset that I think this is currently a vision for a particular set of subdomains within fields: the Digital Humanities and the Computational Social Sciences, for example. The picture gets a lot more complex as we move into other areas though, of course, the fact that nearly everything is ‘born digital’ and the rise of LLMs — such as ChatGPT — implies that we’ll see greater impacts down the line.\nSo within the fields that the benefits are most obvious — or least problematic — what might they be?"
+    "section": "Cleaning",
+    "text": "Cleaning\n\n\n\n\n\n\n\nSource Text\nCleaned Text\n\n\n\n\nThe economic effects of resource extraction in developing countries. This thesis presents three core chapters examining different aspects of the relationship between natural resources and economic development…\neconomic effect resource extraction develop_country present_three core examine different_aspect relationship natural_resource economic_developmen…\n\n\nMaking sense of environmental governance : a study of e-waste in Malaysia. The nature of e-waste, which is environmentally disastrous but economically precious, calls for close policy attention at all levels of society, and between state and non-state actors…\nmaking_sense environmental_governance study waste malaysia nature waste environmentally disastrous economically precious call close policy attention level society state_non_state actor…\n\n\nAn exploratory study of the constructions of ‘mental health’ in the Afro Caribbean community in the United Kingdom. Afro Caribbean people living in the United Kingdom have historically been overrepresented in the ‘mental health’ system…\nexploratory_study construction mental_health caribbean community united_kingdom caribbean people_live united_kingdom historically mental_health system…\n\n\n\n\nThis table compares three randomly-selected documents before and after cleaning to give you a sense of what this process details. You can see that things like captialisation, punctuation and, to a lesser extent, plurals have gone, together with low- and high-frequency words such as ‘a’ and ‘the’.\nYou’ll also see some underscores, that’s where the computer found statistical associations between pairs or triplets of words across multiple documents."
   },
   {
-    "objectID": "arc/index.html#some-benefits-of-reproducible-workflows",
-    "href": "arc/index.html#some-benefits-of-reproducible-workflows",
+    "objectID": "dcdc22/index.html#learning-3",
+    "href": "dcdc22/index.html#learning-3",
     "title": "Presentations",
-    "section": "Some Benefits of Reproducible Workflows",
-    "text": "Some Benefits of Reproducible Workflows\n\n\n\nFor Students\nFor Teacher-Scholars\n\n\n\n\nAbstraction\nAbstraction\n\n\nEmployability\nEmployability\n\n\nLearning-by-Seeing\nLearning-by-Seeing\n\n\nLearning-by-Breaking\nLearning-by-Breaking\n\n\nWorkload Management\nWorkload Management\n\n\n\n\nI’m going to confess up-front that this is a slightly optimistic assessment of what reproducibility can bring to our teaching on reproducibility, but the point I’d like to make here is that many of things that we ourselves benefit from when we work reproducibly can also attach to our students.\nPerhaps the extent of the alignment of interest is more obvious we move away from the mixed terminology of economic geography and computer science:\nOur staff typically want to:\n\nSpend less time in Moodle/Blackboard.\nSpend less time distributing/updating materials.\nSpend more time on the interesting stuff.\nGet to some useful results as quickly as possible.\n\nOur students typically want to:\n\nHave little prior experience of coding or data science.\nHave first degrees in Social Sciences/far-STEM.\nGet employability credential.\nGet to the answer as quickly as possible.\n\nI’d argue that these benefits appear at all stages of the student and teacher journey, but that they become more obvious as students make the transition from undergraduate to post-graduate to post-doc to instructor. And this module sits at the point in that journey where students transition from undergraduate in a non-CS pathway to someone apparently planning to use code/practice coding everyday."
+    "section": "Learning",
+    "text": "Learning\n\n\n\n\n\n\n\n\n\n\nTerm\nDim 1\nDim 2\nDim 3\nTop 7 Most Similar\n\n\n\n\naccelerator\n-2.597380\n0.562458\n3.047121\nbeam, cern, facility, spectrometer, beam_energy\n\n\nlondon_stock_exchange\n0.516811\n-0.935569\n1.090004\nipo, ftse, stock_market, announcement, lse\n\n\nnational_health_service\n1.782367\n-2.309419\n-2.430357\nnhs, public_sector, emergency, public_health, developed_world\n\n\n\n\nWhat the word embedding process does it to convert that text to a vector (that’s a row) of 100 numbers–embedding is the technical term–using a ‘neural network’. The reduction process tries to ensure that words that are used in similar context end up with similar numeric representations.\nHere, again, are some examples. On the left side we have a term from the corpus. The next three columns are the first 3 of the 100 dimensions that we calculated using the word embedding algorithm. So there are 97 more dimensions, but for obvious reasons I’m not showing them here. These numbers don’t mean anything to us, but they do mean something to the computer.\nFinally, on the right side we see terms that are near–meaning that they have similar embeddings–to the term on the left side. So accelerator is ‘near’ to beam, CERN, and other things having to do with high-energy physics, while national health service is, unsurprisingly, near to NHS, public sector, and public health, amongst others."
   },
   {
-    "objectID": "digital_twins/index.html#some-history-analog-dreams",
-    "href": "digital_twins/index.html#some-history-analog-dreams",
-    "title": "Digital Twins in City Planning",
-    "section": "Some History: Analog Dreams",
-    "text": "Some History: Analog Dreams"
+    "objectID": "dcdc22/index.html#how-did-we-do-visualising-the-corpus",
+    "href": "dcdc22/index.html#how-did-we-do-visualising-the-corpus",
+    "title": "Presentations",
+    "section": "How Did We Do? Visualising the Corpus",
+    "text": "How Did We Do? Visualising the Corpus\n\n\nIt’s a bit mind-bending, but we can take all the vectors for words in a document and average them together to get a useful representation of the document. So now each document is represented by a 100-dimension vector.\nI can’t plot or understand that, but I can use UMAP to project those 100 dimensions down into just 2, which is what this visualisation shows. Each dot is a document, coloured according to its original DDC. So the documents are, for the most part, well-separated which is a really promising sign, but there’s so much data here it’s almost hard to make sense of what’s going on."
   },
   {
-    "objectID": "digital_twins/index.html#some-history-in-three-d",
-    "href": "digital_twins/index.html#some-history-in-three-d",
-    "title": "Digital Twins in City Planning",
-    "section": "Some History: In Three-D!",
-    "text": "Some History: In Three-D!\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM Architect generated model for 9 US cities — and attempts to understand the relationship between different forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface."
+    "objectID": "dcdc22/index.html#how-did-we-do-clustering-accuracy",
+    "href": "dcdc22/index.html#how-did-we-do-clustering-accuracy",
+    "title": "Presentations",
+    "section": "How Did We Do? Clustering Accuracy",
+    "text": "How Did We Do? Clustering Accuracy\n\n\n\nTable 1: Clustering Results\n\n\n\n\n\n\n\n(a) DDC Class (DDC1) 2 Cluster Results\n\n\n\n\n\nCluster\nScience\nSocialsciences\n\n\n\n\nScience\n26,591\n479\n\n\nSocial sciences\n676\n20,948\n\n\n\n\n\n\n\n\n\n\n\n(b) DDC Division (DDC2) 4 Cluster Results\n\n\n\n\n\nCluster\nBiology\nEconomics\nPhysics\nSocial sciences\n\n\n\n\nBiology\n17,498\n214\n514\n178\n\n\nEconomics\n417\n11,063\n79\n1,050\n\n\nPhysics\n230\n45\n8,349\n42\n\n\nSocial sciences\n165\n1,880\n15\n6,955\n\n\n\n\n\n\n\n\n\n\n\n\nThese tables are called confusion matrices. If every document was assigned to an NLP-generated cluster that matched with one DDC exactly, then we’d expect to see only the diagonal of this matrix populated. Those are the bold numbers. So any number that isn’t bold is a case of our NLP process and the university librarian having a difference of opinion.\nSo this table tells you that, at the highest level we were about 98% accurate. At the DDC2 level we were about 90% accurate but this masks some variation: in Biology and Physics we had more success in correctly classifying PhDs than we did in Economics and Social science. Roughly a 10% difference in precision and recall.\nAnd where we’ve struggled are exactly the places you’d expect a human to struggle: distinguishing certain types of biology from physics, when does economics become social science?"
   },
   {
-    "objectID": "digital_twins/index.html#models-of-models",
-    "href": "digital_twins/index.html#models-of-models",
-    "title": "Digital Twins in City Planning",
-    "section": "Models of Models",
-    "text": "Models of Models\n\n\n\n\nIn short, can we embed models into other models such that the output of one is the input to another. Or the same models are running at multiple scales or in multiple contexts? For some kinds of problems this might be relatively straightforward, but in cities — each with its unique history of technologies, policy and political contexts, and data environment — this is non-trivial."
+    "objectID": "dcdc22/index.html#mis-clustered-word-clouds",
+    "href": "dcdc22/index.html#mis-clustered-word-clouds",
+    "title": "Presentations",
+    "section": "‘Mis-clustered’ Word Clouds",
+    "text": "‘Mis-clustered’ Word Clouds\n\n\n\nSo let’s look a little more at the off-diagonals? We’ve assumed that any difference of opinion between algorithm and expert represents a mistake because it’s not how the expert classified it. But it’s worth asking if a human under any number of practical pressures and constraints is always going to get it right? I certainly wouldn’t be the person to tell you which subdivision of Physics or Medieval Literature a text was most appropriate for.\nSo these word clouds use a standard techniques (covered in other Programming Historian tutorials) to pull out potential keywords from the misclassified documents.\nAnd what becomes clear pretty quickly from looking at these is that it’s entirely debateable whether the computer is ‘wrong’. The 42 physics PhDs clustered with the social sciences look a lot more like the interests of social science in education, philosophy, and training than they do like string theory or particle accelerators. Similarly, the Economics misclassifications are all too easy to interpret logically in terms of valuing the natural environment, issues of identity, and energy generation!"
   },
   {
-    "objectID": "digital_twins/index.html#analogue-dreams",
-    "href": "digital_twins/index.html#analogue-dreams",
-    "title": "Digital Twins in City Planning",
-    "section": "Analogue Dreams",
-    "text": "Analogue Dreams"
+    "objectID": "dcdc22/index.html#applications",
+    "href": "dcdc22/index.html#applications",
+    "title": "Presentations",
+    "section": "Applications",
+    "text": "Applications\nDealing with ‘born digital’ archives:\n\nGrowing problems of scale and context.\nUnderstanding overall structure of corpus.\nAdding metadata / filling in missing fields.\n\nImproving document retrieval:\n\nReduced reliance on ‘direct hits’.\nSearching the ‘semantic space’ means fewer ‘near misses’.\n\nIdentifying trends:\n\nEmbeddings may anticipate discoveries (e.g. Tshitoyan et al. (2019))\n\n\nSo where do we see this kind of approach being useful to ’collections and communities?\nThe first and most obvious is dealing with ‘born digital’ archives: in discussions with the BL about text-mining, they’ve mentioned the issues around the growing provision of personal hard drives as part of a scientist’s or author’s bequest. I don’t know about any of you, but the thought of anyone trying to make much sense of my backup drives is terrifying, and it’s worth thinking about just how much ‘data’ is stored on even the smallest personal backup.\nAnd if you’ve ever tried to find something in, say, Outlook then you’ll undoubtedly appreciate that Boolean and Regular Expression searches are not going to cut it. Making it worse is that, unlike traditional written correspondence, it will be that much harder to properly contextualise documents from a drive. So the ability to find ‘similar’ documents in a large corpus will be incredibly important, particularly where word usage has changed over time or where the same word is used to mean different things depending on the context.\nKey words are a good place to start, but often if you don’t pick the right key word then you get back… nothing at all. Or nothing related to your interests. So this kind of approach should mean fewer ‘near misses’ when we search a large corpus. Quite aside from being able to suggest other words that might be related to your search, with Word Embeddings there’s now the possibility of detecting ‘similar usage, different disciplines or discourses’ which could actually help researchers to navigate across disciplinary boundaries, for instance.\nFinally, if we put these pieces together then we might gain just a little insight – however ill-formed – into the near future. Some recent work in Material Science found that associations found in custom word embeddings (so the next step beyond what we’ve done here) actually anticipated discoveries by 2 to 3 years! The payoff in the physical sciences of getting even a year ahead of other labs could be enormous, but I’d like to believe that this also opens up more collaborative ways of peering into the future to understand the evolution of a discipline like geography: where are we now? Where does it look like we are going?"
   },
   {
-    "objectID": "digital_twins/index.html#into-the-third-dimension",
-    "href": "digital_twins/index.html#into-the-third-dimension",
-    "title": "Digital Twins in City Planning",
-    "section": "Into the Third Dimension",
-    "text": "Into the Third Dimension\n\n\nAsk 10 academics and get 10 different answers, but at it’s most basic we’re talking about a virtual representation of a physical object. The term seems to have emerged around 2005, but it’s not hard to trace it back substantially further to, for example, Gelernter (1993)’s Mirror World, or the Day Software Puts the Universe in a Shoebox…. In a built environment context, as the two images on the left show we might even trace it back to the 1980s — top is a model of an English village, and below that is an output from a SOM Architect generated model for 9 US cities — and attempts to understand the relationship between different forms and masses in the real world. On the right is an early attempt to superimpose other contextual information — pollution in this case — on to a 3D surface."
-  },
-  {
-    "objectID": "digital_twins/index.html#data-fied-urban-environments",
-    "href": "digital_twins/index.html#data-fied-urban-environments",
-    "title": "Digital Twins in City Planning",
-    "section": "Data-fied Urban Environments",
-    "text": "Data-fied Urban Environments"
-  },
-  {
-    "objectID": "digital_twins/index.html#scaling-up",
-    "href": "digital_twins/index.html#scaling-up",
-    "title": "Digital Twins in City Planning",
-    "section": "Scaling Up",
-    "text": "Scaling Up\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
-  },
-  {
-    "objectID": "digital_twins/index.html#towards-a-federation-of-twins",
-    "href": "digital_twins/index.html#towards-a-federation-of-twins",
-    "title": "Digital Twins in City Planning",
-    "section": "Towards a Federation of Twins",
-    "text": "Towards a Federation of Twins\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
-  },
-  {
-    "objectID": "digital_twins/index.html#growing-complexity",
-    "href": "digital_twins/index.html#growing-complexity",
-    "title": "Digital Twins in City Planning",
-    "section": "Growing Complexity",
-    "text": "Growing Complexity"
-  },
-  {
-    "objectID": "digital_twins/index.html#exascale-computation",
-    "href": "digital_twins/index.html#exascale-computation",
-    "title": "Digital Twins in City Planning",
-    "section": "Exascale Computation",
-    "text": "Exascale Computation\n\n\nSomething about how exascale and distributed computing allows us to model interactions at unprecedented scale? Also modelling the 2nd and 3rd order interactions which are common in cities but add exponentially to computational complexity? And adding dynamic element to previously static interaction models?"
+    "objectID": "dcdc22/index.html#section-3",
+    "href": "dcdc22/index.html#section-3",
+    "title": "Presentations",
+    "section": "",
+    "text": "Jennie /  @JenniexWilliams /  jenniewilliams\nJon /  @jreades /  jreades\nAcknowledgements\nWe’d like to thank the British Library (particularly the EThOS team) and Programming Historian/Jisc for their support, guidance, and encouragement. We gratefully acknowledge the contribution of the ESRC via the LISS and UBEL DTPs to making Jennie’s research possible.\nReferences\n\nSo the E-Theses Online (or EThOS) data store that we’re using is one example of the kind of work that the BL is enabling; but there is also, for instance, the Internet Archive of UK web domains as another really exciting source for those of who are computationally inclined. And, with luck, you’re starting to think about how such an approach might be useful to you…\nI hope that this has given you a sense of why we are so excited about this tutorial: first, everything we used (the data, the code, everything) is open; second, we provided the computer with few clues about the corpus, but from a fragmented record of titles and abstracts we were able to organise a large corpus into groups that are nonetheless intelligible to human beings.\nWe’ve already identified some ways that we think the results could be improved, but these will take time to implement and we’re just beginning what is likely to be a journey that last well beyond the completion of Jennie’s PhD.\nSo that’s it from us!\n\n\n\n\n\nAndrews, D., L. Broad, P. Edwards, D. Fox, T. Gallagher, S. Garland, R. Kidd, and J. Sweeney. 2016. “The Creation and Characterisation of a National Compound Collection: The Royal Society of Chemistry Pilot.” Chem. Sci. 7. The Royal Society of Chemistry:3869–78. https://doi.org/10.1039/C6SC00264A.\n\n\nFirth, J. R. 1957. “A Synopsis of Linguistic Theory, 1930-1955.” Studies in Linguistic Analysis. Basil Blackwell.\n\n\nHowe, K. 2015. “A Novel Use of PhD Data: Investigating the State of the Dementia Workforce.” 2015. https://blogs.bl.uk/science/2015/09/a-novel-use-of-phd-data.html.\n\n\nMontgomery, C. 2019. “Surfacing ‘Southern’ Perspectives on Student Engagement with Internationalization: Doctoral Theses as Alternative Forms of Knowledge.” Journal of Studies in International Education 23 (1):123–38. https://doi.org/10.1177/1028315318803743.\n\n\nTshitoyan, V., J. Dagdelen, L. Weston, A. Dunn, Z. Rong, O. Kononova, K. A. Persson, C. Gerbrand, and J. Anubhav. 2019. “Unsupervised Word Embeddings Capture Latent Knowledge from Materials Science Literature.” Nature 571 (July):95–98. https://doi.org/10.1038/s41586-019-1335-8."
   },
   {
     "objectID": "digital_twins/fragment.html",
@@ -278,5 +243,12 @@
     "title": "Fragments",
     "section": "",
     "text": "Models reflect\n\n\n\n\n\nTwins interact\n\n\n\n\n\nSo we often think of models as a way to reflect some real-world system in a mathematical or computational context; however the twin isn’t intended just to represent the real world, it is built to interact with it in some way. For physical processes, such as electrical or mechanical systems the difference between a model and a twin can be fairly minimal, and the model itself may be reasonably close to the real thing. The twin will be tightly coupled. To put it another way, with the right tooling, the flow of information between model and world can be bidirectional and relatively simple.\nBut for social and economic processes – such as cities – the representations of any underlying reality is far more abstract and the interactions are far more complex. In the latter case, the flow of information is also complex: even if we did manage to model the entire city, the transfer of information from twin to reality is no longer automated and may even be non-digital such as, for example, the way that model outputs can change our underlying understanding of the problem that we are trying to tackle!\nSo the attempt to make, for example, an urban digital twin is deeply problematic – which is not to say that it’s not worth doing – because of the interaction element."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Reproducible Research and Teaching\nDCDC 2022\nARC Festival:\n\nDigital Twins w/ Mike Batty\nFrom Reproducible Research to Teaching, and Back"
   }
 ]
